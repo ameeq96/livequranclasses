@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Title -->
-    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.jpg') }})">
+    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
 			<h2>Courses Details</h2>
 			<ul class="bread-crumb clearfix">
@@ -23,7 +23,7 @@
 					<div class="course-detail">
 						<div class="course-detail_inner">
 							<div class="course-detail_image">
-								<img src="{{ asset('assets/images/resource/course-11.jpg') }}" alt="" />
+								<img src="{{ asset('assets/images/resource/course-11.webp') }}" alt="" />
 							</div>
 							<div class="course-detail_content">
 								<h3 class="course-detail_heading">Online Quran Memorization Course</h3>
@@ -31,7 +31,7 @@
 									<!-- Author -->
 									<div class="course-detail_author">
 										<div class="course-detail_author-image">
-											<img src="{{ asset('assets/images/resource/author-7.png') }}" alt="" />
+											<img src="{{ asset('assets/images/resource/author-7.webp') }}" alt="" />
 										</div>
 										Adul Nobi 
 										<span>Arabic Teacher</span>
@@ -182,7 +182,7 @@
 													<div class="course-author_box">
 														<div class="course-author_box-inner">
 															<div class="course-author_box-image">
-																<img src="{{ asset('assets/images/resource/author-14.png') }}" alt="" />
+																<img src="{{ asset('assets/images/resource/author-14.webp') }}" alt="" />
 															</div>
 															<h5 class="course-author_box-heading">Rajab Saad <span>Arabic Teacher</span></h5>
 															<div class="course-author_box-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam</div>
@@ -205,7 +205,7 @@
 															<div class="course-author">
 																<div class="course-author_inner">
 																	<div class="course-author_image">
-																		<img src="{{ asset('assets/images/resource/author-15.png') }}" alt="" />
+																		<img src="{{ asset('assets/images/resource/author-15.webp') }}" alt="" />
 																	</div>
 																	<h5 class="course-author_heading">Ibrahim Kabir</h5>
 																	<div class="course-author_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam. Alteration in some form, lipsum is simply free text by injected </div>
@@ -216,7 +216,7 @@
 															<div class="course-author">
 																<div class="course-author_inner">
 																	<div class="course-author_image">
-																		<img src="{{ asset('assets/images/resource/author-16.png') }}" alt="" />
+																		<img src="{{ asset('assets/images/resource/author-16.webp') }}" alt="" />
 																	</div>
 																	<h5 class="course-author_heading">Mahfuz Riad </h5>
 																	<div class="course-author_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam. Alteration in some form, lipsum is simply free text by injected </div>
@@ -228,7 +228,7 @@
 														<!-- Course Comment Form -->
 														<div class="course-comment_form">
 															<h5>Add a Review</h5>
-															<form method="post" action="https://themazine.com/html/Alquran_4/alquran/alquran/contact.html">
+															<form method="get" action="{{ route('contact') }}">
 																<div class="row clearfix">
 
 																	<div class="form-group col-lg-6 col-md-6 col-sm-12">
@@ -276,7 +276,7 @@
 														
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn active"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.png') }}" alt="" /></span></div>Can I choose the sessions timings on my own convenience?</div>
+															<div class="acc-btn active"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>Can I choose the sessions timings on my own convenience?</div>
 															<div class="acc-content current">
 																<div class="content">
 																	<div class="text">Yes, you can. Once you are enrolled in the course, the Support team will email you to arrange the timing of the sessions with you. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem  </div>
@@ -286,7 +286,7 @@
 																	
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.png') }}" alt="" /></span></div>Why online Islamic classes have charges?</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>Why online Islamic classes have charges?</div>
 															<div class="acc-content">
 																<div class="content">
 																	<div class="text">Yes, you can. Once you are enrolled in the course, the Support team will email you to arrange the timing of the sessions with you. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem  </div>
@@ -296,7 +296,7 @@
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.png') }}" alt="" /></span></div>Where are the Quran Tutors from & are they qualified?</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>Where are the Quran Tutors from & are they qualified?</div>
 															<div class="acc-content">
 																<div class="content">
 																	<div class="text">Yes, you can. Once you are enrolled in the course, the Support team will email you to arrange the timing of the sessions with you. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem  </div>
@@ -306,7 +306,7 @@
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.png') }}" alt="" /></span></div>What if a teacher is absent and misses my class?</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>What if a teacher is absent and misses my class?</div>
 															<div class="acc-content">
 																<div class="content">
 																	<div class="text">Yes, you can. Once you are enrolled in the course, the Support team will email you to arrange the timing of the sessions with you. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem  </div>
@@ -355,7 +355,7 @@
 						<div class="sidebar-widget helpline-widget">
 							<div class="widget-content">
 								<div class="image">
-									<img src="{{ asset('assets/images/icons/helpline-widget.png') }}" alt="" />
+									<img src="{{ asset('assets/images/icons/helpline-widget.webp') }}" alt="" />
 								</div>
 								<h4 class="helpline-title">If you have any further query then you can contact our helpline</h4>
 								<div class="helpline-widget_phone flaticon-phone-call"></div>

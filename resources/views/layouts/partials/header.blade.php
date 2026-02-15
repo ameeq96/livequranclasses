@@ -10,7 +10,7 @@
                             <li><span class="icon fa-solid fa-envelope fa-fw"></span><a href="#">[email&#160;protected]</a></li>
                             <li><span class="icon fa-solid fa-location-dot fa-fw"></span>Suite 80 Golden Street Germeney</li>
                         </ul>
-                        <div class="bismillah"><img src="{{ asset('assets/images/icons/bismillah.png') }}" alt="" /></div>
+                        <div class="bismillah"><img src="{{ asset('assets/images/icons/bismillah.webp') }}" alt="" /></div>
                     </div>
                     <ul class="header-top_list-two">
                         <li><span class="icon fa-regular fa-sun fa-fw"></span>Sunrise At: 5:15 AM</li>
@@ -29,7 +29,7 @@
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
 
                     <div class="logo-box">
-                        <div class="logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.svg') }}" alt="" title=""></a></div>
+                        <div class="logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.webp') }}" alt="" title=""></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -87,7 +87,7 @@
         <div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.svg') }}" alt="" title=""></a></div>
+            <div class="nav-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.webp') }}" alt="" title=""></a></div>
             <div class="menu-outer"></div>
         </nav>
     </div>

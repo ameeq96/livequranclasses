@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Title -->
-    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.jpg') }})">
+    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
 			<h2>Contact</h2>
 			<ul class="bread-crumb clearfix">

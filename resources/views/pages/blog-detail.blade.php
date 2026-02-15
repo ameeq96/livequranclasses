@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Title -->
-<section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.jpg') }})">
+<section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
     <div class="auto-container">
         <h2>Blog Details</h2>
         <ul class="bread-crumb clearfix">
@@ -24,7 +24,7 @@
                 <div class="blog-detail">
                     <div class="blog-detail_outer">
                         <div class="blog-detail_image">
-                            <img src="{{ asset('assets/images/resource/news-11.jpg') }}" alt="" />
+                            <img src="{{ asset('assets/images/resource/news-11.webp') }}" alt="" />
                         </div>
                         <div class="blog-detail_content">
                             <div class="blog-detail_author d-flex align-items-center flex-wrap">
@@ -68,7 +68,7 @@
 
                                 <div class="comment-box">
                                     <div class="comment">
-                                        <div class="author-thumb"><img src="{{ asset('assets/images/resource/author-11.png') }}" alt="" /></div>
+                                        <div class="author-thumb"><img src="{{ asset('assets/images/resource/author-11.webp') }}" alt="" /></div>
                                         <div class="comment-info">
                                             <strong>Usman Ali</strong>
                                             <div class="comment-time">October 20, 2025 at 11:30 AM</div>
@@ -80,7 +80,7 @@
 
                                 <div class="comment-box reply-comment">
                                     <div class="comment">
-                                        <div class="author-thumb"><img src="{{ asset('assets/images/resource/author-12.png') }}" alt="" /></div>
+                                        <div class="author-thumb"><img src="{{ asset('assets/images/resource/author-12.webp') }}" alt="" /></div>
                                         <div class="comment-info">
                                             <strong>Hafsa Noor</strong>
                                             <div class="comment-time">October 21, 2025 at 09:10 AM</div>
@@ -161,17 +161,17 @@
                         <div class="content">
                             <div class="widget-content">
                                 <article class="post">
-                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-1.png') }}" alt="" /></a></figure>
+                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-1.webp') }}" alt="" /></a></figure>
                                     <span class="post-date">October 10, 2025</span>
                                     <h6><a href="{{ route('blog.detail') }}">The Purpose of Revelation of the Holy Quran</a></h6>
                                 </article>
                                 <article class="post">
-                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-2.png') }}" alt="" /></a></figure>
+                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-2.webp') }}" alt="" /></a></figure>
                                     <span class="post-date">October 12, 2025</span>
                                     <h6><a href="{{ route('blog.detail') }}">Types of Tawakkul in Daily Life</a></h6>
                                 </article>
                                 <article class="post">
-                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-3.png') }}" alt="" /></a></figure>
+                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-3.webp') }}" alt="" /></a></figure>
                                     <span class="post-date">October 15, 2025</span>
                                     <h6><a href="{{ route('blog.detail') }}">How to Build Quran Habit for Kids</a></h6>
                                 </article>

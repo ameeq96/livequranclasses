@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Title -->
-    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.jpg') }})">
+    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
 			<h2>Services Details</h2>
 			<ul class="bread-crumb clearfix">
@@ -16,7 +16,7 @@
 	<!-- Service Detail -->
 	<section class="service-detail">
 		<div class="auto-container">
-			<div class="content" style="background-image:url({{ asset('assets/images/background/service-detail.png') }})">
+			<div class="content" style="background-image:url({{ asset('assets/images/background/service-detail.webp') }})">
 				<div class="service-detail_icon flaticon-quran-5"></div>
 				<h3 class="service-detail_heading">Quranic Junior Al-Hafiz</h3>
 				<div class="service-detail_text">This class focuses mainly on Qurâ€™an memorisation and revision of <br> surahs that have already been memorised.</div>
@@ -44,7 +44,7 @@
 				<div class="service-detail_image-column col-lg-6 col-md-12 col-sm-12">
 					<div class="service-detail_image-outer">
 						<div class="service-detail_image">
-							<img src="{{ asset('assets/images/resource/service.png') }}" alt="" />
+							<img src="{{ asset('assets/images/resource/service.webp') }}" alt="" />
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 						<div class="gallery-block_two">
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
-									<img src="{{ asset('assets/images/gallery/9.jpg') }}" alt="" />
+									<img src="{{ asset('assets/images/gallery/9.webp') }}" alt="" />
 									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
@@ -79,7 +79,7 @@
 						<div class="gallery-block_two">
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
-									<img src="{{ asset('assets/images/gallery/10.jpg') }}" alt="" />
+									<img src="{{ asset('assets/images/gallery/10.webp') }}" alt="" />
 									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
@@ -92,7 +92,7 @@
 						<div class="gallery-block_two">
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
-									<img src="{{ asset('assets/images/gallery/11.jpg') }}" alt="" />
+									<img src="{{ asset('assets/images/gallery/11.webp') }}" alt="" />
 									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
@@ -105,7 +105,7 @@
 						<div class="gallery-block_two">
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
-									<img src="{{ asset('assets/images/gallery/12.jpg') }}" alt="" />
+									<img src="{{ asset('assets/images/gallery/12.webp') }}" alt="" />
 									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
@@ -118,7 +118,7 @@
 						<div class="gallery-block_two">
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
-									<img src="{{ asset('assets/images/gallery/9.jpg') }}" alt="" />
+									<img src="{{ asset('assets/images/gallery/9.webp') }}" alt="" />
 									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
@@ -131,7 +131,7 @@
 						<div class="gallery-block_two">
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
-									<img src="{{ asset('assets/images/gallery/10.jpg') }}" alt="" />
+									<img src="{{ asset('assets/images/gallery/10.webp') }}" alt="" />
 									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
@@ -144,7 +144,7 @@
 						<div class="gallery-block_two">
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
-									<img src="{{ asset('assets/images/gallery/11.jpg') }}" alt="" />
+									<img src="{{ asset('assets/images/gallery/11.webp') }}" alt="" />
 									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
@@ -157,7 +157,7 @@
 						<div class="gallery-block_two">
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
-									<img src="{{ asset('assets/images/gallery/12.jpg') }}" alt="" />
+									<img src="{{ asset('assets/images/gallery/12.webp') }}" alt="" />
 									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
@@ -175,7 +175,7 @@
 	<section class="cta-two">
 		<div class="auto-container">
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
-				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.png') }})"></div>
+				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<div class="cta-two_icon flaticon-nabawi-mosque"></div>
 				<h3 class="cta-two_heading">Proud to be serving thousands of Muslim <br> Families around the World</h3>
 				<!-- Button Box -->

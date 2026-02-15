@@ -894,7 +894,7 @@
 	right: -12px;
 	height: 430px;
 	z-index: -1;
-	background: url(../images/background/students-one_pattern.png) no-repeat;
+	background: url(../images/background/students-one_pattern.webp) no-repeat;
 	background-size: cover;
 }
 
@@ -3077,7 +3077,7 @@
 	margin: 0 auto;
 	margin-top: -120px;
 	padding-top: var(--padding-top-35);
-	background: url(../images/background/scholar-one_bg.png);
+	background: url(../images/background/scholar-one_bg.webp);
 }
 
 .scholar-block_one-heading{
@@ -6840,7 +6840,7 @@
 	top: -20px;
 	width: 113px;
 	height: 84px;
-	background: url(../images/icons/quran.png);
+	background: url(../images/icons/quran.webp);
 	background-repeat: no-repeat;
 	-webkit-animation: icon-bounce 0.8s ease-out infinite;
     animation: icon-bounce 0.8s ease-out infinite;
@@ -8370,7 +8370,7 @@
 	margin-top: 0px;
 	padding: 25px 15px;
 	border-radius:92px 92px 92px 0px;
-	background: url(../images/background/scholar-two_bg.jpg);
+	background: url(../images/background/scholar-two_bg.webp);
 	background-size:cover;
 }
 
@@ -8823,7 +8823,7 @@
 	-o-transition:all 900ms ease;
 	transition: 1.3s cubic-bezier(0.5, 0.5, 0, 1);
     clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
-	background:url(../images/main-slider/title-bg.png) no-repeat;
+	background:url(../images/main-slider/title-bg.webp) no-repeat;
 }
 
 .slider-five .swiper-slide-active .slider-five_title{
@@ -9648,7 +9648,7 @@
 	right:0px;
 	height:171px;
 	z-index:1;
-	background: url(../images/background/gumbad.png) no-repeat;
+	background: url(../images/background/gumbad.webp) no-repeat;
 	background-size: cover;
     background-position: center center;
 }
@@ -10157,7 +10157,7 @@
 	right:0px;
 	height:170px;
 	z-index:1;
-	background: url(../images/background/scholar-pattern.png) no-repeat;
+	background: url(../images/background/scholar-pattern.webp) no-repeat;
 	background-size: cover;
     background-position: center top;
 }
@@ -10292,7 +10292,7 @@
 	right:0px;
 	height:162px;
 	z-index:1;
-	background: url(../images/background/news-block_five-pattern.png) no-repeat;
+	background: url(../images/background/news-block_five-pattern.webp) no-repeat;
 	background-size: cover;
     background-position: center top;
 }
@@ -11360,7 +11360,7 @@
 	text-align: center;
 	margin-top: -3px;
 	padding: 25px 15px 50px;
-	background: url(../images/background/team-two_bg.png);
+	background: url(../images/background/team-two_bg.webp);
 	background-size:cover;
 }
 
@@ -11566,11 +11566,11 @@
 }
 
 .home-six_dark .news-block_five-image:after{
-	background:url(../images/background/news-block_five-pattern-dark.png) no-repeat;
+	background:url(../images/background/news-block_five-pattern-dark.webp) no-repeat;
 }
 
 .home-six_dark .offer-block_two-image:before{
-	background:url(../images/background/gumbad-1.png) no-repeat;
+	background:url(../images/background/gumbad-1.webp) no-repeat;
 }
 
 .home-six_dark .experiance-one.style-two:before{

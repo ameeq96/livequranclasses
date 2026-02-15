@@ -1,5 +1,5 @@
 <footer class="main-footer">
-		<div class="footer_bg-image" style="background-image: url({{ asset('assets/images/background/footer-bg.jpg') }})"></div>
+		<div class="footer_bg-image" style="background-image: url({{ asset('assets/images/background/footer-bg.webp') }})"></div>
 		<div class="auto-container">
 			<div class="inner-container">
 				<!-- Widgets Section -->
@@ -70,7 +70,7 @@
 										<h4 class="footer-title">newsletter</h4>
 										<div class="footer-text">Waiting for your message is not your important time</div>
 										<div class="newsletter-box">
-											<form method="post" action="https://themazine.com/html/Alquran_4/alquran/alquran/contact.html">
+											<form method="get" action="{{ route('contact') }}">
 												<div class="form-group">
 													<input type="email" name="search-field" value="" placeholder="email address" required>
 													<button type="submit" class="theme-btn fa-regular fa-paper-plane fa-fw"></button>
@@ -88,7 +88,7 @@
 			</div>
 		</div>
 		<div class="footer-bottom">
-			<div class="footer_bottom-bg" style="background-image: url({{ asset('assets/images/background/footer-bg_2.jpg') }})"></div>
+			<div class="footer_bottom-bg" style="background-image: url({{ asset('assets/images/background/footer-bg_2.webp') }})"></div>
 			<div class="auto-container">
 				<div class="d-flex justify-content-between align-items-center flex-wrap">
 					<div class="copyright">All rights reserved 2025 &copy; template_mr</div>
@@ -106,7 +106,7 @@
 	<div class="search-popup">
 		<div class="color-layer"></div>
 		<button class="close-search"><span class="flaticon-close-1"></span></button>
-		<form method="post" action="https://themazine.com/html/Alquran_4/alquran/alquran/blog.html">
+		<form method="get" action="{{ route('blog') }}">
 			<div class="form-group">
 				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
 				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>

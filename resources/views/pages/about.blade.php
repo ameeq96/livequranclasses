@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Title -->
-    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.jpg') }})">
+    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
 			<h2>About</h2>
 			<ul class="bread-crumb clearfix">
@@ -15,24 +15,24 @@
 
 	<!-- Welcome One -->
 	<section class="welcome-two">
-		<div class="welcome-two_pattern" style="background-image:url({{ asset('assets/images/background/welcome-two_pattern.png') }})"></div>
-		<div class="welcome-two_pattern-two" style="background-image:url({{ asset('assets/images/background/welcome-two_pattern-two.png') }})"></div>
+		<div class="welcome-two_pattern" style="background-image:url({{ asset('assets/images/background/welcome-two_pattern.webp') }})"></div>
+		<div class="welcome-two_pattern-two" style="background-image:url({{ asset('assets/images/background/welcome-two_pattern-two.webp') }})"></div>
 		<div class="auto-container">
 			<div class="row clearfix">
 
 				<!-- Image Column -->
 				<div class="welcome-two_image-column col-lg-6 col-md-12 col-sm-12">
 					<div class="welcome-two_image-outer">
-						<div class="welcome-two_dots" style="background-image:url({{ asset('assets/images/background/pattern-2.png') }})"></div>
-						<div class="welcome-two_dots-two" style="background-image:url({{ asset('assets/images/background/pattern-2.png') }})"></div>
+						<div class="welcome-two_dots" style="background-image:url({{ asset('assets/images/background/pattern-2.webp') }})"></div>
+						<div class="welcome-two_dots-two" style="background-image:url({{ asset('assets/images/background/pattern-2.webp') }})"></div>
 						<div class="welcome-two_ameen">
-							<img src="{{ asset('assets/images/icons/ameen-1.png') }}" alt="" />
+							<img src="{{ asset('assets/images/icons/ameen-1.webp') }}" alt="" />
 						</div>
 						<div class="welcome-two_image">
-							<img src="{{ asset('assets/images/resource/welcome-2.jpg') }}" alt="" />
+							<img src="{{ asset('assets/images/resource/welcome-2.webp') }}" alt="" />
 						</div>
 						<div class="welcome-two_image-two">
-							<img src="{{ asset('assets/images/resource/welcome-4.jpg') }}" alt="" />
+							<img src="{{ asset('assets/images/resource/welcome-4.webp') }}" alt="" />
 						</div>
 						<div class="welcome-two_years d-flex align-items-center flex-wrap">
 							<span class="fa-solid fa-globe fa-fw"></span>
@@ -46,13 +46,13 @@
 					<div class="welcome-two_content-outer">
 						<!-- Sec Title -->
 						<div class="sec-title">
-							<div class="sec-title_title d-flex align-items-center">Islamic Online Madrasah <span><img src="{{ asset('assets/images/icons/bismillah-2.png') }}" alt="" /></span></div>
+							<div class="sec-title_title d-flex align-items-center">Islamic Online Madrasah <span><img src="{{ asset('assets/images/icons/bismillah-2.webp') }}" alt="" /></span></div>
 							<h2 class="sec-title_heading">Online Islamic School At Home</h2>
 							<div class="sec-title_text">We welcome our users to Online Quran teaching services where we are offering multiple Islamic as well as character building and life reformation courses as per the teachings of Sharia.</div>
 						</div>
 						<div class="welcome-two_middle-content">
 							<div class="welcome-two_icon">
-								<img src="{{ asset('assets/images/icons/welcome_two.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/welcome_two.webp') }}" alt="" />
 							</div>
 							<div class="welcome-two_learn">
 								<span class="welcome-two_learn-icon flaticon-mosque"></span>
@@ -65,7 +65,7 @@
 						</div>
 						<div class="welcome-two_middle-lower d-flex align-items-center flex-wrap">
 							<div class="welcome-two_thumb">
-								<img src="{{ asset('assets/images/resource/welcome-3.jpg') }}" alt="" />
+								<img src="{{ asset('assets/images/resource/welcome-3.webp') }}" alt="" />
 							</div>
 							<h5 class="welcome-two_title">Peaceful</h5>
 							<p>Working for peace & serving humanity. lorem free market to available, but the majority have alteration in some form</p>
@@ -91,7 +91,7 @@
 				<!-- Institute Block One -->
 				<div class="institute-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.png') }})"></div>
+						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-quran-1"></div>
 						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Expert Quran <br> Tutor</a></h4>
 						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
@@ -101,7 +101,7 @@
 				<!-- Institute Block One -->
 				<div class="institute-block_one color-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.png') }})"></div>
+						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-pray-1"></div>
 						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">We Value Our <br> Students</a></h4>
 						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
@@ -111,7 +111,7 @@
 				<!-- Institute Block One -->
 				<div class="institute-block_one color-three col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.png') }})"></div>
+						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-education"></div>
 						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Male Female <br> Teachers</a></h4>
 						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
@@ -121,7 +121,7 @@
 				<!-- Institute Block One -->
 				<div class="institute-block_one color-four col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.png') }})"></div>
+						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-time-management"></div>
 						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Flexible <br> Timings</a></h4>
 						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
@@ -137,7 +137,7 @@
 	<section class="students-one style-three">
 		<div class="auto-container">
 			<div class="inner-container">
-				<div class="students-one_pattern" style="background-image:url({{ asset('assets/images/background/student-bg.png') }})"></div>
+				<div class="students-one_pattern" style="background-image:url({{ asset('assets/images/background/student-bg.webp') }})"></div>
 				<div class="row clearfix">
 
 					<!-- Content Column -->
@@ -202,7 +202,7 @@
 	<!-- End Students One -->
 
 	<!-- Scholar One -->
-	<section class="scholar-one" style="background-image:url({{ asset('assets/images/background/scholar-bg.png') }})">
+	<section class="scholar-one" style="background-image:url({{ asset('assets/images/background/scholar-bg.webp') }})">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title d-flex justify-content-between align-items-center flex-wrap">
@@ -212,7 +212,7 @@
 				</div>
 				<!-- Button Box -->
 				<div class="scholar-one_button">
-					<a href="team.html" class="theme-btn btn-style-one">
+					<a href="{{ route('about') }}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
 							<span class="text-one">Our Scholars</span>
 							<span class="text-two">Our Scholars</span>
@@ -227,10 +227,10 @@
 				<div class="scholar-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="scholar-block_one-inner wow fadeInLeft"  data-wow-delay="0ms" data-wow-duration="1000ms">
 						<div class="scholar-block_one-image">
-							<a href="scholar-detail.html"><img src="{{ asset('assets/images/resource/scholar-1.jpg') }}" alt="" /></a>
+							<a href="{{ route('about') }}"><img src="{{ asset('assets/images/resource/scholar-1.webp') }}" alt="" /></a>
 						</div>
 						<div class="scholar-block_one-content">
-							<h4 class="scholar-block_one-heading"><a href="scholar-detail.html">Osama Gamal</a></h4>
+							<h4 class="scholar-block_one-heading"><a href="{{ route('about') }}">Osama Gamal</a></h4>
 							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
 							<!-- Social Box -->
 							<div class="scholar-block_one-socials">
@@ -246,10 +246,10 @@
 				<div class="scholar-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="scholar-block_one-inner wow fadeInUp"  data-wow-delay="0ms" data-wow-duration="1000ms">
 						<div class="scholar-block_one-image">
-							<a href="scholar-detail.html"><img src="{{ asset('assets/images/resource/scholar-2.jpg') }}" alt="" /></a>
+							<a href="{{ route('about') }}"><img src="{{ asset('assets/images/resource/scholar-2.webp') }}" alt="" /></a>
 						</div>
 						<div class="scholar-block_one-content">
-							<h4 class="scholar-block_one-heading"><a href="scholar-detail.html">Ahmed Hany</a></h4>
+							<h4 class="scholar-block_one-heading"><a href="{{ route('about') }}">Ahmed Hany</a></h4>
 							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
 							<!-- Social Box -->
 							<div class="scholar-block_one-socials">
@@ -265,10 +265,10 @@
 				<div class="scholar-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="scholar-block_one-inner wow fadeInRight"  data-wow-delay="0ms" data-wow-duration="1000ms">
 						<div class="scholar-block_one-image">
-							<a href="scholar-detail.html"><img src="{{ asset('assets/images/resource/scholar-3.jpg') }}" alt="" /></a>
+							<a href="{{ route('about') }}"><img src="{{ asset('assets/images/resource/scholar-3.webp') }}" alt="" /></a>
 						</div>
 						<div class="scholar-block_one-content">
-							<h4 class="scholar-block_one-heading"><a href="scholar-detail.html">Yusuf Samir</a></h4>
+							<h4 class="scholar-block_one-heading"><a href="{{ route('about') }}">Yusuf Samir</a></h4>
 							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
 							<!-- Social Box -->
 							<div class="scholar-block_one-socials">
@@ -311,7 +311,7 @@
 						</ul>
 						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="price.html" class="theme-btn btn-style-one">
+							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">free trial</span>
 									<span class="text-two">free trial</span>
@@ -336,7 +336,7 @@
 						</ul>
 						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="price.html" class="theme-btn btn-style-one">
+							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">free trial</span>
 									<span class="text-two">free trial</span>
@@ -361,7 +361,7 @@
 						</ul>
 						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="price.html" class="theme-btn btn-style-one">
+							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">free trial</span>
 									<span class="text-two">free trial</span>
@@ -386,7 +386,7 @@
 						</ul>
 						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="price.html" class="theme-btn btn-style-one">
+							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">free trial</span>
 									<span class="text-two">free trial</span>
@@ -402,7 +402,7 @@
 	<!-- End Price One -->
 
 	<!-- Testimonial Two -->
-	<section class="testimonial-two" style="background-image:url({{ asset('assets/images/background/testimonial-two_bg.png') }})">
+	<section class="testimonial-two" style="background-image:url({{ asset('assets/images/background/testimonial-two_bg.webp') }})">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title centered">
@@ -429,18 +429,18 @@
 								<div class="testimonial-block_two-text">Best platform for learning quran and arabic for kids. The way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
-										<img src="{{ asset('assets/images/resource/author-1.png') }}" alt="" />
+										<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 									</div>
 									Hafiz bin Usif
 									<span>Quran Teacher</span>
 								</div>
 								<!-- Ameen -->
 								<div class="testimonial-block_two_ameen">
-									<img src="{{ asset('assets/images/icons/ameen-3.png') }}" alt="" />
+									<img src="{{ asset('assets/images/icons/ameen-3.webp') }}" alt="" />
 								</div>
 								<!-- Icon -->
 								<div class="testimonial-block_two-icon">
-									<img src="{{ asset('assets/images/icons/featured.png') }}" alt="" />
+									<img src="{{ asset('assets/images/icons/featured.webp') }}" alt="" />
 								</div>
 							</div>
 						</div>
@@ -462,18 +462,18 @@
 								<div class="testimonial-block_two-text">Best platform for learning quran and arabic for kids. The way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
-										<img src="{{ asset('assets/images/resource/author-6.png') }}" alt="" />
+										<img src="{{ asset('assets/images/resource/author-6.webp') }}" alt="" />
 									</div>
 									Ibrahim klip
 									<span>Quran Teacher</span>
 								</div>
 								<!-- Ameen -->
 								<div class="testimonial-block_two_ameen">
-									<img src="{{ asset('assets/images/icons/ameen-3.png') }}" alt="" />
+									<img src="{{ asset('assets/images/icons/ameen-3.webp') }}" alt="" />
 								</div>
 								<!-- Icon -->
 								<div class="testimonial-block_two-icon">
-									<img src="{{ asset('assets/images/icons/featured.png') }}" alt="" />
+									<img src="{{ asset('assets/images/icons/featured.webp') }}" alt="" />
 								</div>
 							</div>
 						</div>
@@ -495,18 +495,18 @@
 								<div class="testimonial-block_two-text">Best platform for learning quran and arabic for kids. The way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
-										<img src="{{ asset('assets/images/resource/author-1.png') }}" alt="" />
+										<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 									</div>
 									Hafiz bin Usif
 									<span>Quran Teacher</span>
 								</div>
 								<!-- Ameen -->
 								<div class="testimonial-block_two_ameen">
-									<img src="{{ asset('assets/images/icons/ameen-3.png') }}" alt="" />
+									<img src="{{ asset('assets/images/icons/ameen-3.webp') }}" alt="" />
 								</div>
 								<!-- Icon -->
 								<div class="testimonial-block_two-icon">
-									<img src="{{ asset('assets/images/icons/featured.png') }}" alt="" />
+									<img src="{{ asset('assets/images/icons/featured.webp') }}" alt="" />
 								</div>
 							</div>
 						</div>
@@ -527,7 +527,7 @@
 	<section class="cta-two">
 		<div class="auto-container">
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
-				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.png') }})"></div>
+				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<div class="cta-two_icon flaticon-nabawi-mosque"></div>
 				<h3 class="cta-two_heading">Proud to be serving thousands of Muslim <br> Families around the World</h3>
 				<!-- Button Box -->

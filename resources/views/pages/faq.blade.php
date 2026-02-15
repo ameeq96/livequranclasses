@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Title -->
-    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.jpg') }})">
+    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
 			<h2>Faq's</h2>
 			<ul class="bread-crumb clearfix">
@@ -107,7 +107,7 @@
 						<div class="sidebar-widget helpline-widget">
 							<div class="widget-content">
 								<div class="image">
-									<img src="{{ asset('assets/images/icons/helpline-widget.png') }}" alt="" />
+									<img src="{{ asset('assets/images/icons/helpline-widget.webp') }}" alt="" />
 								</div>
 								<h4 class="helpline-title">If you have any further query then you can contact our helpline</h4>
 								<div class="helpline-widget_phone flaticon-phone-call"></div>

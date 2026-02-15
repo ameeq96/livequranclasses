@@ -1597,7 +1597,7 @@ img{
 .sec-title-two_title span{
 	position: relative;
 	padding:8px 25px 8px 15px;
-	background:url(../images/background/title-bg.png) no-repeat;
+	background:url(../images/background/title-bg.webp) no-repeat;
 	background-size: contain;
 }
 

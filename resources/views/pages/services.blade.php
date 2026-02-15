@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Title -->
-    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.jpg') }})">
+    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
 			<h2>Our Services</h2>
 			<ul class="bread-crumb clearfix">
@@ -24,7 +24,7 @@
 						<div class="service-block_two-upper">
 							<div class="service-block_two-icon flaticon-quran-1"></div>
 							<div class="service-block_two-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Online Quran <br> Classes</a></h4>
 							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
@@ -41,7 +41,7 @@
 						<div class="service-block_two-upper">
 							<div class="service-block_two-icon flaticon-pray"></div>
 							<div class="service-block_two-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Online Islamic <br> Classes</a></h4>
 							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
@@ -58,7 +58,7 @@
 						<div class="service-block_two-upper">
 							<div class="service-block_two-icon flaticon-quran-2"></div>
 							<div class="service-block_two-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Expert Quran <br> Tutor</a></h4>
 							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
@@ -75,7 +75,7 @@
 						<div class="service-block_two-upper">
 							<div class="service-block_two-icon flaticon-quran-5"></div>
 							<div class="service-block_two-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Quranic Junior <br> Al-Hafiz</a></h4>
 							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
@@ -92,7 +92,7 @@
 						<div class="service-block_two-upper">
 							<div class="service-block_two-icon flaticon-quran-4"></div>
 							<div class="service-block_two-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Quran <br> Translation</a></h4>
 							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
@@ -109,7 +109,7 @@
 						<div class="service-block_two-upper">
 							<div class="service-block_two-icon flaticon-boy"></div>
 							<div class="service-block_two-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Islamic Studies For <br> Kids Course</a></h4>
 							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
@@ -139,7 +139,7 @@
 	<section class="cta-two">
 		<div class="auto-container">
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
-				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.png') }})"></div>
+				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<div class="cta-two_icon flaticon-nabawi-mosque"></div>
 				<h3 class="cta-two_heading">Proud to be serving thousands of Muslim <br> Families around the World</h3>
 				<!-- Button Box -->

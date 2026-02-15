@@ -7,7 +7,7 @@
 
 				<!-- Slide -->
 				<div class="swiper-slide">
-					<div class="slider-one_image-layer" style="background-image:url({{ asset('assets/images/main-slider/1.jpg') }})"></div>
+					<div class="slider-one_image-layer" style="background-image:url({{ asset('assets/images/main-slider/1.webp') }})"></div>
 					<div class="auto-container">
 						
 						<!-- Content Column -->
@@ -17,7 +17,7 @@
 								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
 								<div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
 								<div class="slider-one_button">
-									<a href="course-detail.html" class="theme-btn btn-style-two">
+									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
 											<span class="text-one">Find the course</span>
 											<span class="text-two">Find the course</span>
@@ -32,7 +32,7 @@
 
 				<!-- Slide -->
 				<div class="swiper-slide">
-					<div class="slider-one_image-layer" style="background-image:url({{ asset('assets/images/main-slider/2.jpg') }})"></div>
+					<div class="slider-one_image-layer" style="background-image:url({{ asset('assets/images/main-slider/2.webp') }})"></div>
 					<div class="auto-container">
 						
 						<!-- Content Column -->
@@ -42,7 +42,7 @@
 								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
 								<div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
 								<div class="slider-one_button">
-									<a href="course-detail.html" class="theme-btn btn-style-two">
+									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
 											<span class="text-one">Find the course</span>
 											<span class="text-two">Find the course</span>
@@ -57,7 +57,7 @@
 
 				<!-- Slide -->
 				<div class="swiper-slide">
-					<div class="slider-one_image-layer" style="background-image:url({{ asset('assets/images/main-slider/3.jpg') }})"></div>
+					<div class="slider-one_image-layer" style="background-image:url({{ asset('assets/images/main-slider/3.webp') }})"></div>
 					<div class="auto-container">
 						
 						<!-- Content Column -->
@@ -67,7 +67,7 @@
 								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
 								<div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
 								<div class="slider-one_button">
-									<a href="course-detail.html" class="theme-btn btn-style-two">
+									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
 											<span class="text-one">Find the course</span>
 											<span class="text-two">Find the course</span>
@@ -93,7 +93,7 @@
 	<!-- Featured One -->
 	<section class="featured-one">
 		<div class="auto-container">
-			<div class="inner-container" style="background-image:url({{ asset('assets/images/icons/featured.png') }})">
+			<div class="inner-container" style="background-image:url({{ asset('assets/images/icons/featured.webp') }})">
 				<div class="row clearfix">
 
 					<!-- Feature Block One -->
@@ -128,8 +128,8 @@
 
 	<!-- Welcome One -->
 	<section class="welcome-one">
-		<div class="welcome-one_pattern" style="background-image:url({{ asset('assets/images/background/pattern-1.png') }})"></div>
-		<div class="welcome-one_pattern-two" style="background-image:url({{ asset('assets/images/background/pattern-2.png') }})"></div>
+		<div class="welcome-one_pattern" style="background-image:url({{ asset('assets/images/background/pattern-1.webp') }})"></div>
+		<div class="welcome-one_pattern-two" style="background-image:url({{ asset('assets/images/background/pattern-2.webp') }})"></div>
 		<div class="auto-container">
 			<div class="row clearfix">
 
@@ -138,13 +138,13 @@
 					<div class="welcome-one_content-outer">
 						<!-- Sec Title -->
 						<div class="sec-title">
-							<div class="sec-title_title d-flex align-items-center">Islamic Online Madrasah <span><img src="{{ asset('assets/images/icons/bismillah-2.png') }}" alt="" /></span></div>
+							<div class="sec-title_title d-flex align-items-center">Islamic Online Madrasah <span><img src="{{ asset('assets/images/icons/bismillah-2.webp') }}" alt="" /></span></div>
 							<h2 class="sec-title_heading">Welcome To Imman Quran Institute</h2>
 							<div class="sec-title_text">We welcome our users to Online Quran teaching services where we are offering multiple Islamic as well as character building and life reformation courses as per the teachings of Sharia.</div>
 						</div>
 						<div class="welcome-one_content">
 							<div class="welcome-one_content-image">
-								<img src="{{ asset('assets/images/resource/welcome.jpg') }}" alt="" />
+								<img src="{{ asset('assets/images/resource/welcome.webp') }}" alt="" />
 							</div>
 							<p>There are many variations of passages of lorem ipsum available, but the majority have suffered business consulting</p>
 							<div class="welcome-one_learn">
@@ -160,10 +160,10 @@
 				<div class="welcome-one_image-column col-lg-6 col-md-12 col-sm-12">
 					<div class="welcome-one_image-outer">
 						<div class="welcome-one_ameen">
-							<img src="{{ asset('assets/images/icons/ameen-1.png') }}" alt="" />
+							<img src="{{ asset('assets/images/icons/ameen-1.webp') }}" alt="" />
 						</div>
 						<div class="welcome-one_image">
-							<img src="{{ asset('assets/images/resource/welcome-1.jpg') }}" alt="" />
+							<img src="{{ asset('assets/images/resource/welcome-1.webp') }}" alt="" />
 						</div>
 						<div class="welcome-one_years d-flex align-items-center flex-wrap">
 							<span class="fa-solid fa-globe fa-fw"></span>
@@ -178,7 +178,7 @@
 	<!-- End Welcome One -->
 
 	<!-- Service One -->
-	<section class="service-one" style="background-image:url({{ asset('assets/images/background/service-bg.png') }})">
+	<section class="service-one" style="background-image:url({{ asset('assets/images/background/service-bg.webp') }})">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title centered light">
@@ -193,13 +193,13 @@
 						<div class="service-block_one-upper">
 							<div class="service-block_one-icon flaticon-quran-1"></div>
 							<div class="service-block_one-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_one-heading"><a href="service-detail.html">Online Quran <br> Classes</a></h4>
+							<h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">Online Quran <br> Classes</a></h4>
 							<div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
 						</div>
 						<div class="service-block_one-lower">
-							<a class="service-block_one-more" href="service-detail.html">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -210,13 +210,13 @@
 						<div class="service-block_one-upper">
 							<div class="service-block_one-icon flaticon-pray"></div>
 							<div class="service-block_one-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_one-heading"><a href="service-detail.html">Tafseer <br> Course</a></h4>
+							<h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">Tafseer <br> Course</a></h4>
 							<div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
 						</div>
 						<div class="service-block_one-lower">
-							<a class="service-block_one-more" href="service-detail.html">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -227,13 +227,13 @@
 						<div class="service-block_one-upper">
 							<div class="service-block_one-icon flaticon-quran-2"></div>
 							<div class="service-block_one-big_icon">
-								<img src="{{ asset('assets/images/icons/service-1.png') }}" alt="" />
+								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_one-heading"><a href="service-detail.html">We Value <br> Our Students</a></h4>
+							<h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">We Value <br> Our Students</a></h4>
 							<div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
 						</div>
 						<div class="service-block_one-lower">
-							<a class="service-block_one-more" href="service-detail.html">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -247,7 +247,7 @@
 	<section class="students-one">
 		<div class="auto-container">
 			<div class="inner-container">
-				<div class="students-one_pattern" style="background-image:url({{ asset('assets/images/background/student-bg.png') }})"></div>
+				<div class="students-one_pattern" style="background-image:url({{ asset('assets/images/background/student-bg.webp') }})"></div>
 				<div class="row clearfix">
 
 					<!-- Content Column -->
@@ -312,7 +312,7 @@
 	<!-- End Students One -->
 
 	<!-- Courses One -->
-	<section class="courses-one" style="background-image:url({{ asset('assets/images/background/courses-one_bg.png') }})">
+	<section class="courses-one" style="background-image:url({{ asset('assets/images/background/courses-one_bg.webp') }})">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title centered">
@@ -325,13 +325,13 @@
 				<div class="course-block_one col-xl-3 col-lg-4 col-md-6 col-sm-12">
 					<div class="course-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="course-block_one-image">
-							<a href="course-detail.html"><img src="{{ asset('assets/images/resource/course-1.jpg') }}" alt="" /></a>
+							<a href="{{ route('course.detail') }}"><img src="{{ asset('assets/images/resource/course-1.webp') }}" alt="" /></a>
 						</div>
 						<div class="course-block_one-content">
 							<div class="course-block_one-icon">
 								<img src="{{ asset('assets/images/icons/service-1.svg') }}" alt="" />
 							</div>
-							<h4 class="course-block_one-heading"><a href="course-detail.html">Quran Intermediate Course brother</a></h4>
+							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Quran Intermediate Course brother</a></h4>
 							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -350,13 +350,13 @@
 				<div class="course-block_one col-xl-3 col-lg-4 col-md-6 col-sm-12">
 					<div class="course-block_one-inner wow fadeInLeft"  data-wow-delay="300ms" data-wow-duration="1000ms">
 						<div class="course-block_one-image">
-							<a href="course-detail.html"><img src="{{ asset('assets/images/resource/course-2.jpg') }}" alt="" /></a>
+							<a href="{{ route('course.detail') }}"><img src="{{ asset('assets/images/resource/course-2.webp') }}" alt="" /></a>
 						</div>
 						<div class="course-block_one-content">
 							<div class="course-block_one-icon">
 								<img src="{{ asset('assets/images/icons/service-2.svg') }}" alt="" />
 							</div>
-							<h4 class="course-block_one-heading"><a href="course-detail.html">Online Quran Classes For Ladies</a></h4>
+							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Online Quran Classes For Ladies</a></h4>
 							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -375,13 +375,13 @@
 				<div class="course-block_one col-xl-3 col-lg-4 col-md-6 col-sm-12">
 					<div class="course-block_one-inner wow fadeInLeft"  data-wow-delay="450ms" data-wow-duration="1000ms">
 						<div class="course-block_one-image">
-							<a href="course-detail.html"><img src="{{ asset('assets/images/resource/course-3.jpg') }}" alt="" /></a>
+							<a href="{{ route('course.detail') }}"><img src="{{ asset('assets/images/resource/course-3.webp') }}" alt="" /></a>
 						</div>
 						<div class="course-block_one-content">
 							<div class="course-block_one-icon">
 								<img src="{{ asset('assets/images/icons/service-3.svg') }}" alt="" />
 							</div>
-							<h4 class="course-block_one-heading"><a href="course-detail.html">Online Quran Classes for Kids</a></h4>
+							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Online Quran Classes for Kids</a></h4>
 							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -400,13 +400,13 @@
 				<div class="course-block_one col-xl-3 col-lg-4 col-md-6 col-sm-12">
 					<div class="course-block_one-inner wow fadeInLeft"  data-wow-delay="600ms" data-wow-duration="1000ms">
 						<div class="course-block_one-image">
-							<a href="course-detail.html"><img src="{{ asset('assets/images/resource/course-4.jpg') }}" alt="" /></a>
+							<a href="{{ route('course.detail') }}"><img src="{{ asset('assets/images/resource/course-4.webp') }}" alt="" /></a>
 						</div>
 						<div class="course-block_one-content">
 							<div class="course-block_one-icon">
 								<img src="{{ asset('assets/images/icons/service-4.svg') }}" alt="" />
 							</div>
-							<h4 class="course-block_one-heading"><a href="course-detail.html">Hifz Quran (Quran Memorization Course)</a></h4>
+							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Hifz Quran (Quran Memorization Course)</a></h4>
 							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -430,11 +430,11 @@
 	<section class="cta-one">
 		<div class="auto-container">
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
-				<div class="cta-one_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.png') }})"></div>
+				<div class="cta-one_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<h3 class="cta-one_heading">Do not let Shaitan delay you from starting <br> to learn your deen.</h3>
 				<!-- Button Box -->
 				<div class="cta-one_button">
-					<a href="contact.html" class="theme-btn btn-style-one">
+					<a href="{{ route('contact') }}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
 							<span class="text-one">Quick Start Now</span>
 							<span class="text-two">Quick Start Now</span>
@@ -459,9 +459,9 @@
 				<!-- Institute Block One -->
 				<div class="institute-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.png') }})"></div>
+						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-quran-1"></div>
-						<h4 class="institute-block_one-heading"><a href="course-detail.html">Expert Quran <br> Tutor</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Expert Quran <br> Tutor</a></h4>
 						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
 					</div>
 				</div>
@@ -469,9 +469,9 @@
 				<!-- Institute Block One -->
 				<div class="institute-block_one color-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.png') }})"></div>
+						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-pray-1"></div>
-						<h4 class="institute-block_one-heading"><a href="course-detail.html">We Value Our <br> Students</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">We Value Our <br> Students</a></h4>
 						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
 					</div>
 				</div>
@@ -479,9 +479,9 @@
 				<!-- Institute Block One -->
 				<div class="institute-block_one color-three col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.png') }})"></div>
+						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-education"></div>
-						<h4 class="institute-block_one-heading"><a href="course-detail.html">Male Female <br> Teachers</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Male Female <br> Teachers</a></h4>
 						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
 					</div>
 				</div>
@@ -489,9 +489,9 @@
 				<!-- Institute Block One -->
 				<div class="institute-block_one color-four col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.png') }})"></div>
+						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-time-management"></div>
-						<h4 class="institute-block_one-heading"><a href="course-detail.html">Flexible <br> Timings</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Flexible <br> Timings</a></h4>
 						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
 					</div>
 				</div>
@@ -502,14 +502,14 @@
 	<!-- End Institute One -->
 
 	<!-- Testimonial One -->
-	<section class="testimonial-one" style="background-image:url({{ asset('assets/images/background/testimonial-one_bg.png') }})">
+	<section class="testimonial-one" style="background-image:url({{ asset('assets/images/background/testimonial-one_bg.webp') }})">
 		<div class="auto-container">
 			<div class="row clearfix">
 
 				<!-- Image Column -->
 				<div class="testimonial-one_image-column col-lg-4 col-md-12 col-sm-12">
 					<div class="testimonial-one_image">
-						<img src="{{ asset('assets/images/resource/testimonial.jpg') }}" alt="" />
+						<img src="{{ asset('assets/images/resource/testimonial.webp') }}" alt="" />
 					</div>
 				</div>
 
@@ -519,7 +519,7 @@
 
 						<!-- Ameen -->
 						<div class="testimonial-one_ameen">
-							<img src="{{ asset('assets/images/icons/ameen-2.png') }}" alt="" />
+							<img src="{{ asset('assets/images/icons/ameen-2.webp') }}" alt="" />
 						</div>
 
 						<!-- Carousel -->
@@ -542,7 +542,7 @@
 											<div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
-													<img src="{{ asset('assets/images/resource/author-1.png') }}" alt="" />
+													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 												</div>
 												Hafiz bin Usif
 												<span>Quran Teacher</span>
@@ -567,7 +567,7 @@
 											<div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
-													<img src="{{ asset('assets/images/resource/author-1.png') }}" alt="" />
+													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 												</div>
 												Hafiz bin Usif
 												<span>Quran Teacher</span>
@@ -592,7 +592,7 @@
 											<div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
-													<img src="{{ asset('assets/images/resource/author-1.png') }}" alt="" />
+													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 												</div>
 												Hafiz bin Usif
 												<span>Quran Teacher</span>
@@ -642,7 +642,7 @@
 						</ul>
 						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="price.html" class="theme-btn btn-style-one">
+							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">free trial</span>
 									<span class="text-two">free trial</span>
@@ -667,7 +667,7 @@
 						</ul>
 						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="price.html" class="theme-btn btn-style-one">
+							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">free trial</span>
 									<span class="text-two">free trial</span>
@@ -692,7 +692,7 @@
 						</ul>
 						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="price.html" class="theme-btn btn-style-one">
+							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">free trial</span>
 									<span class="text-two">free trial</span>
@@ -717,7 +717,7 @@
 						</ul>
 						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="price.html" class="theme-btn btn-style-one">
+							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
 									<span class="text-one">free trial</span>
 									<span class="text-two">free trial</span>
@@ -743,7 +743,7 @@
 				</div>
 				<!-- Button Box -->
 				<div class="gallery-one_button">
-					<a href="contact.html" class="theme-btn btn-style-one">
+					<a href="{{ route('contact') }}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
 							<span class="text-one">Quick Start Now</span>
 							<span class="text-two">Quick Start Now</span>
@@ -762,8 +762,8 @@
 						<div class="gallery-block_one">
 							<div class="gallery-block_one-inner">
 								<div class="gallery-block_one-image">
-									<img src="{{ asset('assets/images/gallery/1.jpg') }}" alt="" />
-									<a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="service-detail.html"></a>
+									<img src="{{ asset('assets/images/gallery/1.webp') }}" alt="" />
+									<a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -775,8 +775,8 @@
 						<div class="gallery-block_one">
 							<div class="gallery-block_one-inner">
 								<div class="gallery-block_one-image">
-									<img src="{{ asset('assets/images/gallery/2.jpg') }}" alt="" />
-									<a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="service-detail.html"></a>
+									<img src="{{ asset('assets/images/gallery/2.webp') }}" alt="" />
+									<a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -788,8 +788,8 @@
 						<div class="gallery-block_one">
 							<div class="gallery-block_one-inner">
 								<div class="gallery-block_one-image">
-									<img src="{{ asset('assets/images/gallery/3.jpg') }}" alt="" />
-									<a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="service-detail.html"></a>
+									<img src="{{ asset('assets/images/gallery/3.webp') }}" alt="" />
+									<a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -801,8 +801,8 @@
 						<div class="gallery-block_one">
 							<div class="gallery-block_one-inner">
 								<div class="gallery-block_one-image">
-									<img src="{{ asset('assets/images/gallery/4.jpg') }}" alt="" />
-									<a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="service-detail.html"></a>
+									<img src="{{ asset('assets/images/gallery/4.webp') }}" alt="" />
+									<a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -829,7 +829,7 @@
 				<div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="news-block_one-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
 						<div class="news-block_one-image">
-							<a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/news-1.jpg') }}" alt="" /></a>
+							<a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/news-1.webp') }}" alt="" /></a>
 						</div>
 						<div class="news-block_one-content">
 							<ul class="news-block_one-meta">
@@ -841,7 +841,7 @@
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
-										<img src="{{ asset('assets/images/resource/author-2.png') }}" alt="" />
+										<img src="{{ asset('assets/images/resource/author-2.webp') }}" alt="" />
 									</div>
 									amir khan
 								</div>
@@ -855,7 +855,7 @@
 				<div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="news-block_one-inner wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1500ms">
 						<div class="news-block_one-image">
-							<a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/news-2.jpg') }}" alt="" /></a>
+							<a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/news-2.webp') }}" alt="" /></a>
 						</div>
 						<div class="news-block_one-content">
 							<ul class="news-block_one-meta">
@@ -867,7 +867,7 @@
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
-										<img src="{{ asset('assets/images/resource/author-3.png') }}" alt="" />
+										<img src="{{ asset('assets/images/resource/author-3.webp') }}" alt="" />
 									</div>
 									amir khan
 								</div>
@@ -881,7 +881,7 @@
 				<div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="news-block_one-inner wow fadeInRight" data-wow-delay="150ms" data-wow-duration="1500ms">
 						<div class="news-block_one-image">
-							<a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/news-3.jpg') }}" alt="" /></a>
+							<a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/news-3.webp') }}" alt="" /></a>
 						</div>
 						<div class="news-block_one-content">
 							<ul class="news-block_one-meta">
@@ -893,7 +893,7 @@
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
-										<img src="{{ asset('assets/images/resource/author-4.png') }}" alt="" />
+										<img src="{{ asset('assets/images/resource/author-4.webp') }}" alt="" />
 									</div>
 									amir khan
 								</div>
@@ -912,12 +912,12 @@
 	<section class="cta-two">
 		<div class="auto-container">
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
-				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.png') }})"></div>
+				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<div class="cta-two_icon flaticon-nabawi-mosque"></div>
 				<h3 class="cta-two_heading">Proud to be serving thousands of Muslim <br> Families around the World</h3>
 				<!-- Button Box -->
 				<div class="cta-two_button">
-					<a href="contact.html" class="theme-btn btn-style-three">
+					<a href="{{ route('contact') }}" class="theme-btn btn-style-three">
 						<span class="btn-wrap">
 							<span class="text-one">get in touch</span>
 							<span class="text-two">get in touch</span>

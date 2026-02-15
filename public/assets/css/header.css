@@ -640,7 +640,7 @@
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	background:url(../images/icons/right-arrow.png) no-repeat;
+	background:url(../images/icons/right-arrow.webp) no-repeat;
 }
 
 .main-header .main-menu .navigation > li > ul > li:hover > a{
@@ -833,7 +833,7 @@
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-	background:url(../images/icons/right-arrow.png) no-repeat;
+	background:url(../images/icons/right-arrow.webp) no-repeat;
 }
 
 .main-header .main-menu .navigation > li > ul > li > ul > li > a:hover::before{
@@ -934,7 +934,7 @@
 	top: 8px;
 	width: 148px;
 	height: 99px;
-	background: url(../images/icons/logo-flag.png) no-repeat;
+	background: url(../images/icons/logo-flag.webp) no-repeat;
 }
 
 .main-header.header-style-two .header-upper .outer-box{
@@ -1119,7 +1119,7 @@
 	top:0px;
 	width:233px;
 	height:72px;
-	background:url(../images/background/logo-bg.png) no-repeat;
+	background:url(../images/background/logo-bg.webp) no-repeat;
 }
 
 .header-style-six .header_button-box .theme-btn{
@@ -1905,4 +1905,8 @@
 
 .main-header .main-menu .navigation > li.active-mobile-menu{
 	display:none;
+}
+
+.main-header .header-upper .logo-box .logo img {
+	max-width: 200px;
 }
