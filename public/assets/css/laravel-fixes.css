@@ -5,6 +5,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden;
+  top: 0 !important;
 }
 
 .page-wrapper {
@@ -23,6 +24,21 @@ body {
 
 .preloader {
   display: none !important;
+}
+
+/* Remove top gap injected by Google Translate/browser toolbars */
+body > .skiptranslate,
+.goog-te-banner-frame.skiptranslate,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+}
+
+body.translated-ltr,
+body.translated-rtl {
+  top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .cursor,

@@ -1,4 +1,4 @@
-﻿<header class="main-header">
+<header class="main-header">
 
     <!-- Header Top -->
     <div class="header-top">
