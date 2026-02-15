@@ -22,8 +22,8 @@
 					<div class="contact-info_column col-lg-4 col-md-6 col-sm-12">
 						<div class="contact-info_outer">
 							<div class="contact-info_icon fa-solid fa-location-dot fa-fw"></div>
-							<h4 class="contact-info_heading">Our Address</h4>
-							<div class="contact-info_text">Metro City Shop 11 floor <br> Fiolveien 230, Norway</div>
+							<h4 class="contact-info_heading">Our Office</h4>
+							<div class="contact-info_text">Metro City Shop 11 Floor <br> Fiolveien 230, Norway</div>
 						</div>
 					</div>
 
@@ -31,8 +31,8 @@
 					<div class="contact-info_column col-lg-4 col-md-6 col-sm-12">
 						<div class="contact-info_outer">
 							<div class="contact-info_icon fa-solid fa-phone fa-fw"></div>
-							<h4 class="contact-info_heading">Our Phone</h4>
-							<div class="contact-info_text">( +088 ) 48 26 48 26 <span>Letâ€™s Talk +88 01 27 14 101</span></div>
+							<h4 class="contact-info_heading">Call Us</h4>
+							<div class="contact-info_text">( +088 ) 48 26 48 26 <span>Let's Talk +88 01 27 14 101</span></div>
 						</div>
 					</div>
 
@@ -40,7 +40,7 @@
 					<div class="contact-info_column col-lg-4 col-md-6 col-sm-12">
 						<div class="contact-info_outer">
 							<div class="contact-info_icon fa-solid fa-envelope fa-fw"></div>
-							<h4 class="contact-info_heading">Email address</h4>
+							<h4 class="contact-info_heading">Email Address</h4>
 							<div class="contact-info_text"><a href="https://themazine.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f3ba80929f9eac828681929db3949e929a9fdd909c9e">[email&#160;protected]</a> <br> <a href="https://themazine.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a6efc8c0c9f9ced4e6c1cbc7cfca88c5c9cb">[email&#160;protected]</a></div>
 						</div>
 					</div>
@@ -54,7 +54,7 @@
 	<!-- Contact Form Box -->
 	<div class="contact-form_box">
 		<div class="auto-container">
-			<h4>Feel free to write Islamic anytime</h4>
+			<h4>Feel free to ask about classes anytime</h4>
 
 			<!-- Contact Form -->
 			<div class="contact-form">
@@ -65,11 +65,11 @@
 					</div>
 					
 					<div class="form-group">
-						<input type="text" name="email" placeholder="Your Email" required="">
+						<input type="text" name="email" placeholder="Your Email Address" required="">
 					</div>
 					
 					<div class="form-group">
-						<textarea class="" name="message" placeholder="Type your Message"></textarea>
+						<textarea class="" name="message" placeholder="Type your message"></textarea>
 					</div>
 					
 					<div class="form-group">
@@ -77,8 +77,8 @@
 						<div class="button-box">
 							<button type="submit" class="theme-btn btn-style-four">
 								<span class="btn-wrap">
-									<span class="text-one">Post Comment</span>
-									<span class="text-two">Post Comment</span>
+									<span class="text-one">Send Message</span>
+									<span class="text-two">Send Message</span>
 								</span>
 							</button>
 						</div>
@@ -100,4 +100,3 @@
 	</section>
 	<!-- End Map One -->
 @endsection
-

@@ -13,14 +13,14 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">Largest Online Madrasah</div>
+								<div class="slider-one_title">Trusted Online Quran Academy</div>
 								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
-								<div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
+								<div class="slider-one_text">Join quran learning online free classes with structured support for families worldwide.</div>
 								<div class="slider-one_button">
 									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
-											<span class="text-one">Find the course</span>
-											<span class="text-two">Find the course</span>
+											<span class="text-one">Start learning now</span>
+											<span class="text-two">Start learning now</span>
 										</span>
 									</a>
 								</div>
@@ -38,14 +38,14 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">Largest Online Madrasah</div>
+								<div class="slider-one_title">Trusted Online Quran Academy</div>
 								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
-								<div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
+								<div class="slider-one_text">Join quran learning online free classes with structured support for families worldwide.</div>
 								<div class="slider-one_button">
 									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
-											<span class="text-one">Find the course</span>
-											<span class="text-two">Find the course</span>
+											<span class="text-one">Start learning now</span>
+											<span class="text-two">Start learning now</span>
 										</span>
 									</a>
 								</div>
@@ -63,14 +63,14 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">Largest Online Madrasah</div>
+								<div class="slider-one_title">Trusted Online Quran Academy</div>
 								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
-								<div class="slider-one_text">Islamic online madrasah is an ISO certified educational institution of international standards</div>
+								<div class="slider-one_text">Join quran learning online free classes with structured support for families worldwide.</div>
 								<div class="slider-one_button">
 									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
-											<span class="text-one">Find the course</span>
-											<span class="text-two">Find the course</span>
+											<span class="text-one">Start learning now</span>
+											<span class="text-two">Start learning now</span>
 										</span>
 									</a>
 								</div>
@@ -100,7 +100,7 @@
 					<div class="feature-block_one col-lg-4 col-md-6 col-sm-12">
 						<div class="feature-block_one-inner">
 							<div class="feature-block_one-icon flaticon-quran"></div>
-							Learn quick <br> Quran Classes
+							quran lessons online free <br> with expert mentors
 						</div>
 					</div>
 
@@ -108,7 +108,7 @@
 					<div class="feature-block_one col-lg-4 col-md-6 col-sm-12">
 						<div class="feature-block_one-inner">
 							<div class="feature-block_one-icon flaticon-iso"></div>
-							ISO certified <br> islamic institution
+							free quran lessons <br> for every age group
 						</div>
 					</div>
 
@@ -116,7 +116,7 @@
 					<div class="feature-block_one col-lg-4 col-md-6 col-sm-12">
 						<div class="feature-block_one-inner">
 							<div class="feature-block_one-icon flaticon-islamic"></div>
-							Online Arabic <br> Classes For Kids
+							quran learning for kids <br> and families
 						</div>
 					</div>
 
@@ -140,19 +140,19 @@
 						<div class="sec-title">
 							<div class="sec-title_title d-flex align-items-center">Islamic Online Madrasah <span><img src="{{ asset('assets/images/icons/bismillah-2.webp') }}" alt="" /></span></div>
 							<h2 class="sec-title_heading">Welcome To Imman Quran Institute</h2>
-							<div class="sec-title_text">We welcome our users to Online Quran teaching services where we are offering multiple Islamic as well as character building and life reformation courses as per the teachings of Sharia.</div>
+							<div class="sec-title_text">We offer clear, practical guidance for anyone who wants to learn quran for beginners and follow authentic quran teachings in daily life.</div>
 						</div>
 						<div class="welcome-one_content">
 							<div class="welcome-one_content-image">
 								<img src="{{ asset('assets/images/resource/welcome.webp') }}" alt="" />
 							</div>
-							<p>There are many variations of passages of lorem ipsum available, but the majority have suffered business consulting</p>
+							<p>Our classes cover learning arabic for quran, tajweed practice, and memorization with personal attention in every session.</p>
 							<div class="welcome-one_learn">
 								<span class="welcome-one_learn-icon flaticon-mosque"></span>
 								Learn Online at Your <br> Own Pace
 							</div>
 						</div>
-						<p>We offer our students high-quality Arabic and Quran at affordable prices that meet their budget.</p>
+						<p>Students can learn quran online with tajweed, improve confidence, and build consistent study habits at affordable fees.</p>
 					</div>
 				</div>
 
@@ -196,7 +196,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">Online Quran <br> Classes</a></h4>
-							<div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_one-text">Our tajweed online course helps students learn to recite quran correctly with daily supervised practice.</div>
 						</div>
 						<div class="service-block_one-lower">
 							<a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -213,7 +213,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">Tafseer <br> Course</a></h4>
-							<div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_one-text">Choose tajweed courses online with step-by-step drills, recorded revision, and live teacher correction.</div>
 						</div>
 						<div class="service-block_one-lower">
 							<a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -230,7 +230,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">We Value <br> Our Students</a></h4>
-							<div class="service-block_one-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_one-text">Our online tajweed courses are designed for clear pronunciation and practical recitation fluency.</div>
 						</div>
 						<div class="service-block_one-lower">
 							<a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -256,7 +256,7 @@
 							<!-- Title Box -->
 							<div class="students-one_title-box">
 								<h3 class="students-one_title">Alhamdulillah we have reached over</h3>
-								<div class="students-one_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+								<div class="students-one_text">Families trust our teachers for disciplined schedules, progress tracking, and caring one-to-one support.</div>
 							</div>
 							<!-- Counter Two -->
 							<div class="students-one_counter">
@@ -287,7 +287,7 @@
 										4.5
 									</div>
 									<h4 class="top-rated_heading">Top Ratings on Trustpilot</h4>
-									<div class="top-rated_text">Lorem ipsum generators on the internet tend to repeat predefined chunks necessary on making this the first velit esse cillum dolore</div>
+									<div class="top-rated_text">Students and parents appreciate the clear teaching style, regular feedback, and simple lesson flow that supports steady improvement.</div>
 								</div>
 							</div>
 
@@ -297,8 +297,8 @@
 									<div class="passout-number">
 										22k
 									</div>
-									<h4 class="passout_heading">pass out</h4>
-									<div class="passout_text">Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt to labore et dolore pass out</div>
+									<h4 class="passout_heading">Graduates</h4>
+									<div class="passout_text">Our graduates show better recitation, stronger discipline, and consistent Quran study habits after each term.</div>
 								</div>
 							</div>
 
@@ -331,13 +331,13 @@
 							<div class="course-block_one-icon">
 								<img src="{{ asset('assets/images/icons/service-1.svg') }}" alt="" />
 							</div>
-							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Quran Intermediate Course brother</a></h4>
+							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Quran Intermediate Course</a></h4>
 							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
 								<li><span>50</span>enroll</li>
 							</ul>
-							<div class="course-block_one-text">There are many variations of lorem class passages of lorem ipsum available online</div>
+							<div class="course-block_one-text">A complete quran tajweed course for readers who want precise recitation and strong daily revision.</div>
 							<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
 								<a class="theme-btn course-block_one-study" href="#">study now</a>
 								<div class="course-block_one-price">$45.00 <span>$32.00</span></div>
@@ -362,7 +362,7 @@
 								<li><span>10</span>weeks</li>
 								<li><span>50</span>enroll</li>
 							</ul>
-							<div class="course-block_one-text">There are many variations of lorem class passages of lorem ipsum available online</div>
+							<div class="course-block_one-text">This tajweed course online supports sisters with flexible timing and focused pronunciation feedback.</div>
 							<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
 								<a class="theme-btn course-block_one-study" href="#">study now</a>
 								<div class="course-block_one-price">$45.00 <span>$32.00</span></div>
@@ -387,7 +387,7 @@
 								<li><span>10</span>weeks</li>
 								<li><span>50</span>enroll</li>
 							</ul>
-							<div class="course-block_one-text">There are many variations of lorem class passages of lorem ipsum available online</div>
+							<div class="course-block_one-text">Learning quran for beginners starts here with simple lessons, repetition, and clear teacher guidance.</div>
 							<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
 								<a class="theme-btn course-block_one-study" href="#">study now</a>
 								<div class="course-block_one-price">$45.00 <span>$32.00</span></div>
@@ -412,7 +412,7 @@
 								<li><span>10</span>weeks</li>
 								<li><span>50</span>enroll</li>
 							</ul>
-							<div class="course-block_one-text">There are many variations of lorem class passages of lorem ipsum available online</div>
+							<div class="course-block_one-text">A practical path to online hifz quran with guided memorization, repetition plans, and weekly assessment.</div>
 							<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
 								<a class="theme-btn course-block_one-study" href="#">study now</a>
 								<div class="course-block_one-price">$45.00 <span>$32.00</span></div>
@@ -436,8 +436,8 @@
 				<div class="cta-one_button">
 					<a href="{{ route('contact') }}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
-							<span class="text-one">Quick Start Now</span>
-							<span class="text-two">Quick Start Now</span>
+							<span class="text-one">Begin Your Class</span>
+							<span class="text-two">Begin Your Class</span>
 						</span>
 					</a>
 				</div>
@@ -461,8 +461,8 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-quran-1"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Expert Quran <br> Tutor</a></h4>
-						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Best Quran <br> Teacher</a></h4>
+						<div class="institute-block_one-text">Train with the best quran teacher to learn quran with tajweed and improve recitation in every lesson.</div>
 					</div>
 				</div>
 
@@ -471,8 +471,8 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-pray-1"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">We Value Our <br> Students</a></h4>
-						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Learn Quran <br> Reading</a></h4>
+						<div class="institute-block_one-text">Structured plans for learn quran reading with tajweed for beginners and learning the quran for beginners.</div>
 					</div>
 				</div>
 
@@ -481,8 +481,8 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-education"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Male Female <br> Teachers</a></h4>
-						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Female Quran <br> Teacher Online</a></h4>
+						<div class="institute-block_one-text">Choose a female quran teacher online and easily find quran teacher guidance for your family.</div>
 					</div>
 				</div>
 
@@ -491,8 +491,8 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-time-management"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Flexible <br> Timings</a></h4>
-						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">How to Learn <br> Quran at Home</a></h4>
+						<div class="institute-block_one-text">Flexible schedules support how to learn quran at home through trusted online quran teaching websites.</div>
 					</div>
 				</div>
 
@@ -538,13 +538,13 @@
 												<span class="fa-regular fa-star fa-fw"></span>
 												<span class="fa-regular fa-star fa-fw"></span>
 											</div>
-											<h4 class="testimonial-block_one-heading">Customers Review</h4>
-											<div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
+											<h4 class="testimonial-block_one-heading">Student Feedback</h4>
+											<div class="testimonial-block_one-text">The classes are clear, well paced, and supportive. I improved my recitation and confidence in a short time.</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
 													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 												</div>
-												Hafiz bin Usif
+												Muhammad Farhan
 												<span>Quran Teacher</span>
 											</div>
 										</div>
@@ -563,13 +563,13 @@
 												<span class="fa-regular fa-star fa-fw"></span>
 												<span class="fa-regular fa-star fa-fw"></span>
 											</div>
-											<h4 class="testimonial-block_one-heading">Customers Review</h4>
-											<div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
+											<h4 class="testimonial-block_one-heading">Student Feedback</h4>
+											<div class="testimonial-block_one-text">The classes are clear, well paced, and supportive. I improved my recitation and confidence in a short time.</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
 													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 												</div>
-												Hafiz bin Usif
+												Muhammad Farhan
 												<span>Quran Teacher</span>
 											</div>
 										</div>
@@ -588,13 +588,13 @@
 												<span class="fa-regular fa-star fa-fw"></span>
 												<span class="fa-regular fa-star fa-fw"></span>
 											</div>
-											<h4 class="testimonial-block_one-heading">Customers Review</h4>
-											<div class="testimonial-block_one-text">Honestly i don’t have enough good words to write about resala academy everyone in resala academy are very nice very calm they are also flexible about your schedules. i just want say</div>
+											<h4 class="testimonial-block_one-heading">Student Feedback</h4>
+											<div class="testimonial-block_one-text">The classes are clear, well paced, and supportive. I improved my recitation and confidence in a short time.</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
 													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 												</div>
-												Hafiz bin Usif
+												Muhammad Farhan
 												<span>Quran Teacher</span>
 											</div>
 										</div>
@@ -745,8 +745,8 @@
 				<div class="gallery-one_button">
 					<a href="{{ route('contact') }}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
-							<span class="text-one">Quick Start Now</span>
-							<span class="text-two">Quick Start Now</span>
+							<span class="text-one">Begin Your Class</span>
+							<span class="text-two">Begin Your Class</span>
 						</span>
 					</a>
 				</div>
@@ -836,14 +836,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Abandoning Prayer – Why to Avoid at all Costs?</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">How to start quran lessons online free with a consistent routine</a></h5>
+							<div class="news-block_one-text">A practical guide for students beginning with free quran lessons and quran learning online free study plans.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-2.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -862,14 +862,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">What are the Conditions of the Shahadah in Islam</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Choosing the right tajweed online course for daily recitation</a></h5>
+							<div class="news-block_one-text">Compare tajweed courses online and online tajweed courses to choose the best online tajweed course for your level.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-3.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -888,14 +888,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Types of Khawf (Fear) and Tawakkul (Reliance) in Islam</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Best way to hifz quran with focused revision blocks</a></h5>
+							<div class="news-block_one-text">Learn how online hifz quran, quran hifz online plans, and online quran hifz classes improve memorization outcomes.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-4.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -914,7 +914,7 @@
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
 				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<div class="cta-two_icon flaticon-nabawi-mosque"></div>
-				<h3 class="cta-two_heading">Proud to be serving thousands of Muslim <br> Families around the World</h3>
+				<h3 class="cta-two_heading">Learn Quran with Tajweed Online <br> with Trusted Teachers</h3>
 				<!-- Button Box -->
 				<div class="cta-two_button">
 					<a href="{{ route('contact') }}" class="theme-btn btn-style-three">

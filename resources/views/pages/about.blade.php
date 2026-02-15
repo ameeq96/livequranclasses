@@ -48,7 +48,7 @@
 						<div class="sec-title">
 							<div class="sec-title_title d-flex align-items-center">Islamic Online Madrasah <span><img src="{{ asset('assets/images/icons/bismillah-2.webp') }}" alt="" /></span></div>
 							<h2 class="sec-title_heading">Online Islamic School At Home</h2>
-							<div class="sec-title_text">We welcome our users to Online Quran teaching services where we are offering multiple Islamic as well as character building and life reformation courses as per the teachings of Sharia.</div>
+							<div class="sec-title_text">Our academy is built for students who want online quran learning with tajweed and a clear, reliable study path.</div>
 						</div>
 						<div class="welcome-two_middle-content">
 							<div class="welcome-two_icon">
@@ -68,7 +68,7 @@
 								<img src="{{ asset('assets/images/resource/welcome-3.webp') }}" alt="" />
 							</div>
 							<h5 class="welcome-two_title">Peaceful</h5>
-							<p>Working for peace & serving humanity. lorem free market to available, but the majority have alteration in some form</p>
+							<p>We help families learn about the quran with practical lessons, respectful teachers, and measurable outcomes.</p>
 						</div>
 					</div>
 				</div>
@@ -93,8 +93,8 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-quran-1"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Expert Quran <br> Tutor</a></h4>
-						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Best Quran <br> Teacher</a></h4>
+						<div class="institute-block_one-text">Train with the best quran teacher to learn quran with tajweed and improve recitation in every lesson.</div>
 					</div>
 				</div>
 
@@ -103,8 +103,8 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-pray-1"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">We Value Our <br> Students</a></h4>
-						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Learn Quran <br> Reading</a></h4>
+						<div class="institute-block_one-text">Structured plans for learn quran reading with tajweed for beginners and learning the quran for beginners.</div>
 					</div>
 				</div>
 
@@ -113,8 +113,8 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-education"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Male Female <br> Teachers</a></h4>
-						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Female Quran <br> Teacher Online</a></h4>
+						<div class="institute-block_one-text">Choose a female quran teacher online and easily find quran teacher guidance for your family.</div>
 					</div>
 				</div>
 
@@ -123,8 +123,8 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-time-management"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Flexible <br> Timings</a></h4>
-						<div class="institute-block_one-text">All the classes of online Quran teaching are conducted by well qualified Islamic scholars</div>
+						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">How to Learn <br> Quran at Home</a></h4>
+						<div class="institute-block_one-text">Flexible schedules support how to learn quran at home through trusted online quran teaching websites.</div>
 					</div>
 				</div>
 
@@ -146,7 +146,7 @@
 							<!-- Title Box -->
 							<div class="students-one_title-box">
 								<h3 class="students-one_title">Alhamdulillah we have reached over</h3>
-								<div class="students-one_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+								<div class="students-one_text">From children to adults, we provide consistent support for learning the quran for beginners and advanced learners.</div>
 							</div>
 							<!-- Counter Two -->
 							<div class="students-one_counter">
@@ -177,7 +177,7 @@
 										4.5
 									</div>
 									<h4 class="top-rated_heading">Top Ratings on Trustpilot</h4>
-									<div class="top-rated_text">Lorem ipsum generators on the internet tend to repeat predefined chunks necessary on making this the first velit esse cillum dolore</div>
+									<div class="top-rated_text">Parents call this the best way to learn quran because classes are structured, simple, and teacher-led.</div>
 								</div>
 							</div>
 
@@ -187,8 +187,8 @@
 									<div class="passout-number">
 										22k
 									</div>
-									<h4 class="passout_heading">pass out</h4>
-									<div class="passout_text">Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt to labore et dolore pass out</div>
+									<h4 class="passout_heading">Graduates</h4>
+									<div class="passout_text">Students graduate with better fluency, stronger confidence, and clear understanding of recitation principles.</div>
 								</div>
 							</div>
 
@@ -425,13 +425,13 @@
 									<span class="fa-regular fa-star fa-fw"></span>
 									<span class="fa-regular fa-star fa-fw"></span>
 								</div>
-								<h4 class="testimonial-block_two-heading">Customers Review</h4>
-								<div class="testimonial-block_two-text">Best platform for learning quran and arabic for kids. The way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
+								<h4 class="testimonial-block_two-heading">Student Feedback</h4>
+								<div class="testimonial-block_two-text">Our experience has been excellent. Lessons are simple, engaging, and practical, especially for children who are learning steadily with confidence.</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
 										<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 									</div>
-									Hafiz bin Usif
+									Muhammad Farhan
 									<span>Quran Teacher</span>
 								</div>
 								<!-- Ameen -->
@@ -458,13 +458,13 @@
 									<span class="fa-regular fa-star fa-fw"></span>
 									<span class="fa-regular fa-star fa-fw"></span>
 								</div>
-								<h4 class="testimonial-block_two-heading">Customers Review</h4>
-								<div class="testimonial-block_two-text">Best platform for learning quran and arabic for kids. The way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
+								<h4 class="testimonial-block_two-heading">Student Feedback</h4>
+								<div class="testimonial-block_two-text">Our experience has been excellent. Lessons are simple, engaging, and practical, especially for children who are learning steadily with confidence.</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
 										<img src="{{ asset('assets/images/resource/author-6.webp') }}" alt="" />
 									</div>
-									Ibrahim klip
+									Ibrahim Khalid
 									<span>Quran Teacher</span>
 								</div>
 								<!-- Ameen -->
@@ -491,13 +491,13 @@
 									<span class="fa-regular fa-star fa-fw"></span>
 									<span class="fa-regular fa-star fa-fw"></span>
 								</div>
-								<h4 class="testimonial-block_two-heading">Customers Review</h4>
-								<div class="testimonial-block_two-text">Best platform for learning quran and arabic for kids. The way of teaching is the best and kids feel comfortable with them thank you mishkah for teaching</div>
+								<h4 class="testimonial-block_two-heading">Student Feedback</h4>
+								<div class="testimonial-block_two-text">Our experience has been excellent. Lessons are simple, engaging, and practical, especially for children who are learning steadily with confidence.</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
 										<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
 									</div>
-									Hafiz bin Usif
+									Muhammad Farhan
 									<span>Quran Teacher</span>
 								</div>
 								<!-- Ameen -->
@@ -529,7 +529,7 @@
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
 				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<div class="cta-two_icon flaticon-nabawi-mosque"></div>
-				<h3 class="cta-two_heading">Proud to be serving thousands of Muslim <br> Families around the World</h3>
+				<h3 class="cta-two_heading">Learn Quran with Tajweed Online <br> with Trusted Teachers</h3>
 				<!-- Button Box -->
 				<div class="cta-two_button">
 					<a href="{{ route('contact') }}" class="theme-btn btn-style-three">
@@ -544,4 +544,3 @@
 	</section>
 	<!-- End CTA One -->
 @endsection
-

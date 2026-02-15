@@ -27,7 +27,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Online Quran <br> Classes</a></h4>
-							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_two-text">A focused program to learn quran reading with tajweed for beginners through live guided sessions.</div>
 						</div>
 						<div class="service-block_two-lower">
 							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -44,7 +44,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Online Islamic <br> Classes</a></h4>
-							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_two-text">Balanced lessons for islamic studies, recitation, and learning quran arabic language step by step.</div>
 						</div>
 						<div class="service-block_two-lower">
 							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -61,7 +61,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Expert Quran <br> Tutor</a></h4>
-							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_two-text">Learn with the best quran teacher support and progress plans that make recitation easier every week.</div>
 						</div>
 						<div class="service-block_two-lower">
 							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -78,7 +78,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Quranic Junior <br> Al-Hafiz</a></h4>
-							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_two-text">A complete plan for quran hifz online with revision cycles and one-to-one memorization checks.</div>
 						</div>
 						<div class="service-block_two-lower">
 							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -95,7 +95,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Quran <br> Translation</a></h4>
-							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_two-text">Practical translation and reflection classes for students who want to learn arabic for quran clearly.</div>
 						</div>
 						<div class="service-block_two-lower">
 							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -112,7 +112,7 @@
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
 							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Islamic Studies For <br> Kids Course</a></h4>
-							<div class="service-block_two-text">There are many variations of passages of lorem ipsum available lorem ipsum dolor sit amet</div>
+							<div class="service-block_two-text">Kid-friendly tracks for learn to read quran with tajweed and confident pronunciation from day one.</div>
 						</div>
 						<div class="service-block_two-lower">
 							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
@@ -123,12 +123,12 @@
 			</div>
 
 			<!-- Styled Pagination -->
-			<ul class="styled-pagination text-center">
+			{{-- <ul class="styled-pagination text-center">
 				<li><a href="#" class="active">1</a></li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
 				<li class="next"><a href="#">next</a></li>
-			</ul>
+			</ul> --}}
 			<!-- End Styled Pagination -->
 
 		</div>
@@ -141,7 +141,7 @@
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
 				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<div class="cta-two_icon flaticon-nabawi-mosque"></div>
-				<h3 class="cta-two_heading">Proud to be serving thousands of Muslim <br> Families around the World</h3>
+				<h3 class="cta-two_heading">Learn Quran with Tajweed Online <br> with Trusted Teachers</h3>
 				<!-- Button Box -->
 				<div class="cta-two_button">
 					<a href="{{ route('contact') }}" class="theme-btn btn-style-three">
@@ -156,4 +156,3 @@
 	</section>
 	<!-- End CTA One -->
 @endsection
-

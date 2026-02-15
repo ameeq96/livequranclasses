@@ -29,14 +29,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Abandoning Prayer – Why to Avoid at all Costs?</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">How to start quran lessons online free with a consistent routine</a></h5>
+							<div class="news-block_one-text">A practical guide for students beginning with free quran lessons and quran learning online free study plans.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-2.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -55,14 +55,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">What are the Conditions of the Shahadah in Islam</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Choosing the right tajweed online course for daily recitation</a></h5>
+							<div class="news-block_one-text">Compare tajweed courses online and online tajweed courses to choose the best online tajweed course for your level.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-3.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -81,14 +81,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Types of Khawf (Fear) and Tawakkul (Reliance) in Islam</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Best way to hifz quran with focused revision blocks</a></h5>
+							<div class="news-block_one-text">Learn how online hifz quran, quran hifz online plans, and online quran hifz classes improve memorization outcomes.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-4.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -107,14 +107,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">The Purpose of Revelation of the Holy Quran</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Learn arabic for quran and understand ayah meanings clearly</a></h5>
+							<div class="news-block_one-text">A simple roadmap to learn arabic language to understand quran and improve learning arabic for quran at home.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-8.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -133,14 +133,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Ten Matters Which Invalidate a Person’s Islam</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Learn quran for beginners: how to read quran in arabic</a></h5>
+							<div class="news-block_one-text">Step-by-step tips for learning quran for beginners, learn to read quran, and learn how to read the quran with confidence.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-9.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -159,14 +159,14 @@
 								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
-							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">Great Challenge to Produce One Chapter Like the Holy Quran</a></h5>
-							<div class="news-block_one-text">There are many variations of passages of lorem Ipsum available islam courses</div>
+							<h5 class="news-block_one-heading"><a href="{{ route('blog.detail') }}">How to find quran teacher online for your family goals</a></h5>
+							<div class="news-block_one-text">Use trusted online quran teaching websites, compare preply quran teacher options, and find female quran teacher near me support.</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
 										<img src="{{ asset('assets/images/resource/author-10.webp') }}" alt="" />
 									</div>
-									amir khan
+									Admin Team
 								</div>
 								<a class="news-block_one-more theme-btn" href="{{ route('blog.detail') }}">read more</a>
 							</div>
@@ -185,7 +185,7 @@
 			<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
 				<div class="cta-two_bg" style="background-image:url({{ asset('assets/images/background/cta-one_bg.webp') }})"></div>
 				<div class="cta-two_icon flaticon-nabawi-mosque"></div>
-				<h3 class="cta-two_heading">Proud to be serving thousands of Muslim <br> Families around the World</h3>
+				<h3 class="cta-two_heading">Learn Quran with Tajweed Online <br> with Trusted Teachers</h3>
 				<!-- Button Box -->
 				<div class="cta-two_button">
 					<a href="{{ route('contact') }}" class="theme-btn btn-style-three">
@@ -200,4 +200,3 @@
 	</section>
 	<!-- End CTA One -->
 @endsection
-

@@ -34,11 +34,11 @@
 									<div class="footer-widget links-widget">
 										<h4 class="footer-title">Links</h4>
 										<ul class="footer-list">
-											<li><a href="#">About us</a></li>
-											<li><a href="#">Scholars</a></li>
-											<li><a href="#">Courses</a></li>
-											<li><a href="#">Latest News</a></li>
-											<li><a href="#">Contact</a></li>
+											<li><a href="#">About Us</a></li>
+											<li><a href="#">Best Quran Teacher</a></li>
+											<li><a href="#">Learn Quran with Tajweed</a></li>
+											<li><a href="#">Quran Teachings</a></li>
+											<li><a href="#">Find Quran Teacher</a></li>
 										</ul>
 									</div>
 								</div>
@@ -55,21 +55,21 @@
 									<div class="footer-widget links-widget">
 										<h4 class="footer-title">Other Link</h4>
 										<ul class="footer-list">
-											<li><a href="#">Online Courses</a></li>
-											<li><a href="#">Audio Listening</a></li>
-											<li><a href="#">Sehri & Iftar</a></li>
-											<li><a href="#">Our Events</a></li>
-											<li><a href="#">Quran Hifz Classes</a></li>
+											<li><a href="#">Online Learn Quran with Tajweed</a></li>
+											<li><a href="#">learn to read quran with tajweed</a></li>
+											<li><a href="#">how to learn quran at home</a></li>
+											<li><a href="#">online quran teaching websites</a></li>
+											<li><a href="#">hifz quran classes</a></li>
 										</ul>
 									</div>
 								</div>
 
 								<!-- Footer Column -->
 								<div class="footer-column col-lg-6 col-md-6 col-sm-12">
-									<div class="footer-widget newsletter-widget">
-										<h4 class="footer-title">newsletter</h4>
-										<div class="footer-text">Waiting for your message is not your important time</div>
-										<div class="newsletter-box">
+									<div class="footer-widget Newsletter-widget">
+										<h4 class="footer-title">Newsletter</h4>
+										<div class="footer-text">Get updates about classes, schedules, and new student resources.</div>
+										<div class="Newsletter-box">
 											<form method="get" action="{{ route('contact') }}">
 												<div class="form-group">
 													<input type="email" name="search-field" value="" placeholder="email address" required>

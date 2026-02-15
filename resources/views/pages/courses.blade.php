@@ -28,8 +28,8 @@
 							<div class="course-block_two-icon">
 								<img src="{{ asset('assets/images/icons/course-block_two.webp') }}" alt="" />
 							</div>
-							<a href="{{ route('course.detail') }}" class="course-block_two-study">Study Now</a>
-							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">Quran Intermediate Course brother</a></h4>
+							<a href="{{ route('course.detail') }}" class="course-block_two-study">Enroll Now</a>
+							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">learn quran for beginners</a></h4>
 							<ul class="course-block_two-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -38,10 +38,10 @@
 							<div class="course-block_two-lower d-flex justify-content-between flex-wrap">
 								<div class="course-block_two-author">
 									<div class="course-block_two-author_image"><img src="{{ asset('assets/images/resource/author-5.webp') }}" alt="" /></div>
-									<strong>Habib Al Noor</strong>
+									<strong>Ustadh Salman</strong>
 									Arabic Teacher
 								</div>
-								<div class="course-block_two-price">$22.00 <span>course free</span></div>
+								<div class="course-block_two-price">$22.00 <span>course plan</span></div>
 							</div>
 						</div>
 					</div>
@@ -57,8 +57,8 @@
 							<div class="course-block_two-icon">
 								<img src="{{ asset('assets/images/icons/course-block_two.webp') }}" alt="" />
 							</div>
-							<a href="{{ route('course.detail') }}" class="course-block_two-study">Study Now</a>
-							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">Online Quran Memorization Course</a></h4>
+							<a href="{{ route('course.detail') }}" class="course-block_two-study">Enroll Now</a>
+							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">online quran hifz classes</a></h4>
 							<ul class="course-block_two-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -67,10 +67,10 @@
 							<div class="course-block_two-lower d-flex justify-content-between flex-wrap">
 								<div class="course-block_two-author">
 									<div class="course-block_two-author_image"><img src="{{ asset('assets/images/resource/author-4.webp') }}" alt="" /></div>
-									<strong>Habib Al Noor</strong>
+									<strong>Ustadh Salman</strong>
 									Arabic Teacher
 								</div>
-								<div class="course-block_two-price">$22.00 <span>course free</span></div>
+								<div class="course-block_two-price">$22.00 <span>course plan</span></div>
 							</div>
 						</div>
 					</div>
@@ -86,8 +86,8 @@
 							<div class="course-block_two-icon">
 								<img src="{{ asset('assets/images/icons/course-block_two.webp') }}" alt="" />
 							</div>
-							<a href="{{ route('course.detail') }}" class="course-block_two-study">Study Now</a>
-							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">Tafseer of Surah Al-Fatiha Short Course </a></h4>
+							<a href="{{ route('course.detail') }}" class="course-block_two-study">Enroll Now</a>
+							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">learn arabic language to understand quran</a></h4>
 							<ul class="course-block_two-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -96,10 +96,10 @@
 							<div class="course-block_two-lower d-flex justify-content-between flex-wrap">
 								<div class="course-block_two-author">
 									<div class="course-block_two-author_image"><img src="{{ asset('assets/images/resource/author-2.webp') }}" alt="" /></div>
-									<strong>Habib Al Noor</strong>
+									<strong>Ustadh Salman</strong>
 									Arabic Teacher
 								</div>
-								<div class="course-block_two-price">$22.00 <span>course free</span></div>
+								<div class="course-block_two-price">$22.00 <span>course plan</span></div>
 							</div>
 						</div>
 					</div>
@@ -115,8 +115,8 @@
 							<div class="course-block_two-icon">
 								<img src="{{ asset('assets/images/icons/course-block_two.webp') }}" alt="" />
 							</div>
-							<a href="{{ route('course.detail') }}" class="course-block_two-study">Study Now</a>
-							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">Online Tajweed Rules Course</a></h4>
+							<a href="{{ route('course.detail') }}" class="course-block_two-study">Enroll Now</a>
+							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">best online tajweed course</a></h4>
 							<ul class="course-block_two-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -125,10 +125,10 @@
 							<div class="course-block_two-lower d-flex justify-content-between flex-wrap">
 								<div class="course-block_two-author">
 									<div class="course-block_two-author_image"><img src="{{ asset('assets/images/resource/author-3.webp') }}" alt="" /></div>
-									<strong>Habib Al Noor</strong>
+									<strong>Ustadh Salman</strong>
 									Arabic Teacher
 								</div>
-								<div class="course-block_two-price">$22.00 <span>course free</span></div>
+								<div class="course-block_two-price">$22.00 <span>course plan</span></div>
 							</div>
 						</div>
 					</div>
@@ -144,8 +144,8 @@
 							<div class="course-block_two-icon">
 								<img src="{{ asset('assets/images/icons/course-block_two.webp') }}" alt="" />
 							</div>
-							<a href="{{ route('course.detail') }}" class="course-block_two-study">Study Now</a>
-							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">Online Quran ijazah Course</a></h4>
+							<a href="{{ route('course.detail') }}" class="course-block_two-study">Enroll Now</a>
+							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">learn quran recitation with tajweed</a></h4>
 							<ul class="course-block_two-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -154,10 +154,10 @@
 							<div class="course-block_two-lower d-flex justify-content-between flex-wrap">
 								<div class="course-block_two-author">
 									<div class="course-block_two-author_image"><img src="{{ asset('assets/images/resource/author-5.webp') }}" alt="" /></div>
-									<strong>Habib Al Noor</strong>
+									<strong>Ustadh Salman</strong>
 									Arabic Teacher
 								</div>
-								<div class="course-block_two-price">$22.00 <span>course free</span></div>
+								<div class="course-block_two-price">$22.00 <span>course plan</span></div>
 							</div>
 						</div>
 					</div>
@@ -173,8 +173,8 @@
 							<div class="course-block_two-icon">
 								<img src="{{ asset('assets/images/icons/course-block_two.webp') }}" alt="" />
 							</div>
-							<a href="{{ route('course.detail') }}" class="course-block_two-study">Study Now</a>
-							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">Islamic Philosophy and Quranic Studies</a></h4>
+							<a href="{{ route('course.detail') }}" class="course-block_two-study">Enroll Now</a>
+							<h4 class="course-block_two-heading"><a href="{{ route('course.detail') }}">learning arabic for quran</a></h4>
 							<ul class="course-block_two-list d-flex justify-content-between flex-wrap align-items-center">
 								<li><span>20</span>lessons</li>
 								<li><span>10</span>weeks</li>
@@ -183,10 +183,10 @@
 							<div class="course-block_two-lower d-flex justify-content-between flex-wrap">
 								<div class="course-block_two-author">
 									<div class="course-block_two-author_image"><img src="{{ asset('assets/images/resource/author-4.webp') }}" alt="" /></div>
-									<strong>Habib Al Noor</strong>
+									<strong>Ustadh Salman</strong>
 									Arabic Teacher
 								</div>
-								<div class="course-block_two-price">$22.00 <span>course free</span></div>
+								<div class="course-block_two-price">$22.00 <span>course plan</span></div>
 							</div>
 						</div>
 					</div>

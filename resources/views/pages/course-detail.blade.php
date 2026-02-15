@@ -44,8 +44,8 @@
 									</ul>
 									<div class="course-detail_price">$92.00 <span>Course Fee</span></div>
 								</div>
-								<h4 class="course-detail_subtitle">Overview</h4>
-								<p>This class is for students who can fluently read Qurâ€™an. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
+								<h4 class="course-detail_subtitle">Course Overview</h4>
+								<p>This class is designed for students who already read Quran and want structured improvement in fluency, correction, and consistency.</p>
 
 								<!-- Product Info Tabs -->
 								<div class="course-detail-info-tabs">
@@ -67,105 +67,105 @@
 											<div class="tab active-tab" id="prod-curriculum">
 												<div class="content">
 													<h4 class="course-detail_subtitle">Course Structure</h4>
-													<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
+													<p>Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</p>
 
 													<!-- Accordion Box -->
 													<ul class="accordion-box">
 														
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Quran Literacy, level 1 <i class="preview">preview</i></div>
+															<div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>learn to read the quran, level 1 <i class="preview">preview</i></div>
 															<div class="acc-content current">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
 																	
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Basic Quran Memorization, level 2</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>learn and memorize quran, level 2</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Quran Tajweed, level 1</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>learn tajweed quran, level 1</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Intermediate Quran Level Course</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>learn quran with tajweed online, intermediate level</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
 
 													</ul>
 
-													<h4 class="course-detail_subtitle">Intermediate Quran Level Course</h4>
-													<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
+													<h4 class="course-detail_subtitle">learn quran with tajweed online, intermediate level</h4>
+													<p>Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</p>
 
 													<!-- Accordion Box -->
 													<ul class="accordion-box">
 														
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Quran Memorization Lesson 1 <i class="preview">preview</i></div>
+															<div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>quran hifz online lesson 1 <i class="preview">preview</i></div>
 															<div class="acc-content current">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
 																	
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Quran Memorization Lesson 2</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>quran hifz online lesson 2</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Quran Memorization Lesson 3</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>quran hifz online lesson 3</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Quran Memorization Lesson 4</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>quran hifz online lesson 4</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>Quran Memorization Lesson 5 <span class="questions">questions</span> <i class="preview">preview</i></div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus flaticon-padlock"></span> <span class="icon icon-minus flaticon-check-mark"></span></div>quran hifz online lesson 5 <span class="questions">questions</span> <i class="preview">preview</i></div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</div>
+																	<div class="text">Each module is practical and structured, helping students learn how to read quran, review correctly, and progress with consistency.</div>
 																</div>
 															</div>
 														</li>
@@ -184,8 +184,8 @@
 															<div class="course-author_box-image">
 																<img src="{{ asset('assets/images/resource/author-14.webp') }}" alt="" />
 															</div>
-															<h5 class="course-author_box-heading">Rajab Saad <span>Arabic Teacher</span></h5>
-															<div class="course-author_box-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam</div>
+															<h5 class="course-author_box-heading">Rajab Saad <span>best quran teacher</span></h5>
+															<div class="course-author_box-text">He guides students through learning quran with tajweed and clear correction methods for steady results.</div>
 														</div>
 													</div>
 
@@ -208,7 +208,7 @@
 																		<img src="{{ asset('assets/images/resource/author-15.webp') }}" alt="" />
 																	</div>
 																	<h5 class="course-author_heading">Ibrahim Kabir</h5>
-																	<div class="course-author_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam. Alteration in some form, lipsum is simply free text by injected </div>
+																	<div class="course-author_text">He guides students through learning quran with tajweed and applies clear correction methods for steady, measurable progress.</div>
 																</div>
 															</div>
 
@@ -219,7 +219,7 @@
 																		<img src="{{ asset('assets/images/resource/author-16.webp') }}" alt="" />
 																	</div>
 																	<h5 class="course-author_heading">Mahfuz Riad </h5>
-																	<div class="course-author_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam. Alteration in some form, lipsum is simply free text by injected </div>
+																	<div class="course-author_text">He guides students through learning quran with tajweed and applies clear correction methods for steady, measurable progress.</div>
 																</div>
 															</div>
 
@@ -276,40 +276,40 @@
 														
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn active"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>Can I choose the sessions timings on my own convenience?</div>
+															<div class="acc-btn active"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>How can i learn quran with flexible timings?</div>
 															<div class="acc-content current">
 																<div class="content">
-																	<div class="text">Yes, you can. Once you are enrolled in the course, the Support team will email you to arrange the timing of the sessions with you. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem  </div>
+																	<div class="text">Yes. Our support team arranges suitable slots, makeup classes, and study plans so you can continue online quran learning with tajweed without interruption.</div>
 																</div>
 															</div>
 														</li>
 																	
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>Why online Islamic classes have charges?</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>Are there free quran lessons or paid plans?</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Yes, you can. Once you are enrolled in the course, the Support team will email you to arrange the timing of the sessions with you. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem  </div>
+																	<div class="text">Yes. Our support team arranges suitable slots, makeup classes, and study plans so you can continue online quran learning with tajweed without interruption.</div>
 																</div>
 															</div>
 														</li>
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>Where are the Quran Tutors from & are they qualified?</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>Can I find quran teacher support from qualified tutors?</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Yes, you can. Once you are enrolled in the course, the Support team will email you to arrange the timing of the sessions with you. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem  </div>
+																	<div class="text">Yes. Our support team arranges suitable slots, makeup classes, and study plans so you can continue online quran learning with tajweed without interruption.</div>
 																</div>
 															</div>
 														</li>
 
 														<!-- Block -->
 														<li class="accordion block">
-															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>What if a teacher is absent and misses my class?</div>
+															<div class="acc-btn"><div class="icon-outer"><span class="icon"><img src="{{ asset('assets/images/icons/faq-arrow.webp') }}" alt="" /></span></div>What happens if my quran teacher misses a class?</div>
 															<div class="acc-content">
 																<div class="content">
-																	<div class="text">Yes, you can. Once you are enrolled in the course, the Support team will email you to arrange the timing of the sessions with you. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Unde omnis iste natus error sit voluptatem  </div>
+																	<div class="text">Yes. Our support team arranges suitable slots, makeup classes, and study plans so you can continue online quran learning with tajweed without interruption.</div>
 																</div>
 															</div>
 														</li>
@@ -357,7 +357,7 @@
 								<div class="image">
 									<img src="{{ asset('assets/images/icons/helpline-widget.webp') }}" alt="" />
 								</div>
-								<h4 class="helpline-title">If you have any further query then you can contact our helpline</h4>
+								<h4 class="helpline-title">If you need help with enrollment, contact our helpline anytime</h4>
 								<div class="helpline-widget_phone flaticon-phone-call"></div>
 								<div class="helpline-widget_number">Helpline: 0241-21131 <span>(10AM-5PM)</span></div>
 							</div>
