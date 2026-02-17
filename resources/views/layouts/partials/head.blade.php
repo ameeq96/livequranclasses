@@ -1,6 +1,46 @@
 <head>
+@php
+    $routeName = request()->route()?->getName() ?? 'home';
+    $seoConfig = config('seo');
+    $pageSeo = data_get($seoConfig, 'pages.' . $routeName, data_get($seoConfig, 'pages.home', []));
+    $siteName = data_get($seoConfig, 'site_name', config('app.name'));
+    $defaultTagline = data_get($seoConfig, 'site_tagline', '');
+    $metaTitle = trim(($pageSeo['title'] ?? $siteName) . ($defaultTagline && empty($pageSeo['title']) ? ' | ' . $defaultTagline : ''));
+    $metaDescription = $pageSeo['description'] ?? $defaultTagline;
+    $canonicalUrl = url()->current();
+    $ogType = $pageSeo['type'] ?? 'website';
+    $ogImage = data_get($pageSeo, 'image', data_get($seoConfig, 'default_og_image', '/assets/images/main-slider/image-1.webp'));
+    $ogImageUrl = \Illuminate\Support\Str::startsWith($ogImage, ['http://', 'https://']) ? $ogImage : url($ogImage);
+    $robots = data_get($seoConfig, 'indexable_robots', 'index,follow');
+
+    if ($routeName === 'search') {
+        $robots = data_get($seoConfig, 'noindex_robots', 'noindex,follow');
+    }
+    if (($routeName === 'enroll.show' && request()->route('course')) || $routeName === 'enroll.plan') {
+        $canonicalUrl = route('enroll.show');
+        $robots = data_get($seoConfig, 'noindex_robots', 'noindex,follow');
+    }
+@endphp
 <meta charset="utf-8">
-<title>Al-Quran Business HTML-5 Template | Homepage 01</title>
+<title>{{ $metaTitle }}</title>
+<meta name="description" content="{{ $metaDescription }}">
+<meta name="robots" content="{{ $robots }}">
+<link rel="canonical" href="{{ $canonicalUrl }}">
+
+<meta property="og:locale" content="{{ data_get($seoConfig, 'default_locale', 'en_US') }}">
+<meta property="og:site_name" content="{{ $siteName }}">
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:title" content="{{ $metaTitle }}">
+<meta property="og:description" content="{{ $metaDescription }}">
+<meta property="og:url" content="{{ $canonicalUrl }}">
+<meta property="og:image" content="{{ $ogImageUrl }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{{ data_get($seoConfig, 'twitter_site', '') }}">
+<meta name="twitter:title" content="{{ $metaTitle }}">
+<meta name="twitter:description" content="{{ $metaDescription }}">
+<meta name="twitter:image" content="{{ $ogImageUrl }}">
+
 <!-- Stylesheets -->
 <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
@@ -13,6 +53,8 @@
 
 <link rel="shortcut icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
 <link rel="icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
+<meta name="theme-color" content="#1f9a5f">
+<link rel="apple-touch-icon" href="{{ asset('assets/images/favicon.webp') }}">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,5 +62,6 @@
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+@include('layouts.partials.seo-schema')
 </head>
 

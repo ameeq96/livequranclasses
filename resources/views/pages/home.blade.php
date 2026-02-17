@@ -42,7 +42,7 @@
                         <div class="slider-one_content">
                             <div class="slider-one_content-inner">
                                 <div class="slider-one_title">Master Tajweed Step by Step</div>
-                                <h1 class="slider-one_heading">Learn Quran Online <br> with Tajweed</h1>
+                                <h2 class="slider-one_heading">Learn Quran Online <br> with Tajweed</h2>
                                 <div class="slider-one_text">Join a tajweed online course with qualified tutors and clear
                                     daily practice for better recitation.</div>
                                 <div class="slider-one_button">
@@ -69,7 +69,7 @@
                         <div class="slider-one_content">
                             <div class="slider-one_content-inner">
                                 <div class="slider-one_title">Build a Strong Hifz Routine</div>
-                                <h1 class="slider-one_heading">Online Hifz Quran <br> Classes</h1>
+                                <h2 class="slider-one_heading">Online Hifz Quran <br> Classes</h2>
                                 <div class="slider-one_text">Get structured support for online quran hifz classes, revision
                                     planning, and weekly memorization tracking.</div>
                                 <div class="slider-one_button">

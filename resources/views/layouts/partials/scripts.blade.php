@@ -21,3 +21,19 @@
 <script src="{{ asset('assets/js/jquery-ui.js') }}"></script>
 <script src="{{ asset('assets/js/element-in-view.js') }}"></script>
 <script src="{{ asset('assets/js/script.js') }}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var images = document.querySelectorAll('img');
+    images.forEach(function (img, index) {
+        if (!img.hasAttribute('loading') && index > 3) {
+            img.setAttribute('loading', 'lazy');
+            img.setAttribute('decoding', 'async');
+        }
+
+        var alt = img.getAttribute('alt');
+        if (alt === null || alt.trim() === '') {
+            img.setAttribute('alt', '{{ config('seo.site_name', 'Live Quran Classes') }} image');
+        }
+    });
+});
+</script>

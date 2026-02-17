@@ -3,7 +3,7 @@
 @section('content')
 <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
     <div class="auto-container">
-        <h2>Search Results</h2>
+        <h1>Search Results</h1>
         <ul class="bread-crumb clearfix">
             <li><a href="{{ route('home') }}">Home</a></li>
             <li>Search</li>
@@ -44,4 +44,5 @@
     </div>
 </section>
 @endsection
+
 

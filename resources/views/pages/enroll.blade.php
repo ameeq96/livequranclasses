@@ -5,7 +5,7 @@
 <!-- Page Title -->
 <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
     <div class="auto-container">
-        <h2>Course Enrollment</h2>
+        <h1>Course Enrollment</h1>
         <ul class="bread-crumb clearfix">
             <li><a href="{{ route('home') }}">Home</a></li>
             <li>Course Enrollment</li>
@@ -410,3 +410,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 @endpush
+

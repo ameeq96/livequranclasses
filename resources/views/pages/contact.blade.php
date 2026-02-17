@@ -5,7 +5,7 @@
 <!-- Page Title -->
     <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
-			<h2>Contact</h2>
+			<h1>Contact</h1>
 			<ul class="bread-crumb clearfix">
 				<li><a href="{{ route('home') }}">Home</a></li>
 				<li>Contact</li>
@@ -117,3 +117,4 @@
 	</section> --}}
 	<!-- End Map One -->
 @endsection
+

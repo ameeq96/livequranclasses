@@ -4,7 +4,7 @@
 <!-- Page Title -->
     <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
-			<h2>Our Courses</h2>
+			<h1>Our Courses</h1>
 			<ul class="bread-crumb clearfix">
 				<li><a href="{{ route('home') }}">Home</a></li>
 				<li>Our Courses</li>
@@ -59,3 +59,4 @@
 	</section>
 	<!-- End Courses Two -->
 @endsection
+

@@ -3,6 +3,36 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+Route::permanentRedirect('/services/detail', '/enroll');
+Route::permanentRedirect('/service-detail', '/enroll');
+Route::permanentRedirect('/about.html', '/about');
+Route::permanentRedirect('/faq.html', '/faq');
+Route::permanentRedirect('/services.html', '/services');
+Route::permanentRedirect('/courses.html', '/courses');
+Route::permanentRedirect('/blog.html', '/blog');
+Route::permanentRedirect('/contact.html', '/contact');
+
+Route::get('/sitemap.xml', function () {
+    $urls = [
+        ['loc' => route('home'), 'priority' => '1.0', 'changefreq' => 'weekly'],
+        ['loc' => route('about'), 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['loc' => route('faq'), 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['loc' => route('services'), 'priority' => '0.8', 'changefreq' => 'monthly'],
+        ['loc' => route('courses'), 'priority' => '0.9', 'changefreq' => 'weekly'],
+        ['loc' => route('enroll.show'), 'priority' => '0.9', 'changefreq' => 'weekly'],
+        ['loc' => route('blog'), 'priority' => '0.8', 'changefreq' => 'weekly'],
+        ['loc' => route('blog.detail'), 'priority' => '0.7', 'changefreq' => 'monthly'],
+        ['loc' => route('contact'), 'priority' => '0.7', 'changefreq' => 'monthly'],
+    ];
+
+    $xml = view('sitemap.index', [
+        'urls' => $urls,
+        'lastmod' => now()->toAtomString(),
+    ])->render();
+
+    return response($xml, 200)->header('Content-Type', 'application/xml');
+})->name('sitemap');
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
