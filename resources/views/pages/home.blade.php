@@ -208,13 +208,13 @@
                             <div class="service-block_one-big_icon">
                                 <img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
                             </div>
-                            <h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">Online Quran
+                            <h4 class="service-block_one-heading"><a href="{{ route('enroll.show') }}">Online Quran
                                     <br> Classes</a></h4>
                             <div class="service-block_one-text">Our tajweed online course helps students learn to recite
                                 quran correctly with daily supervised practice.</div>
                         </div>
                         <div class="service-block_one-lower">
-                            <a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i
+                            <a class="service-block_one-more" href="{{ route('enroll.show') }}">Read More<i
                                     class="fa-solid fa-arrow-right fa-fw"></i></a>
                         </div>
                     </div>
@@ -228,13 +228,13 @@
                             <div class="service-block_one-big_icon">
                                 <img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
                             </div>
-                            <h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">Tafseer <br>
+                            <h4 class="service-block_one-heading"><a href="{{ route('enroll.show') }}">Tafseer <br>
                                     Course</a></h4>
                             <div class="service-block_one-text">Choose tajweed courses online with step-by-step drills,
                                 recorded revision, and live teacher correction.</div>
                         </div>
                         <div class="service-block_one-lower">
-                            <a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i
+                            <a class="service-block_one-more" href="{{ route('enroll.show') }}">Read More<i
                                     class="fa-solid fa-arrow-right fa-fw"></i></a>
                         </div>
                     </div>
@@ -248,13 +248,13 @@
                             <div class="service-block_one-big_icon">
                                 <img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
                             </div>
-                            <h4 class="service-block_one-heading"><a href="{{ route('service.detail') }}">We Value <br>
+                            <h4 class="service-block_one-heading"><a href="{{ route('enroll.show') }}">We Value <br>
                                     Our Students</a></h4>
                             <div class="service-block_one-text">Our online tajweed courses are designed for clear
                                 pronunciation and practical recitation fluency.</div>
                         </div>
                         <div class="service-block_one-lower">
-                            <a class="service-block_one-more" href="{{ route('service.detail') }}">Read More<i
+                            <a class="service-block_one-more" href="{{ route('enroll.show') }}">Read More<i
                                     class="fa-solid fa-arrow-right fa-fw"></i></a>
                         </div>
                     </div>
@@ -769,7 +769,7 @@
                                 <div class="gallery-block_one-image">
                                     <img src="{{ asset('assets/images/gallery/1.webp') }}" alt="" />
                                     <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow"
-                                        href="{{ route('service.detail') }}"></a>
+                                        href="{{ route('enroll.show') }}"></a>
                                 </div>
                             </div>
                         </div>
@@ -783,7 +783,7 @@
                                 <div class="gallery-block_one-image">
                                     <img src="{{ asset('assets/images/gallery/2.webp') }}" alt="" />
                                     <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow"
-                                        href="{{ route('service.detail') }}"></a>
+                                        href="{{ route('enroll.show') }}"></a>
                                 </div>
                             </div>
                         </div>
@@ -797,7 +797,7 @@
                                 <div class="gallery-block_one-image">
                                     <img src="{{ asset('assets/images/gallery/3.webp') }}" alt="" />
                                     <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow"
-                                        href="{{ route('service.detail') }}"></a>
+                                        href="{{ route('enroll.show') }}"></a>
                                 </div>
                             </div>
                         </div>
@@ -811,7 +811,7 @@
                                 <div class="gallery-block_one-image">
                                     <img src="{{ asset('assets/images/gallery/4.webp') }}" alt="" />
                                     <a class="gallery-block_one-arrow theme-btn flaticon-up-right-arrow"
-                                        href="{{ route('service.detail') }}"></a>
+                                        href="{{ route('enroll.show') }}"></a>
                                 </div>
                             </div>
                         </div>
@@ -948,3 +948,4 @@
     </section>
     <!-- End CTA One -->
 @endsection
+

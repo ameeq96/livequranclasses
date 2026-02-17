@@ -26,11 +26,11 @@
 							<div class="service-block_two-big_icon">
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Online Quran <br> Classes</a></h4>
+							<h4 class="service-block_two-heading"><a href="{{ route('enroll.show') }}">Online Quran <br> Classes</a></h4>
 							<div class="service-block_two-text">A focused program to learn quran reading with tajweed for beginners through live guided sessions.</div>
 						</div>
 						<div class="service-block_two-lower">
-							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_two-more" href="{{ route('enroll.show') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -43,11 +43,11 @@
 							<div class="service-block_two-big_icon">
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Online Islamic <br> Classes</a></h4>
+							<h4 class="service-block_two-heading"><a href="{{ route('enroll.show') }}">Online Islamic <br> Classes</a></h4>
 							<div class="service-block_two-text">Balanced lessons for islamic studies, recitation, and learning quran arabic language step by step.</div>
 						</div>
 						<div class="service-block_two-lower">
-							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_two-more" href="{{ route('enroll.show') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -60,11 +60,11 @@
 							<div class="service-block_two-big_icon">
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Expert Quran <br> Tutor</a></h4>
+							<h4 class="service-block_two-heading"><a href="{{ route('enroll.show') }}">Expert Quran <br> Tutor</a></h4>
 							<div class="service-block_two-text">Learn with the best quran teacher support and progress plans that make recitation easier every week.</div>
 						</div>
 						<div class="service-block_two-lower">
-							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_two-more" href="{{ route('enroll.show') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -77,11 +77,11 @@
 							<div class="service-block_two-big_icon">
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Quranic Junior <br> Al-Hafiz</a></h4>
+							<h4 class="service-block_two-heading"><a href="{{ route('enroll.show') }}">Quranic Junior <br> Al-Hafiz</a></h4>
 							<div class="service-block_two-text">A complete plan for quran hifz online with revision cycles and one-to-one memorization checks.</div>
 						</div>
 						<div class="service-block_two-lower">
-							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_two-more" href="{{ route('enroll.show') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -94,11 +94,11 @@
 							<div class="service-block_two-big_icon">
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Quran <br> Translation</a></h4>
+							<h4 class="service-block_two-heading"><a href="{{ route('enroll.show') }}">Quran <br> Translation</a></h4>
 							<div class="service-block_two-text">Practical translation and reflection classes for students who want to learn arabic for quran clearly.</div>
 						</div>
 						<div class="service-block_two-lower">
-							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_two-more" href="{{ route('enroll.show') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -111,11 +111,11 @@
 							<div class="service-block_two-big_icon">
 								<img src="{{ asset('assets/images/icons/service-1.webp') }}" alt="" />
 							</div>
-							<h4 class="service-block_two-heading"><a href="{{ route('service.detail') }}">Islamic Studies For <br> Kids Course</a></h4>
+							<h4 class="service-block_two-heading"><a href="{{ route('enroll.show') }}">Islamic Studies For <br> Kids Course</a></h4>
 							<div class="service-block_two-text">Kid-friendly tracks for learn to read quran with tajweed and confident pronunciation from day one.</div>
 						</div>
 						<div class="service-block_two-lower">
-							<a class="service-block_two-more" href="{{ route('service.detail') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
+							<a class="service-block_two-more" href="{{ route('enroll.show') }}">Read More<i class="fa-solid fa-arrow-right fa-fw"></i></a>
 						</div>
 					</div>
 				</div>
@@ -156,3 +156,4 @@
 	</section>
 	<!-- End CTA One -->
 @endsection
+

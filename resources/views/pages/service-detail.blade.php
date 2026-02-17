@@ -67,7 +67,7 @@
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
 									<img src="{{ asset('assets/images/gallery/9.webp') }}" alt="" />
-									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
+									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('enroll.show') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
 									<img src="{{ asset('assets/images/gallery/10.webp') }}" alt="" />
-									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
+									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('enroll.show') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -93,7 +93,7 @@
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
 									<img src="{{ asset('assets/images/gallery/11.webp') }}" alt="" />
-									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
+									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('enroll.show') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -106,7 +106,7 @@
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
 									<img src="{{ asset('assets/images/gallery/12.webp') }}" alt="" />
-									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
+									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('enroll.show') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -119,7 +119,7 @@
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
 									<img src="{{ asset('assets/images/gallery/9.webp') }}" alt="" />
-									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
+									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('enroll.show') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -132,7 +132,7 @@
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
 									<img src="{{ asset('assets/images/gallery/10.webp') }}" alt="" />
-									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
+									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('enroll.show') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -145,7 +145,7 @@
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
 									<img src="{{ asset('assets/images/gallery/11.webp') }}" alt="" />
-									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
+									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('enroll.show') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -158,7 +158,7 @@
 							<div class="gallery-block_two-inner">
 								<div class="gallery-block_two-image">
 									<img src="{{ asset('assets/images/gallery/12.webp') }}" alt="" />
-									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('service.detail') }}"></a>
+									<a class="gallery-block_two-arrow theme-btn flaticon-up-right-arrow" href="{{ route('enroll.show') }}"></a>
 								</div>
 							</div>
 						</div>
@@ -192,4 +192,5 @@
 	</section>
 	<!-- End CTA One -->
 @endsection
+
 

@@ -126,11 +126,6 @@ class HomeController extends Controller
         return view('pages.services');
     }
 
-    public function serviceDetail(): View
-    {
-        return view('pages.service-detail');
-    }
-
     public function courses(): View
     {
         return view('pages.courses');

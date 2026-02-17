@@ -118,7 +118,7 @@
                         </select>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                        <input type="text" name="preferred_time" value="{{ old('preferred_time') }}" placeholder="Preferred Class Time (e.g., Evening UTC+5)">
+                        <input type="time" name="preferred_time" value="{{ old('preferred_time') }}" placeholder="Preferred Class Time">
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                         <textarea name="notes" placeholder="Learning goals / Notes">{{ old('notes') }}</textarea>
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.enroll-page select').not('#dial_code').select2({
             width: '100%',
             placeholder: 'Select option',
-            minimumResultsForSearch: Infinity
+            minimumResultsForSearch: 0
         });
 
         const formatDialCode = function (option) {
@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('#dial_code').select2({
             width: '100%',
             placeholder: 'Code*',
-            minimumResultsForSearch: Infinity,
+            minimumResultsForSearch: 0,
             templateResult: formatDialCode,
             templateSelection: formatDialCode
         });

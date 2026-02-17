@@ -7,7 +7,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
-Route::get('/services/detail', [HomeController::class, 'serviceDetail'])->name('service.detail');
 Route::get('/courses', [HomeController::class, 'courses'])->name('courses');
 Route::get('/enroll/plan/{plan}', [HomeController::class, 'enrollPlanForm'])
     ->where('plan', '[a-z0-9\-]+')
