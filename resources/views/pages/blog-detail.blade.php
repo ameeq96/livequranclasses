@@ -54,68 +54,11 @@
 
                             <div class="post-share-options d-flex justify-content-between align-items-center flex-wrap">
                                 <div class="tags"><span>Tags:</span><a href="#">learn quran recitation with tajweed</a> <a href="#">learn quran with tajweed</a> <a href="#">learn to read quran</a></div>
-                                <div class="social-box"><span>Share:</span>
+                                <div class="social-box mt-2"><span>Share:</span>
                                     <a href="#" class="fa-brands fa-facebook-f"></a>
                                     <a href="#" class="fa-brands fa-twitter"></a>
                                     <a href="#" class="fa-brands fa-instagram"></a>
                                 </div>
-                            </div>
-
-                            <div class="comments-area">
-                                <div class="group-title">
-                                    <h4>2 Comments</h4>
-                                </div>
-
-                                <div class="comment-box">
-                                    <div class="comment">
-                                        <div class="author-thumb"><img src="{{ asset('assets/images/resource/author-11.webp') }}" alt="" /></div>
-                                        <div class="comment-info">
-                                            <strong>Usman Ali</strong>
-                                            <div class="comment-time">October 20, 2025 at 11:30 AM</div>
-                                        </div>
-                                        <div class="text">Very beneficial reminder. The explanation is simple and practical for daily routine.</div>
-                                        <a class="reply-btn" href="#">Reply</a>
-                                    </div>
-                                </div>
-
-                                <div class="comment-box reply-comment">
-                                    <div class="comment">
-                                        <div class="author-thumb"><img src="{{ asset('assets/images/resource/author-12.webp') }}" alt="" /></div>
-                                        <div class="comment-info">
-                                            <strong>Hafsa Noor</strong>
-                                            <div class="comment-time">October 21, 2025 at 09:10 AM</div>
-                                        </div>
-                                        <div class="text">This article motivated me to become regular with prayers again. JazakAllah khair.</div>
-                                        <a class="reply-btn" href="#">Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="comment-form-outer">
-                                <div class="group-title">
-                                    <h4>Leave a Comment</h4>
-                                </div>
-                                <form class="comment-form" method="post" action="#">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="name" placeholder="Your Name" required>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="email" name="email" placeholder="Email Address" required>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea name="message" placeholder="Write your comment" required></textarea>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <button class="theme-btn btn-style-one" type="submit">
-                                                <span class="btn-wrap">
-                                                    <span class="text-one">Post Comment</span>
-                                                    <span class="text-two">Post Comment</span>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -137,20 +80,6 @@
                                     <button type="submit"><span class="fa fa-search"></span></button>
                                 </div>
                             </form>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-widget style-two">
-                        <div class="sidebar-title">
-                            <h4>Categories</h4>
-                        </div>
-                        <div class="content">
-                            <ul class="category-list">
-                                <li><a href="#">quran learning for kids <span>(06)</span></a></li>
-                                <li><a href="#">learning quran for beginners <span>(04)</span></a></li>
-                                <li><a href="#">learning quran with tajweed <span>(08)</span></a></li>
-                                <li><a href="#">learn about the quran <span>(05)</span></a></li>
-                            </ul>
                         </div>
                     </div>
 
