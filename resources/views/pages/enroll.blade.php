@@ -168,6 +168,39 @@
 .enroll-page .select2-results__option {
     font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
 }
+.enroll-page input[type="time"] {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 30px;
+    padding: 10px 25px;
+    color: var(--black-color);
+    font-size: var(--font-16);
+    border-radius: 0;
+    font-weight: 400;
+    background-color: var(--white-color);
+    border: 1px solid rgba(var(--black-color-rgb), 1);
+}
+.enroll-page input[type="time"]::-webkit-datetime-edit {
+    color: #8f8f8f;
+}
+.enroll-page input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    cursor: pointer;
+}
+.enroll-page input[type="time"]:focus {
+    outline: none;
+}
+.enroll-page .select2-flag {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    margin-right: 8px;
+    border-radius: 2px;
+    vertical-align: middle;
+    display: inline-block;
+}
 </style>
 @endpush
 
@@ -299,11 +332,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (window.jQuery) {
         const $ = window.jQuery;
-        $('.enroll-page select').not('#dial_code').select2({
+        $('.enroll-page select').not('#dial_code, #country').select2({
             width: '100%',
             placeholder: 'Select option',
             minimumResultsForSearch: 0
         });
+
+        const flagSrc = (countryCode) => {
+            if (!countryCode) {
+                return '';
+            }
+            return `https://flagcdn.com/24x18/${String(countryCode).toLowerCase()}.png`;
+        };
+
+        const formatCountry = function (option) {
+            if (!option.id) {
+                return option.text;
+            }
+            const code = option.id;
+            const text = option.text || '';
+            return $('<span><img class="select2-flag" src="' + flagSrc(code) + '" alt="' + code + ' flag"> ' + text + '</span>');
+        };
 
         const formatDialCode = function (option) {
             if (!option.id) {
@@ -313,24 +362,49 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!el) {
                 return option.text;
             }
-            const flag = el.getAttribute('data-flag') || '';
+            const countryCode = el.getAttribute('data-country') || '';
             const code = el.getAttribute('data-code') || option.id;
             const countryName = el.getAttribute('data-country-name') || '';
-            return `${flag} ${code}${countryName ? ` (${countryName})` : ''}`;
+            return $('<span><img class="select2-flag" src="' + flagSrc(countryCode) + '" alt="' + countryCode + ' flag"> ' + code + (countryName ? ` (${countryName})` : '') + '</span>');
         };
+
+        $('#country').select2({
+            width: '100%',
+            placeholder: 'Select Country*',
+            minimumResultsForSearch: 0,
+            templateResult: formatCountry,
+            templateSelection: formatCountry,
+            escapeMarkup: function (markup) {
+                return markup;
+            }
+        });
 
         $('#dial_code').select2({
             width: '100%',
             placeholder: 'Code*',
             minimumResultsForSearch: 0,
             templateResult: formatDialCode,
-            templateSelection: formatDialCode
+            templateSelection: formatDialCode,
+            escapeMarkup: function (markup) {
+                return markup;
+            }
         });
         $('#country').on('change', function () {
             handleCountryChange(this.value);
         });
         $('#state').on('change', function () {
             handleStateChange(this.value);
+        });
+    }
+
+    const preferredTimeInput = document.querySelector('.enroll-page input[name="preferred_time"]');
+    if (preferredTimeInput) {
+        preferredTimeInput.addEventListener('click', function () {
+            if (typeof this.showPicker === 'function') {
+                this.showPicker();
+            } else {
+                this.focus();
+            }
         });
     }
 });
