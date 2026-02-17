@@ -359,7 +359,8 @@
 								</div>
 								<h4 class="helpline-title">If you need help with enrollment, contact our helpline anytime</h4>
 								<div class="helpline-widget_phone flaticon-phone-call"></div>
-								<div class="helpline-widget_number">Helpline: 0241-21131 <span>(10AM-5PM)</span></div>
+								@php($phoneHref = preg_replace('/[^0-9+]/', '', config('site.contact_phone')))
+								<div class="helpline-widget_number">Helpline: <a href="tel:{{ $phoneHref }}">{{ config('site.contact_phone') }}</a> <span>(10AM-5PM)</span></div>
 							</div>
 						</div>
 

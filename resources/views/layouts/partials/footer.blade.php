@@ -1,4 +1,5 @@
 <footer class="main-footer">
+		@php($phoneHref = preg_replace('/[^0-9+]/', '', config('site.contact_phone')))
 		<div class="footer_bg-image" style="background-image: url({{ asset('assets/images/background/footer-bg.webp') }})"></div>
 		<div class="auto-container">
 			<div class="inner-container">
@@ -17,7 +18,7 @@
 										<!-- Footer List -->
 										<div class="footer_list">
 											<li>{{ config('site.contact_address') }}</li>
-											<li>{{ config('site.contact_phone') }}</li>
+											<li><a href="tel:{{ $phoneHref }}">{{ config('site.contact_phone') }}</a></li>
 										</div>
 										<!-- Social Box -->
 										<div class="footer_socials">

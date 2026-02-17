@@ -57,16 +57,16 @@
                     <div class="col-lg-3 col-md-4 col-sm-12 form-group">
                         <select name="dial_code" id="dial_code" required>
                             <option value="">Code*</option>
-                            @php
-                                $dialCodes = [];
-                                foreach ($locationData as $countryCode => $countryItem) {
-                                    $dialCodes[$countryItem['dial_code']] = $countryItem['dial_code'];
-                                }
-                                ksort($dialCodes);
-                            @endphp
-                            @foreach ($dialCodes as $dialCode)
-                                <option value="{{ $dialCode }}" {{ old('dial_code') === $dialCode ? 'selected' : '' }}>
-                                    {{ $dialCode }}
+                            @foreach ($locationData as $countryCode => $countryItem)
+                                <option
+                                    value="{{ $countryItem['dial_code'] }}"
+                                    data-country="{{ $countryCode }}"
+                                    data-flag="{{ $countryItem['flag'] }}"
+                                    data-country-name="{{ $countryItem['name'] }}"
+                                    data-code="{{ $countryItem['dial_code'] }}"
+                                    {{ old('country') === $countryCode ? 'selected' : '' }}
+                                >
+                                    {{ $countryItem['flag'] }} {{ $countryItem['dial_code'] }} ({{ $countryItem['name'] }})
                                 </option>
                             @endforeach
                         </select>
@@ -211,7 +211,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!countryCode || !locationData[countryCode]) {
             return;
         }
-        dialCodeSelect.value = locationData[countryCode].dial_code;
+        const optionByCountry = dialCodeSelect.querySelector(`option[data-country="${countryCode}"]`);
+        if (!optionByCountry) {
+            return;
+        }
+        optionByCountry.selected = true;
+        if (window.jQuery && window.jQuery(dialCodeSelect).hasClass('select2-hidden-accessible')) {
+            window.jQuery(dialCodeSelect).trigger('change.select2');
+        }
     };
 
     const populateStates = (countryCode, selectedState = '') => {
@@ -221,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        const stateItems = Object.keys(locationData[countryCode].states).map((stateName) => ({
+        const stateItems = Object.keys(locationData[countryCode].states).sort((a, b) => a.localeCompare(b)).map((stateName) => ({
             value: stateName,
             label: stateName
         }));
@@ -236,7 +243,10 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        const cityItems = locationData[countryCode].states[stateName].map((cityName) => ({
+        const cityItems = locationData[countryCode].states[stateName]
+            .slice()
+            .sort((a, b) => a.localeCompare(b))
+            .map((cityName) => ({
             value: cityName,
             label: cityName
         }));
@@ -244,14 +254,34 @@ document.addEventListener('DOMContentLoaded', function () {
         setOptions(citySelect, cityItems, 'Select City*', selectedCity);
     };
 
-    countrySelect.addEventListener('change', function () {
-        const countryCode = this.value;
+    const handleCountryChange = (countryCode) => {
         syncDialCode(countryCode);
         populateStates(countryCode);
+    };
+
+    const handleStateChange = (stateName) => {
+        populateCities(countrySelect.value, stateName);
+    };
+
+    countrySelect.addEventListener('change', function () {
+        handleCountryChange(this.value);
     });
 
     stateSelect.addEventListener('change', function () {
-        populateCities(countrySelect.value, this.value);
+        handleStateChange(this.value);
+    });
+
+    dialCodeSelect.addEventListener('change', function () {
+        const selectedOption = this.options[this.selectedIndex];
+        const countryCode = selectedOption ? selectedOption.getAttribute('data-country') : '';
+        if (!countryCode || !locationData[countryCode] || countrySelect.value === countryCode) {
+            return;
+        }
+        countrySelect.value = countryCode;
+        if (window.jQuery && window.jQuery(countrySelect).hasClass('select2-hidden-accessible')) {
+            window.jQuery(countrySelect).trigger('change.select2');
+        }
+        populateStates(countryCode);
     });
 
     if (countrySelect.value || oldCountry) {
@@ -269,10 +299,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (window.jQuery) {
         const $ = window.jQuery;
-        $('.enroll-page select').select2({
+        $('.enroll-page select').not('#dial_code').select2({
             width: '100%',
             placeholder: 'Select option',
             minimumResultsForSearch: Infinity
+        });
+
+        const formatDialCode = function (option) {
+            if (!option.id) {
+                return option.text;
+            }
+            const el = option.element;
+            if (!el) {
+                return option.text;
+            }
+            const flag = el.getAttribute('data-flag') || '';
+            const code = el.getAttribute('data-code') || option.id;
+            const countryName = el.getAttribute('data-country-name') || '';
+            return `${flag} ${code}${countryName ? ` (${countryName})` : ''}`;
+        };
+
+        $('#dial_code').select2({
+            width: '100%',
+            placeholder: 'Code*',
+            minimumResultsForSearch: Infinity,
+            templateResult: formatDialCode,
+            templateSelection: formatDialCode
+        });
+        $('#country').on('change', function () {
+            handleCountryChange(this.value);
+        });
+        $('#state').on('change', function () {
+            handleStateChange(this.value);
         });
     }
 });

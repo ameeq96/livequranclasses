@@ -818,25 +818,46 @@
 
 	///////////////////////////////////////////////////// 
     // Title Animation
-    let splitTitleLines = gsap.utils.toArray(".title-anim");
+    if (window.gsap && window.ScrollTrigger && window.SplitText) {
+		gsap.config({ nullTargetWarn: false });
+		gsap.registerPlugin(ScrollTrigger);
 
-    splitTitleLines.forEach(splitTextLine => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: splitTextLine,
-          start: 'top 90%',
-          end: 'bottom 60%',
-          scrub: false,
-          markers: false,
-          toggleActions: 'play none none none'
-        }
-      });
+		let splitTitleLines = gsap.utils.toArray(".title-anim");
 
-      const itemSplitted = new SplitText(splitTextLine, { type: "words, lines" });
-      gsap.set(splitTextLine, { perspective: 400 });
-      itemSplitted.split({ type: "lines" })
-      tl.from(itemSplitted.lines, { duration: 1, delay: 0.3, opacity: 0, rotationX: -80, force3D: true, transformOrigin: "top center -50", stagger: 0.1 });
-    });
+		splitTitleLines.forEach(splitTextLine => {
+			if (!(splitTextLine instanceof Element)) {
+				return;
+			}
+
+			const itemSplitted = new SplitText(splitTextLine, { type: "words, lines" });
+			if (!itemSplitted || !itemSplitted.lines || !itemSplitted.lines.length) {
+				return;
+			}
+
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: splitTextLine,
+					start: 'top 90%',
+					end: 'bottom 60%',
+					scrub: false,
+					markers: false,
+					toggleActions: 'play none none none'
+				}
+			});
+
+			gsap.set(splitTextLine, { perspective: 400 });
+			itemSplitted.split({ type: "lines" });
+			tl.from(itemSplitted.lines, {
+				duration: 1,
+				delay: 0.3,
+				opacity: 0,
+				rotationX: -80,
+				force3D: true,
+				transformOrigin: "top center -50",
+				stagger: 0.1
+			});
+		});
+	}
     /////////////////////////////////////////////////////
 
 

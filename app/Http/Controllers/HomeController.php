@@ -11,6 +11,25 @@ use Propaganistas\LaravelPhone\Rules\Phone;
 
 class HomeController extends Controller
 {
+    private function countryFlagFromIso(string $iso2, ?string $emoji = null): string
+    {
+        $iso = strtoupper(trim($iso2));
+        if (preg_match('/^[A-Z]{2}$/', $emoji ?? '')) {
+            $emoji = null;
+        }
+
+        if (! empty($emoji)) {
+            return $emoji;
+        }
+
+        if (! preg_match('/^[A-Z]{2}$/', $iso)) {
+            return '';
+        }
+
+        $base = 127397;
+        return mb_chr(ord($iso[0]) + $base) . mb_chr(ord($iso[1]) + $base);
+    }
+
     private function enrollCourses(): array
     {
         return [
@@ -66,7 +85,7 @@ class HomeController extends Controller
 
             $locationData[$country->iso2] = [
                 'name' => $country->name,
-                'flag' => $country->emoji ?: ($country->iso2 === 'US' ? "\u{1F1FA}\u{1F1F8}" : "\u{1F1E8}\u{1F1E6}"),
+                'flag' => $this->countryFlagFromIso($country->iso2, $country->emoji),
                 'dial_code' => $country->phone_code ? '+' . ltrim($country->phone_code, '+') : '',
                 'states' => $states,
             ];

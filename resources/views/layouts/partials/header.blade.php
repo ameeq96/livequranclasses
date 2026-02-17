@@ -3,6 +3,7 @@
         $timezone = config('app.timezone', 'UTC');
         $lat = (float) config('site.latitude', 0);
         $lng = (float) config('site.longitude', 0);
+        $phoneHref = preg_replace('/[^0-9+]/', '', config('site.contact_phone'));
         $nowTs = now($timezone)->timestamp;
         $sunInfo = date_sun_info($nowTs, $lat, $lng);
         $sunrise = isset($sunInfo['sunrise']) && $sunInfo['sunrise'] ? \Carbon\Carbon::createFromTimestamp($sunInfo['sunrise'], $timezone)->format('g:i A') : 'N/A';
@@ -22,7 +23,7 @@
                         <div class="bismillah"><img src="{{ asset('assets/images/icons/bismillah.webp') }}" alt="" /></div>
                     </div>
                     <ul class="header-top_list-two">
-                        <li><span class="icon fa-solid fa-phone fa-fw"></span>Let's Talk {{ config('site.contact_phone') }}</li>
+                        <li><span class="icon fa-solid fa-phone fa-fw"></span><a href="tel:{{ $phoneHref }}" style="color:#ffffff;">Let's Talk {{ config('site.contact_phone') }}</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@php($phoneHref = preg_replace('/[^0-9+]/', '', config('site.contact_phone')))
 <!-- Page Title -->
     <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
@@ -32,7 +33,7 @@
 						<div class="contact-info_outer">
 							<div class="contact-info_icon fa-solid fa-phone fa-fw"></div>
 							<h4 class="contact-info_heading">Call Us</h4>
-							<div class="contact-info_text">{{ config('site.contact_phone') }} <span>Let's Talk {{ config('site.contact_phone') }}</span></div>
+							<div class="contact-info_text"><a href="tel:{{ $phoneHref }}">{{ config('site.contact_phone') }}</a></div>
 						</div>
 					</div>
 
@@ -109,10 +110,10 @@
 	<!-- End Contact Form Box -->
 
 	<!-- Map One -->
-	<section class="map-one">
+	{{-- <section class="map-one">
 		<div class="map-outer">
 			<iframe  class="map w-100"  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 		</div>
-	</section>
+	</section> --}}
 	<!-- End Map One -->
 @endsection
