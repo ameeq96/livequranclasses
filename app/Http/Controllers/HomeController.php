@@ -2,10 +2,91 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
+use Nnjeim\World\Models\Country;
+use Propaganistas\LaravelPhone\Rules\Phone;
 
 class HomeController extends Controller
 {
+    private function enrollCourses(): array
+    {
+        return [
+            'islamic-studies' => 'Islamic Studies',
+            'quran-for-kids' => 'Quran for Kids',
+            'quran-memorization' => 'Quran Memorization',
+            'quran-reading' => 'Quran Reading',
+            'tajweed-course' => 'Tajweed Course',
+            'tajweed-qaida-course' => 'Tajweed Qaida Course',
+        ];
+    }
+
+    private function enrollPlans(): array
+    {
+        return [
+            'plan-a' => 'Plan A - $40 / month',
+            'plan-b' => 'Plan B - $48 / month',
+            'plan-c' => 'Plan C - $55 / month',
+        ];
+    }
+
+    private function locationData(): array
+    {
+        $countries = Country::query()
+            ->whereIn('iso2', ['US', 'CA'])
+            ->with([
+                'states' => function ($stateQuery) {
+                    $stateQuery->orderBy('name')->with([
+                        'cities' => function ($cityQuery) {
+                            $cityQuery->orderBy('name');
+                        },
+                    ]);
+                },
+            ])
+            ->orderBy('name')
+            ->get();
+
+        $locationData = [];
+        foreach ($countries as $country) {
+            $states = [];
+            foreach ($country->states as $state) {
+                $cities = $state->cities
+                    ->pluck('name')
+                    ->filter()
+                    ->unique()
+                    ->values()
+                    ->all();
+
+                if (! empty($cities)) {
+                    $states[$state->name] = $cities;
+                }
+            }
+
+            $locationData[$country->iso2] = [
+                'name' => $country->name,
+                'flag' => $country->emoji ?: ($country->iso2 === 'US' ? "\u{1F1FA}\u{1F1F8}" : "\u{1F1E8}\u{1F1E6}"),
+                'dial_code' => $country->phone_code ? '+' . ltrim($country->phone_code, '+') : '',
+                'states' => $states,
+            ];
+        }
+
+        return $locationData;
+    }
+
+    private function buildEnrollView(?string $course = null, ?string $plan = null): View
+    {
+        $courseMap = $this->enrollCourses();
+        $planMap = $this->enrollPlans();
+        $locationData = $this->locationData();
+
+        $selectedCourse = $course && isset($courseMap[$course]) ? $course : null;
+        $selectedPlan = $plan && isset($planMap[$plan]) ? $plan : null;
+
+        return view('pages.enroll', compact('courseMap', 'planMap', 'locationData', 'selectedCourse', 'selectedPlan'));
+    }
+
     public function index(): View
     {
         return view('pages.home');
@@ -36,9 +117,61 @@ class HomeController extends Controller
         return view('pages.courses');
     }
 
-    public function courseDetail(): View
+    public function enrollForm(?string $course = null): View
     {
-        return view('pages.course-detail');
+        return $this->buildEnrollView($course, null);
+    }
+
+    public function enrollPlanForm(string $plan): View
+    {
+        return $this->buildEnrollView(null, $plan);
+    }
+
+    public function enrollSubmit(Request $request): RedirectResponse
+    {
+        $courseMap = $this->enrollCourses();
+        $planMap = $this->enrollPlans();
+        $locationData = $this->locationData();
+        $countryCodes = array_keys($locationData);
+        $dialCodes = array_values(array_unique(array_column($locationData, 'dial_code')));
+
+        $validated = $request->validate([
+            'student_name' => ['required', 'string', 'max:120'],
+            'parent_name' => ['nullable', 'string', 'max:120'],
+            'email' => ['required', 'email', 'max:180'],
+            'dial_code' => ['required', 'in:' . implode(',', $dialCodes)],
+            'phone_number' => ['required', 'max:30', (new Phone())->countryField('country')],
+            'age' => ['nullable', 'integer', 'min:4', 'max:80'],
+            'country' => ['required', 'in:' . implode(',', $countryCodes)],
+            'state' => ['required', 'string', 'max:120'],
+            'city' => ['required', 'string', 'max:120'],
+            'course' => ['required', 'in:' . implode(',', array_keys($courseMap))],
+            'plan' => ['required', 'in:' . implode(',', array_keys($planMap))],
+            'preferred_time' => ['nullable', 'string', 'max:120'],
+            'notes' => ['nullable', 'string', 'max:1500'],
+        ]);
+
+        $selectedCountry = $locationData[$validated['country']];
+        if (($selectedCountry['dial_code'] ?? null) !== $validated['dial_code']) {
+            return back()
+                ->withErrors(['dial_code' => 'Please select the correct dial code for the selected country.'])
+                ->withInput();
+        }
+        $states = $selectedCountry['states'];
+        if (! isset($states[$validated['state']])) {
+            return back()
+                ->withErrors(['state' => 'Please select a valid state for the selected country.'])
+                ->withInput();
+        }
+        if (! in_array($validated['city'], $states[$validated['state']], true)) {
+            return back()
+                ->withErrors(['city' => 'Please select a valid city for the selected state.'])
+                ->withInput();
+        }
+
+        return redirect()
+            ->route('enroll.show', $validated['course'])
+            ->with('success', 'Your booking request has been submitted successfully. Our team will contact you shortly.');
     }
 
     public function blog(): View
@@ -51,8 +184,99 @@ class HomeController extends Controller
         return view('pages.blog-detail');
     }
 
+    public function search(Request $request): View
+    {
+        $query = trim((string) $request->query('q', ''));
+        $items = [
+            ['title' => 'Home', 'route' => route('home'), 'keywords' => 'home quran classes tajweed hifz'],
+            ['title' => 'About', 'route' => route('about'), 'keywords' => 'about institute teachers quran learning'],
+            ['title' => 'FAQ', 'route' => route('faq'), 'keywords' => 'faq questions answers classes'],
+            ['title' => 'Services', 'route' => route('services'), 'keywords' => 'services tajweed tafseer quran'],
+            ['title' => 'Courses', 'route' => route('courses'), 'keywords' => 'courses islamic studies kids memorization reading tajweed qaida'],
+            ['title' => 'Blogs', 'route' => route('blog'), 'keywords' => 'blogs articles news quran'],
+            ['title' => 'Contact', 'route' => route('contact'), 'keywords' => 'contact email phone address'],
+            ['title' => 'Enroll', 'route' => route('enroll.show'), 'keywords' => 'enroll admission plan course booking'],
+        ];
+
+        $results = [];
+        if ($query !== '') {
+            $needle = mb_strtolower($query);
+            foreach ($items as $item) {
+                $haystack = mb_strtolower($item['title'] . ' ' . $item['keywords']);
+                if (str_contains($haystack, $needle)) {
+                    $results[] = $item;
+                }
+            }
+        }
+
+        return view('pages.search', [
+            'query' => $query,
+            'results' => $results,
+        ]);
+    }
+
     public function contact(): View
     {
         return view('pages.contact');
     }
+
+    public function contactSubmit(Request $request): RedirectResponse
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:120'],
+            'email' => ['required', 'email', 'max:180'],
+            'message' => ['required', 'string', 'max:3000'],
+        ]);
+
+        $toEmail = config('site.contact_email');
+
+        try {
+            Mail::raw(
+                "New contact enquiry\n\n"
+                . "Name: {$validated['name']}\n"
+                . "Email: {$validated['email']}\n\n"
+                . "Message:\n{$validated['message']}\n",
+                function ($mail) use ($toEmail, $validated) {
+                    $mail->to($toEmail)
+                        ->replyTo($validated['email'], $validated['name'])
+                        ->subject('Website Contact Form Enquiry');
+                }
+            );
+        } catch (\Throwable $exception) {
+            return back()
+                ->withInput()
+                ->withErrors(['mail' => 'Message could not be sent right now. Please try again in a moment.']);
+        }
+
+        return back()->with('success', 'Your message has been sent successfully.');
+    }
+
+    public function newsletterSubscribe(Request $request): RedirectResponse
+    {
+        $validated = $request->validate([
+            'email' => ['required', 'email', 'max:180'],
+        ]);
+
+        $toEmail = config('site.contact_email');
+
+        try {
+            Mail::raw(
+                "New newsletter subscription request\n\n"
+                . "Subscriber Email: {$validated['email']}\n",
+                function ($mail) use ($toEmail, $validated) {
+                    $mail->to($toEmail)
+                        ->replyTo($validated['email'])
+                        ->subject('Newsletter Subscription Request');
+                }
+            );
+        } catch (\Throwable $exception) {
+            return back()
+                ->withInput()
+                ->withErrors(['newsletter' => 'Subscription failed right now. Please try again.']);
+        }
+
+        return back()->with('newsletter_success', 'Subscribed successfully. We will keep you updated.');
+    }
 }
+
+

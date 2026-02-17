@@ -36,7 +36,7 @@
 						</div>
 						<div class="welcome-two_years d-flex align-items-center flex-wrap">
 							<span class="fa-solid fa-globe fa-fw"></span>
-							Since 1995 Operating in the world
+							Since 2020 Operating in the world
 						</div>
 					</div>
 				</div>
@@ -93,7 +93,7 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-quran-1"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Best Quran <br> Teacher</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('enroll.show') }}">Best Quran <br> Teacher</a></h4>
 						<div class="institute-block_one-text">Train with the best quran teacher to learn quran with tajweed and improve recitation in every lesson.</div>
 					</div>
 				</div>
@@ -103,7 +103,7 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-pray-1"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Learn Quran <br> Reading</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('enroll.show') }}">Learn Quran <br> Reading</a></h4>
 						<div class="institute-block_one-text">Structured plans for learn quran reading with tajweed for beginners and learning the quran for beginners.</div>
 					</div>
 				</div>
@@ -113,7 +113,7 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-education"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Female Quran <br> Teacher Online</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('enroll.show') }}">Female Quran <br> Teacher Online</a></h4>
 						<div class="institute-block_one-text">Choose a female quran teacher online and easily find quran teacher guidance for your family.</div>
 					</div>
 				</div>
@@ -123,7 +123,7 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-time-management"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">How to Learn <br> Quran at Home</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('enroll.show') }}">How to Learn <br> Quran at Home</a></h4>
 						<div class="institute-block_one-text">Flexible schedules support how to learn quran at home through trusted online quran teaching websites.</div>
 					</div>
 				</div>
@@ -297,24 +297,22 @@
 			<div class="row clearfix">
 
 				<!-- Price Block One -->
-				<div class="price-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
-					<div class="price-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="price-block_one-price "><sub>$</sub>32 <span>/Mo</span></div>
-						<h4 class="price-block_one-heading">2 Classes Per Week</h4>
-						<div class="price-block_one-students">2,000+ Students Enrolled</div>
+				<div class="price-block_one col-xl-4 col-lg-6 col-md-6 col-sm-12">
+					<div class="price-block_one-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1000ms">
+						<div class="price-block_one-price "><sub>$</sub>40 <span>Per month</span></div>
+						<h4 class="price-block_one-heading">Plan A</h4>
 						<ul class="price-block_one-list">
-							<li>8 Classes per Month</li>
-							<li>6 Months = US$ 178</li>
-							<li>Save 7%</li>
-							<li>12 Months = US$ 345</li>
-							<li>Save 10%</li>
+							<li>3 Days Per Week</li>
+							<li>30 Minutes Per Day</li>
+							<li>12-14 Classes Per Month</li>
+							<li>One to One Live Classes</li>
+							<li>24/7 Customer Support</li>
 						</ul>
-						<!-- Button Box -->
 						<div class="price-block_one-button">
 							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
-									<span class="text-one">free trial</span>
-									<span class="text-two">free trial</span>
+									<span class="text-one">Select Plan</span>
+									<span class="text-two">Select Plan</span>
 								</span>
 							</a>
 						</div>
@@ -322,24 +320,22 @@
 				</div>
 
 				<!-- Price Block One -->
-				<div class="price-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
-					<div class="price-block_one-inner wow fadeInLeft"  data-wow-delay="300ms" data-wow-duration="1000ms">
-						<div class="price-block_one-price "><sub>$</sub>48 <span>/Mo</span></div>
-						<h4 class="price-block_one-heading">3 Classes Per Week</h4>
-						<div class="price-block_one-students">3,000+ Students Enrolled</div>
+				<div class="price-block_one col-xl-4 col-lg-6 col-md-6 col-sm-12">
+					<div class="price-block_one-inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
+						<div class="price-block_one-price "><sub>$</sub>48 <span>Per month</span></div>
+						<h4 class="price-block_one-heading">Plan B</h4>
 						<ul class="price-block_one-list">
-							<li>12 Classes per Month</li>
-							<li>6 Months = US$ 178</li>
-							<li>Save 7%</li>
-							<li>12 Months = US$ 345</li>
-							<li>Save 10%</li>
+							<li>4 Days Per Week</li>
+							<li>30 Minutes Per Day</li>
+							<li>16-18 Classes Per Month</li>
+							<li>One to One Live Classes</li>
+							<li>24/7 Customer Support</li>
 						</ul>
-						<!-- Button Box -->
 						<div class="price-block_one-button">
 							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
-									<span class="text-one">free trial</span>
-									<span class="text-two">free trial</span>
+									<span class="text-one">Select Plan</span>
+									<span class="text-two">Select Plan</span>
 								</span>
 							</a>
 						</div>
@@ -347,49 +343,22 @@
 				</div>
 
 				<!-- Price Block One -->
-				<div class="price-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
-					<div class="price-block_one-inner wow fadeInLeft"  data-wow-delay="450ms" data-wow-duration="1000ms">
-						<div class="price-block_one-price "><sub>$</sub>60 <span>/Mo</span></div>
-						<h4 class="price-block_one-heading">4 Classes Per Week</h4>
-						<div class="price-block_one-students">5,000+ Students Enrolled</div>
+				<div class="price-block_one col-xl-4 col-lg-6 col-md-6 col-sm-12">
+					<div class="price-block_one-inner wow fadeInLeft" data-wow-delay="450ms" data-wow-duration="1000ms">
+						<div class="price-block_one-price "><sub>$</sub>55 <span>Per month</span></div>
+						<h4 class="price-block_one-heading">Plan C</h4>
 						<ul class="price-block_one-list">
-							<li>16 Classes per Month</li>
-							<li>6 Months = US$ 178</li>
-							<li>Save 7%</li>
-							<li>12 Months = US$ 345</li>
-							<li>Save 10%</li>
+							<li>5 Days Per Week</li>
+							<li>30 Minutes Per Day</li>
+							<li>20-22 Classes Per Month</li>
+							<li>One to One Live Classes</li>
+							<li>24/7 Customer Support</li>
 						</ul>
-						<!-- Button Box -->
 						<div class="price-block_one-button">
 							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
-									<span class="text-one">free trial</span>
-									<span class="text-two">free trial</span>
-								</span>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Price Block One -->
-				<div class="price-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
-					<div class="price-block_one-inner wow fadeInLeft"  data-wow-delay="550ms" data-wow-duration="1000ms">
-						<div class="price-block_one-price "><sub>$</sub>80 <span>/Mo</span></div>
-						<h4 class="price-block_one-heading">5 Classes Per Week</h4>
-						<div class="price-block_one-students">6,000+ Students Enrolled</div>
-						<ul class="price-block_one-list">
-							<li>20 Classes per Month</li>
-							<li>6 Months = US$ 178</li>
-							<li>Save 7%</li>
-							<li>12 Months = US$ 345</li>
-							<li>Save 10%</li>
-						</ul>
-						<!-- Button Box -->
-						<div class="price-block_one-button">
-							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
-								<span class="btn-wrap">
-									<span class="text-one">free trial</span>
-									<span class="text-two">free trial</span>
+									<span class="text-one">Select Plan</span>
+									<span class="text-two">Select Plan</span>
 								</span>
 							</a>
 						</div>
@@ -426,13 +395,13 @@
 									<span class="fa-regular fa-star fa-fw"></span>
 								</div>
 								<h4 class="testimonial-block_two-heading">Student Feedback</h4>
-								<div class="testimonial-block_two-text">Our experience has been excellent. Lessons are simple, engaging, and practical, especially for children who are learning steadily with confidence.</div>
+								<div class="testimonial-block_two-text">The classes are clear, well paced, and very supportive. My son improved his recitation in a short time and now reads with better confidence and consistency.</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
-										<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
+										<img src="{{ asset('assets/images/resource/author-2.webp') }}" alt="" />
 									</div>
-									Muhammad Farhan
-									<span>Quran Teacher</span>
+									Saif Ullah
+									<span>Parent</span>
 								</div>
 								<!-- Ameen -->
 								<div class="testimonial-block_two_ameen">
@@ -459,13 +428,13 @@
 									<span class="fa-regular fa-star fa-fw"></span>
 								</div>
 								<h4 class="testimonial-block_two-heading">Student Feedback</h4>
-								<div class="testimonial-block_two-text">Our experience has been excellent. Lessons are simple, engaging, and practical, especially for children who are learning steadily with confidence.</div>
+								<div class="testimonial-block_two-text">I started as a beginner and the teacher guided me step by step. Tajweed rules were explained in an easy way, and each class stayed focused and practical.</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
 										<img src="{{ asset('assets/images/resource/author-6.webp') }}" alt="" />
 									</div>
-									Ibrahim Khalid
-									<span>Quran Teacher</span>
+									Hafsa Rahman
+									<span>Student</span>
 								</div>
 								<!-- Ameen -->
 								<div class="testimonial-block_two_ameen">
@@ -492,13 +461,13 @@
 									<span class="fa-regular fa-star fa-fw"></span>
 								</div>
 								<h4 class="testimonial-block_two-heading">Student Feedback</h4>
-								<div class="testimonial-block_two-text">Our experience has been excellent. Lessons are simple, engaging, and practical, especially for children who are learning steadily with confidence.</div>
+								<div class="testimonial-block_two-text">Scheduling has been very flexible for our family. The instructor is respectful, punctual, and gives useful feedback after every session to improve memorization.</div>
 								<div class="testimonial-block_two-author">
 									<div class="author-image">
-										<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
+										<img src="{{ asset('assets/images/resource/author-9.webp') }}" alt="" />
 									</div>
-									Muhammad Farhan
-									<span>Quran Teacher</span>
+									Omar Khan
+									<span>Guardian</span>
 								</div>
 								<!-- Ameen -->
 								<div class="testimonial-block_two_ameen">

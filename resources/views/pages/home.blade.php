@@ -13,11 +13,11 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">Trusted Online Quran Academy</div>
-								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
-								<div class="slider-one_text">Join quran learning online free classes with structured support for families worldwide.</div>
+								<div class="slider-one_title">Learn Quran with Confidence</div>
+								<h1 class="slider-one_heading">Online Quran <br> Classes for All Ages</h1>
+								<div class="slider-one_text">Start with quran lessons online free and continue with guided one-to-one sessions for steady progress.</div>
 								<div class="slider-one_button">
-									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
+									<a href="{{ route('enroll.show') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
 											<span class="text-one">Start learning now</span>
 											<span class="text-two">Start learning now</span>
@@ -38,11 +38,11 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">Trusted Online Quran Academy</div>
-								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
-								<div class="slider-one_text">Join quran learning online free classes with structured support for families worldwide.</div>
+								<div class="slider-one_title">Master Tajweed Step by Step</div>
+								<h1 class="slider-one_heading">Learn Quran Online <br> with Tajweed</h1>
+								<div class="slider-one_text">Join a tajweed online course with qualified tutors and clear daily practice for better recitation.</div>
 								<div class="slider-one_button">
-									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
+									<a href="{{ route('enroll.show') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
 											<span class="text-one">Start learning now</span>
 											<span class="text-two">Start learning now</span>
@@ -63,11 +63,11 @@
 						<!-- Content Column -->
 						<div class="slider-one_content">
 							<div class="slider-one_content-inner">
-								<div class="slider-one_title">Trusted Online Quran Academy</div>
-								<h1 class="slider-one_heading">Islamic Online <br> Madrasah</h1>
-								<div class="slider-one_text">Join quran learning online free classes with structured support for families worldwide.</div>
+								<div class="slider-one_title">Build a Strong Hifz Routine</div>
+								<h1 class="slider-one_heading">Online Hifz Quran <br> Classes</h1>
+								<div class="slider-one_text">Get structured support for online quran hifz classes, revision planning, and weekly memorization tracking.</div>
 								<div class="slider-one_button">
-									<a href="{{ route('course.detail') }}" class="theme-btn btn-style-two">
+									<a href="{{ route('enroll.show') }}" class="theme-btn btn-style-two">
 										<span class="btn-wrap">
 											<span class="text-one">Start learning now</span>
 											<span class="text-two">Start learning now</span>
@@ -100,7 +100,7 @@
 					<div class="feature-block_one col-lg-4 col-md-6 col-sm-12">
 						<div class="feature-block_one-inner">
 							<div class="feature-block_one-icon flaticon-quran"></div>
-							quran lessons online free <br> with expert mentors
+							quran lessons online <br> free with experts
 						</div>
 					</div>
 
@@ -139,20 +139,20 @@
 						<!-- Sec Title -->
 						<div class="sec-title">
 							<div class="sec-title_title d-flex align-items-center">Islamic Online Madrasah <span><img src="{{ asset('assets/images/icons/bismillah-2.webp') }}" alt="" /></span></div>
-							<h2 class="sec-title_heading">Welcome To Imman Quran Institute</h2>
-							<div class="sec-title_text">We offer clear, practical guidance for anyone who wants to learn quran for beginners and follow authentic quran teachings in daily life.</div>
+							<h2 class="sec-title_heading">Welcome To Live Quran Classes</h2>
+							<div class="sec-title_text">We help students learning the quran for beginners with clear steps, so families understand how to learn quran with tajweed the right way.</div>
 						</div>
 						<div class="welcome-one_content">
 							<div class="welcome-one_content-image">
 								<img src="{{ asset('assets/images/resource/welcome.webp') }}" alt="" />
 							</div>
-							<p>Our classes cover learning arabic for quran, tajweed practice, and memorization with personal attention in every session.</p>
+							<p>Our sessions include learning arabic for quran, online quran learning with tajweed, and guided hifz quran classes with one-to-one teacher support.</p>
 							<div class="welcome-one_learn">
 								<span class="welcome-one_learn-icon flaticon-mosque"></span>
-								Learn Online at Your <br> Own Pace
+								Learn Quran with <br> Tajweed Online
 							</div>
 						</div>
-						<p>Students can learn quran online with tajweed, improve confidence, and build consistent study habits at affordable fees.</p>
+						<p>Students can learn to read quran with tajweed, build fluency in recitation, and follow a practical plan for online hifz quran at home.</p>
 					</div>
 				</div>
 
@@ -167,7 +167,7 @@
 						</div>
 						<div class="welcome-one_years d-flex align-items-center flex-wrap">
 							<span class="fa-solid fa-globe fa-fw"></span>
-							Since 1995 Operating in the world
+							Since 2020 Operating in the world
 						</div>
 					</div>
 				</div>
@@ -320,106 +320,36 @@
 				<h2 class="sec-title_heading">Our Arabic & Islamic Courses</h2>
 			</div>
 			<div class="row clearfix">
+				@php
+					$homeCourses = [
+						['id' => 'islamic-studies', 'title' => 'Islamic Studies', 'image' => 'course-1.webp', 'icon' => 'service-1.svg', 'delay' => '150ms', 'text' => 'Core Islamic learning with practical daily guidance and strong foundation building.'],
+						['id' => 'quran-for-kids', 'title' => 'Quran for Kids', 'image' => 'course-3.webp', 'icon' => 'service-3.svg', 'delay' => '300ms', 'text' => 'A child-friendly path with clear lessons, repetition, and personal teacher support.'],
+						['id' => 'quran-memorization', 'title' => 'Quran Memorization', 'image' => 'course-4.webp', 'icon' => 'service-4.svg', 'delay' => '450ms', 'text' => 'Structured memorization with revision plans, weekly targets, and progress tracking.'],
+						['id' => 'quran-reading', 'title' => 'Quran Reading', 'image' => 'course-2.webp', 'icon' => 'service-2.svg', 'delay' => '600ms', 'text' => 'Build reading confidence through guided recitation and step-by-step correction.'],
+						['id' => 'tajweed-course', 'title' => 'Tajweed Course', 'image' => 'course-1.webp', 'icon' => 'service-1.svg', 'delay' => '750ms', 'text' => 'Learn accurate pronunciation rules and improve fluency in every session.'],
+						['id' => 'tajweed-qaida-course', 'title' => 'Tajweed Qaida Course', 'image' => 'course-2.webp', 'icon' => 'service-2.svg', 'delay' => '900ms', 'text' => 'Start from Qaida basics and move to proper Quran recitation with tajweed.'],
+					];
+				@endphp
 
-				<!-- Course Block One -->
-				<div class="course-block_one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="course-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="course-block_one-image">
-							<a href="{{ route('course.detail') }}"><img src="{{ asset('assets/images/resource/course-1.webp') }}" alt="" /></a>
-						</div>
-						<div class="course-block_one-content">
-							<div class="course-block_one-icon">
-								<img src="{{ asset('assets/images/icons/service-1.svg') }}" alt="" />
+				@foreach ($homeCourses as $course)
+					<div class="course-block_one col-xl-4 col-lg-4 col-md-6 col-sm-12">
+						<div class="course-block_one-inner wow fadeInLeft" data-wow-delay="{{ $course['delay'] }}" data-wow-duration="1000ms">
+							<div class="course-block_one-image">
+								<a href="{{ route('courses') }}#{{ $course['id'] }}"><img src="{{ asset('assets/images/resource/' . $course['image']) }}" alt="{{ $course['title'] }}" /></a>
 							</div>
-							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Quran Intermediate Course</a></h4>
-							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
-								<li><span>20</span>lessons</li>
-								<li><span>10</span>weeks</li>
-								<li><span>50</span>enroll</li>
-							</ul>
-							<div class="course-block_one-text">A complete quran tajweed course for readers who want precise recitation and strong daily revision.</div>
-							<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
-								<a class="theme-btn course-block_one-study" href="#">study now</a>
-								<div class="course-block_one-price">$45.00 <span>$32.00</span></div>
+							<div class="course-block_one-content">
+								<div class="course-block_one-icon">
+									<img src="{{ asset('assets/images/icons/' . $course['icon']) }}" alt="" />
+								</div>
+								<h4 class="course-block_one-heading"><a href="{{ route('courses') }}#{{ $course['id'] }}">{{ $course['title'] }}</a></h4>
+								<div class="course-block_one-text">{{ $course['text'] }}</div>
+								<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
+									<a class="theme-btn course-block_one-study" href="{{ route('enroll.show', ['course' => $course['id']]) }}">study now</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<!-- Course Block One -->
-				<div class="course-block_one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="course-block_one-inner wow fadeInLeft"  data-wow-delay="300ms" data-wow-duration="1000ms">
-						<div class="course-block_one-image">
-							<a href="{{ route('course.detail') }}"><img src="{{ asset('assets/images/resource/course-2.webp') }}" alt="" /></a>
-						</div>
-						<div class="course-block_one-content">
-							<div class="course-block_one-icon">
-								<img src="{{ asset('assets/images/icons/service-2.svg') }}" alt="" />
-							</div>
-							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Online Quran Classes For Ladies</a></h4>
-							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
-								<li><span>20</span>lessons</li>
-								<li><span>10</span>weeks</li>
-								<li><span>50</span>enroll</li>
-							</ul>
-							<div class="course-block_one-text">This tajweed course online supports sisters with flexible timing and focused pronunciation feedback.</div>
-							<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
-								<a class="theme-btn course-block_one-study" href="#">study now</a>
-								<div class="course-block_one-price">$45.00 <span>$32.00</span></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block One -->
-				<div class="course-block_one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="course-block_one-inner wow fadeInLeft"  data-wow-delay="450ms" data-wow-duration="1000ms">
-						<div class="course-block_one-image">
-							<a href="{{ route('course.detail') }}"><img src="{{ asset('assets/images/resource/course-3.webp') }}" alt="" /></a>
-						</div>
-						<div class="course-block_one-content">
-							<div class="course-block_one-icon">
-								<img src="{{ asset('assets/images/icons/service-3.svg') }}" alt="" />
-							</div>
-							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Online Quran Classes for Kids</a></h4>
-							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
-								<li><span>20</span>lessons</li>
-								<li><span>10</span>weeks</li>
-								<li><span>50</span>enroll</li>
-							</ul>
-							<div class="course-block_one-text">Learning quran for beginners starts here with simple lessons, repetition, and clear teacher guidance.</div>
-							<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
-								<a class="theme-btn course-block_one-study" href="#">study now</a>
-								<div class="course-block_one-price">$45.00 <span>$32.00</span></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Course Block One -->
-				<div class="course-block_one col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="course-block_one-inner wow fadeInLeft"  data-wow-delay="600ms" data-wow-duration="1000ms">
-						<div class="course-block_one-image">
-							<a href="{{ route('course.detail') }}"><img src="{{ asset('assets/images/resource/course-4.webp') }}" alt="" /></a>
-						</div>
-						<div class="course-block_one-content">
-							<div class="course-block_one-icon">
-								<img src="{{ asset('assets/images/icons/service-4.svg') }}" alt="" />
-							</div>
-							<h4 class="course-block_one-heading"><a href="{{ route('course.detail') }}">Hifz Quran (Quran Memorization Course)</a></h4>
-							<ul class="course-block_one-list d-flex justify-content-between flex-wrap align-items-center">
-								<li><span>20</span>lessons</li>
-								<li><span>10</span>weeks</li>
-								<li><span>50</span>enroll</li>
-							</ul>
-							<div class="course-block_one-text">A practical path to online hifz quran with guided memorization, repetition plans, and weekly assessment.</div>
-							<div class="course-block_one-buttons d-flex justify-content-between flex-wrap">
-								<a class="theme-btn course-block_one-study" href="#">study now</a>
-								<div class="course-block_one-price">$45.00 <span>$32.00</span></div>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
 
 			</div>
 		</div>
@@ -434,7 +364,7 @@
 				<h3 class="cta-one_heading">Do not let Shaitan delay you from starting <br> to learn your deen.</h3>
 				<!-- Button Box -->
 				<div class="cta-one_button">
-					<a href="{{ route('contact') }}" class="theme-btn btn-style-one">
+					<a href="{{ route('enroll.show') }}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
 							<span class="text-one">Begin Your Class</span>
 							<span class="text-two">Begin Your Class</span>
@@ -461,7 +391,7 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-quran-1"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Best Quran <br> Teacher</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('enroll.show') }}">Best Quran <br> Teacher</a></h4>
 						<div class="institute-block_one-text">Train with the best quran teacher to learn quran with tajweed and improve recitation in every lesson.</div>
 					</div>
 				</div>
@@ -471,7 +401,7 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-pray-1"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Learn Quran <br> Reading</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('enroll.show') }}">Learn Quran <br> Reading</a></h4>
 						<div class="institute-block_one-text">Structured plans for learn quran reading with tajweed for beginners and learning the quran for beginners.</div>
 					</div>
 				</div>
@@ -481,7 +411,7 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-education"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">Female Quran <br> Teacher Online</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('enroll.show') }}">Female Quran <br> Teacher Online</a></h4>
 						<div class="institute-block_one-text">Choose a female quran teacher online and easily find quran teacher guidance for your family.</div>
 					</div>
 				</div>
@@ -491,7 +421,7 @@
 					<div class="institute-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
 						<div class="institute-block_one-bismillah" style="background-image:url({{ asset('assets/images/icons/bismillah-5.webp') }})"></div>
 						<div class="institute-block_one-icon flaticon-time-management"></div>
-						<h4 class="institute-block_one-heading"><a href="{{ route('course.detail') }}">How to Learn <br> Quran at Home</a></h4>
+						<h4 class="institute-block_one-heading"><a href="{{ route('enroll.show') }}">How to Learn <br> Quran at Home</a></h4>
 						<div class="institute-block_one-text">Flexible schedules support how to learn quran at home through trusted online quran teaching websites.</div>
 					</div>
 				</div>
@@ -539,13 +469,13 @@
 												<span class="fa-regular fa-star fa-fw"></span>
 											</div>
 											<h4 class="testimonial-block_one-heading">Student Feedback</h4>
-											<div class="testimonial-block_one-text">The classes are clear, well paced, and supportive. I improved my recitation and confidence in a short time.</div>
+											<div class="testimonial-block_one-text">The teaching style is simple and motivating. My child now reads with confidence and looks forward to every class.</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
-													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
+													<img src="{{ asset('assets/images/resource/author-2.webp') }}" alt="" />
 												</div>
-												Muhammad Farhan
-												<span>Quran Teacher</span>
+												Saif Ullah
+												<span>Parent</span>
 											</div>
 										</div>
 									</div>
@@ -564,13 +494,13 @@
 												<span class="fa-regular fa-star fa-fw"></span>
 											</div>
 											<h4 class="testimonial-block_one-heading">Student Feedback</h4>
-											<div class="testimonial-block_one-text">The classes are clear, well paced, and supportive. I improved my recitation and confidence in a short time.</div>
+											<div class="testimonial-block_one-text">As a beginner, I got clear guidance in every lesson. Tajweed practice helped me fix pronunciation step by step.</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
-													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
+													<img src="{{ asset('assets/images/resource/author-6.webp') }}" alt="" />
 												</div>
-												Muhammad Farhan
-												<span>Quran Teacher</span>
+												Hafsa Rahman
+												<span>Student</span>
 											</div>
 										</div>
 									</div>
@@ -589,13 +519,13 @@
 												<span class="fa-regular fa-star fa-fw"></span>
 											</div>
 											<h4 class="testimonial-block_one-heading">Student Feedback</h4>
-											<div class="testimonial-block_one-text">The classes are clear, well paced, and supportive. I improved my recitation and confidence in a short time.</div>
+											<div class="testimonial-block_one-text">Class timings are flexible and the teacher is always punctual. We are very satisfied with the weekly progress.</div>
 											<div class="testimonial-block_one-author">
 												<div class="author-image">
-													<img src="{{ asset('assets/images/resource/author-1.webp') }}" alt="" />
+													<img src="{{ asset('assets/images/resource/author-9.webp') }}" alt="" />
 												</div>
-												Muhammad Farhan
-												<span>Quran Teacher</span>
+												Omar Khan
+												<span>Guardian</span>
 											</div>
 										</div>
 									</div>
@@ -628,24 +558,22 @@
 			<div class="row clearfix">
 
 				<!-- Price Block One -->
-				<div class="price-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
-					<div class="price-block_one-inner wow fadeInLeft"  data-wow-delay="150ms" data-wow-duration="1000ms">
-						<div class="price-block_one-price "><sub>$</sub>32 <span>/Mo</span></div>
-						<h4 class="price-block_one-heading">2 Classes Per Week</h4>
-						<div class="price-block_one-students">2,000+ Students Enrolled</div>
+				<div class="price-block_one col-xl-4 col-lg-6 col-md-6 col-sm-12">
+					<div class="price-block_one-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1000ms">
+						<div class="price-block_one-price "><sub>$</sub>40 <span>Per month</span></div>
+						<h4 class="price-block_one-heading">Plan A</h4>
 						<ul class="price-block_one-list">
-							<li>8 Classes per Month</li>
-							<li>6 Months = US$ 178</li>
-							<li>Save 7%</li>
-							<li>12 Months = US$ 345</li>
-							<li>Save 10%</li>
+							<li>3 Days Per Week</li>
+							<li>30 Minutes Per Day</li>
+							<li>12-14 Classes Per Month</li>
+							<li>One to One Live Classes</li>
+							<li>24/7 Customer Support</li>
 						</ul>
-						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
+							<a href="{{ route('enroll.plan', ['plan' => 'plan-a']) }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
-									<span class="text-one">free trial</span>
-									<span class="text-two">free trial</span>
+									<span class="text-one">Select Plan</span>
+									<span class="text-two">Select Plan</span>
 								</span>
 							</a>
 						</div>
@@ -653,24 +581,22 @@
 				</div>
 
 				<!-- Price Block One -->
-				<div class="price-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
-					<div class="price-block_one-inner wow fadeInLeft"  data-wow-delay="300ms" data-wow-duration="1000ms">
-						<div class="price-block_one-price "><sub>$</sub>48 <span>/Mo</span></div>
-						<h4 class="price-block_one-heading">3 Classes Per Week</h4>
-						<div class="price-block_one-students">3,000+ Students Enrolled</div>
+				<div class="price-block_one col-xl-4 col-lg-6 col-md-6 col-sm-12">
+					<div class="price-block_one-inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms">
+						<div class="price-block_one-price "><sub>$</sub>48 <span>Per month</span></div>
+						<h4 class="price-block_one-heading">Plan B</h4>
 						<ul class="price-block_one-list">
-							<li>12 Classes per Month</li>
-							<li>6 Months = US$ 178</li>
-							<li>Save 7%</li>
-							<li>12 Months = US$ 345</li>
-							<li>Save 10%</li>
+							<li>4 Days Per Week</li>
+							<li>30 Minutes Per Day</li>
+							<li>16-18 Classes Per Month</li>
+							<li>One to One Live Classes</li>
+							<li>24/7 Customer Support</li>
 						</ul>
-						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
+							<a href="{{ route('enroll.plan', ['plan' => 'plan-b']) }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
-									<span class="text-one">free trial</span>
-									<span class="text-two">free trial</span>
+									<span class="text-one">Select Plan</span>
+									<span class="text-two">Select Plan</span>
 								</span>
 							</a>
 						</div>
@@ -678,49 +604,22 @@
 				</div>
 
 				<!-- Price Block One -->
-				<div class="price-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
-					<div class="price-block_one-inner wow fadeInLeft"  data-wow-delay="450ms" data-wow-duration="1000ms">
-						<div class="price-block_one-price "><sub>$</sub>60 <span>/Mo</span></div>
-						<h4 class="price-block_one-heading">4 Classes Per Week</h4>
-						<div class="price-block_one-students">5,000+ Students Enrolled</div>
+				<div class="price-block_one col-xl-4 col-lg-6 col-md-6 col-sm-12">
+					<div class="price-block_one-inner wow fadeInLeft" data-wow-delay="450ms" data-wow-duration="1000ms">
+						<div class="price-block_one-price "><sub>$</sub>55 <span>Per month</span></div>
+						<h4 class="price-block_one-heading">Plan C</h4>
 						<ul class="price-block_one-list">
-							<li>16 Classes per Month</li>
-							<li>6 Months = US$ 178</li>
-							<li>Save 7%</li>
-							<li>12 Months = US$ 345</li>
-							<li>Save 10%</li>
+							<li>5 Days Per Week</li>
+							<li>30 Minutes Per Day</li>
+							<li>20-22 Classes Per Month</li>
+							<li>One to One Live Classes</li>
+							<li>24/7 Customer Support</li>
 						</ul>
-						<!-- Button Box -->
 						<div class="price-block_one-button">
-							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
+							<a href="{{ route('enroll.plan', ['plan' => 'plan-c']) }}" class="theme-btn btn-style-one">
 								<span class="btn-wrap">
-									<span class="text-one">free trial</span>
-									<span class="text-two">free trial</span>
-								</span>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Price Block One -->
-				<div class="price-block_one col-xl-3 col-lg-6 col-md-6 col-sm-12">
-					<div class="price-block_one-inner wow fadeInLeft"  data-wow-delay="550ms" data-wow-duration="1000ms">
-						<div class="price-block_one-price "><sub>$</sub>80 <span>/Mo</span></div>
-						<h4 class="price-block_one-heading">5 Classes Per Week</h4>
-						<div class="price-block_one-students">6,000+ Students Enrolled</div>
-						<ul class="price-block_one-list">
-							<li>20 Classes per Month</li>
-							<li>6 Months = US$ 178</li>
-							<li>Save 7%</li>
-							<li>12 Months = US$ 345</li>
-							<li>Save 10%</li>
-						</ul>
-						<!-- Button Box -->
-						<div class="price-block_one-button">
-							<a href="{{ route('courses') }}" class="theme-btn btn-style-one">
-								<span class="btn-wrap">
-									<span class="text-one">free trial</span>
-									<span class="text-two">free trial</span>
+									<span class="text-one">Select Plan</span>
+									<span class="text-two">Select Plan</span>
 								</span>
 							</a>
 						</div>
@@ -743,7 +642,7 @@
 				</div>
 				<!-- Button Box -->
 				<div class="gallery-one_button">
-					<a href="{{ route('contact') }}" class="theme-btn btn-style-one">
+					<a href="{{ route('enroll.show') }}" class="theme-btn btn-style-one">
 						<span class="btn-wrap">
 							<span class="text-one">Begin Your Class</span>
 							<span class="text-two">Begin Your Class</span>
@@ -917,7 +816,7 @@
 				<h3 class="cta-two_heading">Learn Quran with Tajweed Online <br> with Trusted Teachers</h3>
 				<!-- Button Box -->
 				<div class="cta-two_button">
-					<a href="{{ route('contact') }}" class="theme-btn btn-style-three">
+					<a href="{{ route('enroll.show') }}" class="theme-btn btn-style-three">
 						<span class="btn-wrap">
 							<span class="text-one">get in touch</span>
 							<span class="text-two">get in touch</span>

@@ -18,5 +18,6 @@
 <!-- End PageWrapper -->
 
 @include('layouts.partials.scripts')
+@stack('scripts')
 </body>
 </html>

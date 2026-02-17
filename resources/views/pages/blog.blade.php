@@ -4,10 +4,10 @@
 <!-- Page Title -->
     <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
-			<h2>Blog Grid</h2>
+			<h2>Blogs</h2>
 			<ul class="bread-crumb clearfix">
 				<li><a href="{{ route('home') }}">Home</a></li>
-				<li>Blog Grid</li>
+				<li>Blogs</li>
 			</ul>
         </div>
     </section>

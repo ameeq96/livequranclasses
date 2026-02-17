@@ -571,6 +571,9 @@
 
 .service-block_one-inner{
 	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 	border-radius: 5px;
 	overflow: hidden;
 	background-color: var(--white-color);
@@ -578,6 +581,7 @@
 
 .service-block_one-upper{
 	position: relative;
+	flex: 1 1 auto;
 	padding: 40px 40px;
 }
 
@@ -6617,6 +6621,10 @@
 	padding-bottom: var(--padding-bottom-110);
 }
 
+.enroll-page .enroll-form_box{
+	padding-top: 25px;
+}
+
 .contact-form_box h4{
 	position: relative;
 	text-transform: capitalize;
@@ -6649,6 +6657,7 @@
 .contact-form .form-group input[type="password"],
 .contact-form .form-group input[type="tel"],
 .contact-form .form-group input[type="email"],
+.contact-form .form-group input[type="number"],
 .contact-form .form-group select{
 	position:relative;
 	display:block;
@@ -6666,6 +6675,12 @@
 	transition:all 300ms ease;
 	background-color:var(--white-color);
 	border:1px solid rgba(var(--black-color-rgb), 1);
+}
+
+@media only screen and (max-width: 767px){
+	.enroll-page .enroll-form_box{
+		padding-top: 15px;
+	}
 }
 
 .contact-form .form-group textarea::-webkit-input-placeholder,

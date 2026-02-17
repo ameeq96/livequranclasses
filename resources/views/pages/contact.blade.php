@@ -23,7 +23,7 @@
 						<div class="contact-info_outer">
 							<div class="contact-info_icon fa-solid fa-location-dot fa-fw"></div>
 							<h4 class="contact-info_heading">Our Office</h4>
-							<div class="contact-info_text">Metro City Shop 11 Floor <br> Fiolveien 230, Norway</div>
+							<div class="contact-info_text">{{ config('site.contact_address') }}</div>
 						</div>
 					</div>
 
@@ -32,7 +32,7 @@
 						<div class="contact-info_outer">
 							<div class="contact-info_icon fa-solid fa-phone fa-fw"></div>
 							<h4 class="contact-info_heading">Call Us</h4>
-							<div class="contact-info_text">( +088 ) 48 26 48 26 <span>Let's Talk +88 01 27 14 101</span></div>
+							<div class="contact-info_text">{{ config('site.contact_phone') }} <span>Let's Talk {{ config('site.contact_phone') }}</span></div>
 						</div>
 					</div>
 
@@ -41,7 +41,7 @@
 						<div class="contact-info_outer">
 							<div class="contact-info_icon fa-solid fa-envelope fa-fw"></div>
 							<h4 class="contact-info_heading">Email Address</h4>
-							<div class="contact-info_text"><a href="https://themazine.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f3ba80929f9eac828681929db3949e929a9fdd909c9e">[email&#160;protected]</a> <br> <a href="https://themazine.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a6efc8c0c9f9ced4e6c1cbc7cfca88c5c9cb">[email&#160;protected]</a></div>
+							<div class="contact-info_text"><a href="mailto:{{ config('site.contact_email') }}">{{ config('site.contact_email') }}</a></div>
 						</div>
 					</div>
 
@@ -55,21 +55,37 @@
 	<div class="contact-form_box">
 		<div class="auto-container">
 			<h4>Feel free to ask about classes anytime</h4>
+			@if (session('success'))
+				<div class="mb-4" style="background:#e8f8ee;border:1px solid #8fd4ab;color:#1d6f42;padding:14px 16px;border-radius:8px;">
+					{{ session('success') }}
+				</div>
+			@endif
+			@if ($errors->any())
+				<div class="mb-4" style="background:#fff2f2;border:1px solid #f0b5b5;color:#7d1c1c;padding:14px 16px;border-radius:8px;">
+					<strong>Please fix the following:</strong>
+					<ul class="mt-2 mb-0">
+						@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+						@endforeach
+					</ul>
+				</div>
+			@endif
 
 			<!-- Contact Form -->
 			<div class="contact-form">
-				<form method="post" action="https://themazine.com/html/Alquran_4/alquran/alquran/sendemail.php" id="contact-form">
+				<form method="post" action="{{ route('contact.submit') }}" id="contact-form">
+					@csrf
 					
 					<div class="form-group">
-						<input type="text" name="username" placeholder="Full Name" required="">
+						<input type="text" name="name" value="{{ old('name') }}" placeholder="Full Name" required="">
 					</div>
 					
 					<div class="form-group">
-						<input type="text" name="email" placeholder="Your Email Address" required="">
+						<input type="email" name="email" value="{{ old('email') }}" placeholder="Your Email Address" required="">
 					</div>
 					
 					<div class="form-group">
-						<textarea class="" name="message" placeholder="Type your message"></textarea>
+						<textarea class="" name="message" placeholder="Type your message" required>{{ old('message') }}</textarea>
 					</div>
 					
 					<div class="form-group">
