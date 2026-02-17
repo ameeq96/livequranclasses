@@ -39,7 +39,7 @@
 											<li><a href="{{ route('faq') }}">FAQ</a></li>
 											<li><a href="{{ route('services') }}">Services</a></li>
 											<li><a href="{{ route('courses') }}">Courses</a></li>
-											<li><a href="{{ route('blog') }}">Blogs</a></li>
+											<li><a href="{{ route('blogs') }}">Blogs</a></li>
 											<li><a href="{{ route('contact') }}">Contact</a></li>
 										</ul>
 									</div>
@@ -126,3 +126,4 @@
 			</div>
 		</form>
 	</div>
+

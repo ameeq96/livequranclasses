@@ -54,12 +54,12 @@ return [
             'description' => 'Select a Quran learning plan and complete enrollment for online Tajweed, Quran reading, or Hifz classes with flexible schedules.',
             'type' => 'website',
         ],
-        'blog' => [
+        'blogs' => [
             'title' => 'Quran Learning Blog | Tajweed, Hifz, and Study Tips',
             'description' => 'Read practical articles on how to learn Quran with Tajweed, memorization strategies, beginner guidance, and Quran learning at home.',
             'type' => 'website',
         ],
-        'blog.detail' => [
+        'blogs.detail' => [
             'title' => 'Quran Learning Article | Live Quran Classes Blog',
             'description' => 'Detailed Quran learning insights on Tajweed, Quran recitation, and Hifz methods to improve your study routine and consistency.',
             'type' => 'article',
@@ -76,4 +76,5 @@ return [
         ],
     ],
 ];
+
 

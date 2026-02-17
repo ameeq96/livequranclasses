@@ -12,8 +12,8 @@
         'faq' => ['FAQ', route('faq')],
         'services' => ['Services', route('services')],
         'courses' => ['Courses', route('courses')],
-        'blog' => ['Blogs', route('blog')],
-        'blog.detail' => ['Blog Detail', route('blog.detail')],
+        'blogs' => ['Blogs', route('blogs')],
+        'blogs.detail' => ['Blog Detail', url()->current()],
         'contact' => ['Contact', route('contact')],
         'enroll.show' => ['Enroll', route('enroll.show')],
         'enroll.plan' => ['Enroll', route('enroll.show')],
@@ -123,7 +123,7 @@
     </script>
 @endif
 
-@if ($routeName === 'blog' || $routeName === 'blog.detail')
+@if ($routeName === 'blogs' || $routeName === 'blogs.detail')
     <script type="application/ld+json">
     {!! json_encode([
         '@context' => 'https://schema.org',
@@ -166,4 +166,5 @@
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
 @endif
+
 

@@ -4,11 +4,11 @@
 <!-- Page Title -->
 <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
     <div class="auto-container">
-        <h1>Blog Details</h1>
+        <h1>{{ $post['title'] ?? 'Blog Details' }}</h1>
         <ul class="bread-crumb clearfix">
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('blog') }}">Blogs</a></li>
-            <li>Blog Details</li>
+            <li><a href="{{ route('blogs') }}">Blogs</a></li>
+            <li>{{ $post['title'] ?? 'Blog Details' }}</li>
         </ul>
     </div>
 </section>
@@ -35,7 +35,7 @@
                                 </ul>
                             </div>
 
-                            <h3 class="blog-detail_heading">How to start quran lessons online free and build consistency</h3>
+                            <h3 class="blog-detail_heading">{{ $post['title'] ?? 'How to start quran lessons online free and build consistency' }}</h3>
 
                             <p>Many families ask how can i learn quran without delay. The most effective start is a simple weekly plan with quran lessons online free support and clear teacher feedback.</p>
                             <p>Begin with free quran lessons, then move into structured practice to learn quran online with tajweed and improve recitation quality step by step.</p>
@@ -161,19 +161,19 @@
                         <div class="content">
                             <div class="widget-content">
                                 <article class="post">
-                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-1.webp') }}" alt="" /></a></figure>
+                                    <figure class="thumb"><a href="{{ route('blogs.detail', ['slug' => 'how-to-start-quran-lessons-online-free-and-build-consistency']) }}"><img src="{{ asset('assets/images/resource/post-thumb-1.webp') }}" alt="" /></a></figure>
                                     <span class="post-date">October 10, 2025</span>
-                                    <h6><a href="{{ route('blog.detail') }}">how to learn arabic for quran</a></h6>
+                                    <h6><a href="{{ route('blogs.detail', ['slug' => 'learn-arabic-for-quran-and-understand-ayah-meanings-clearly']) }}">how to learn arabic for quran</a></h6>
                                 </article>
                                 <article class="post">
-                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-2.webp') }}" alt="" /></a></figure>
+                                    <figure class="thumb"><a href="{{ route('blogs.detail', ['slug' => 'learn-quran-for-beginners-how-to-read-quran-in-arabic']) }}"><img src="{{ asset('assets/images/resource/post-thumb-2.webp') }}" alt="" /></a></figure>
                                     <span class="post-date">October 12, 2025</span>
-                                    <h6><a href="{{ route('blog.detail') }}">learn to recite quran with daily practice</a></h6>
+                                    <h6><a href="{{ route('blogs.detail', ['slug' => 'learn-quran-for-beginners-how-to-read-quran-in-arabic']) }}">learn to recite quran with daily practice</a></h6>
                                 </article>
                                 <article class="post">
-                                    <figure class="thumb"><a href="{{ route('blog.detail') }}"><img src="{{ asset('assets/images/resource/post-thumb-3.webp') }}" alt="" /></a></figure>
+                                    <figure class="thumb"><a href="{{ route('blogs.detail', ['slug' => 'choosing-the-right-tajweed-online-course-for-daily-recitation']) }}"><img src="{{ asset('assets/images/resource/post-thumb-3.webp') }}" alt="" /></a></figure>
                                     <span class="post-date">October 15, 2025</span>
-                                    <h6><a href="{{ route('blog.detail') }}">best online tajweed course comparison</a></h6>
+                                    <h6><a href="{{ route('blogs.detail', ['slug' => 'choosing-the-right-tajweed-online-course-for-daily-recitation']) }}">best online tajweed course comparison</a></h6>
                                 </article>
                             </div>
                         </div>
@@ -199,4 +199,5 @@
     </div>
 </div>
 @endsection
+
 

@@ -11,6 +11,18 @@ use Propaganistas\LaravelPhone\Rules\Phone;
 
 class HomeController extends Controller
 {
+    private function blogPosts(): array
+    {
+        return [
+            ['slug' => 'how-to-start-quran-lessons-online-free-and-build-consistency', 'title' => 'How to start quran lessons online free and build consistency'],
+            ['slug' => 'choosing-the-right-tajweed-online-course-for-daily-recitation', 'title' => 'Choosing the right tajweed online course for daily recitation'],
+            ['slug' => 'best-way-to-hifz-quran-with-focused-revision-blocks', 'title' => 'Best way to hifz quran with focused revision blocks'],
+            ['slug' => 'learn-arabic-for-quran-and-understand-ayah-meanings-clearly', 'title' => 'Learn arabic for quran and understand ayah meanings clearly'],
+            ['slug' => 'learn-quran-for-beginners-how-to-read-quran-in-arabic', 'title' => 'Learn quran for beginners: how to read quran in arabic'],
+            ['slug' => 'how-to-find-quran-teacher-online-for-your-family-goals', 'title' => 'How to find quran teacher online for your family goals'],
+        ];
+    }
+
     private function countryFlagFromIso(string $iso2, ?string $emoji = null): string
     {
         $iso = strtoupper(trim($iso2));
@@ -190,12 +202,19 @@ class HomeController extends Controller
 
     public function blog(): View
     {
-        return view('pages.blog');
+        return view('pages.blog', [
+            'blogPosts' => $this->blogPosts(),
+        ]);
     }
 
-    public function blogDetail(): View
+    public function blogDetail(string $slug): View
     {
-        return view('pages.blog-detail');
+        $post = collect($this->blogPosts())->firstWhere('slug', $slug);
+        abort_if(! $post, 404);
+
+        return view('pages.blog-detail', [
+            'post' => $post,
+        ]);
     }
 
     public function search(Request $request): View
@@ -207,7 +226,7 @@ class HomeController extends Controller
             ['title' => 'FAQ', 'route' => route('faq'), 'keywords' => 'faq questions answers classes'],
             ['title' => 'Services', 'route' => route('services'), 'keywords' => 'services tajweed tafseer quran'],
             ['title' => 'Courses', 'route' => route('courses'), 'keywords' => 'courses islamic studies kids memorization reading tajweed qaida'],
-            ['title' => 'Blogs', 'route' => route('blog'), 'keywords' => 'blogs articles news quran'],
+            ['title' => 'Blogs', 'route' => route('blogs'), 'keywords' => 'blogs articles news quran'],
             ['title' => 'Contact', 'route' => route('contact'), 'keywords' => 'contact email phone address'],
             ['title' => 'Enroll', 'route' => route('enroll.show'), 'keywords' => 'enroll admission plan course booking'],
         ];
@@ -292,5 +311,4 @@ class HomeController extends Controller
         return back()->with('newsletter_success', 'Subscribed successfully. We will keep you updated.');
     }
 }
-
 

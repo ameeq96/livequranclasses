@@ -67,7 +67,7 @@
                                             <li><a href="{{ route('enroll.show', ['course' => 'tajweed-qaida-course']) }}">Tajweed Qaida Course</a></li>
                                         </ul>
                                     </li>
-                                    <li class="{{ request()->routeIs('blog*') ? 'current' : '' }}"><a href="{{ route('blog') }}">Blogs</a></li>
+                                    <li class="{{ request()->routeIs('blogs*') ? 'current' : '' }}"><a href="{{ route('blogs') }}">Blogs</a></li>
                                     <li class="{{ request()->routeIs('contact') ? 'current' : '' }}"><a href="{{ route('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
@@ -108,3 +108,4 @@
     <!-- End Mobile Menu -->
 
 </header>
+

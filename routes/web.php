@@ -9,7 +9,9 @@ Route::permanentRedirect('/about.html', '/about');
 Route::permanentRedirect('/faq.html', '/faq');
 Route::permanentRedirect('/services.html', '/services');
 Route::permanentRedirect('/courses.html', '/courses');
-Route::permanentRedirect('/blog.html', '/blog');
+Route::permanentRedirect('/blog.html', '/blogs');
+Route::permanentRedirect('/blog', '/blogs');
+Route::permanentRedirect('/blog/detail', '/blogs/how-to-start-quran-lessons-online-free-and-build-consistency');
 Route::permanentRedirect('/contact.html', '/contact');
 
 Route::get('/sitemap.xml', function () {
@@ -20,8 +22,8 @@ Route::get('/sitemap.xml', function () {
         ['loc' => route('services'), 'priority' => '0.8', 'changefreq' => 'monthly'],
         ['loc' => route('courses'), 'priority' => '0.9', 'changefreq' => 'weekly'],
         ['loc' => route('enroll.show'), 'priority' => '0.9', 'changefreq' => 'weekly'],
-        ['loc' => route('blog'), 'priority' => '0.8', 'changefreq' => 'weekly'],
-        ['loc' => route('blog.detail'), 'priority' => '0.7', 'changefreq' => 'monthly'],
+        ['loc' => route('blogs'), 'priority' => '0.8', 'changefreq' => 'weekly'],
+        ['loc' => route('blogs.detail', ['slug' => 'how-to-start-quran-lessons-online-free-and-build-consistency']), 'priority' => '0.7', 'changefreq' => 'monthly'],
         ['loc' => route('contact'), 'priority' => '0.7', 'changefreq' => 'monthly'],
     ];
 
@@ -45,8 +47,9 @@ Route::get('/enroll/{course?}', [HomeController::class, 'enrollForm'])
     ->where('course', '[a-z0-9\-]+')
     ->name('enroll.show');
 Route::post('/enroll', [HomeController::class, 'enrollSubmit'])->name('enroll.submit');
-Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
-Route::get('/blog/detail', [HomeController::class, 'blogDetail'])->name('blog.detail');
+Route::get('/blogs', [HomeController::class, 'blog'])->name('blogs');
+Route::get('/blogs/{slug}', [HomeController::class, 'blogDetail'])->name('blogs.detail');
+Route::redirect('/blog/{slug}', '/blogs/{slug}', 301);
 Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/contact', [HomeController::class, 'contactSubmit'])->name('contact.submit');
