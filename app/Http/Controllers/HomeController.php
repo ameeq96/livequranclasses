@@ -195,6 +195,35 @@ class HomeController extends Controller
                 ->withInput();
         }
 
+        $toEmail = config('site.contact_email');
+
+        try {
+            Mail::raw(
+                "New course enrollment request\n\n"
+                . "Student Name: {$validated['student_name']}\n"
+                . "Parent/Guardian: " . ($validated['parent_name'] ?? 'N/A') . "\n"
+                . "Email: {$validated['email']}\n"
+                . "Phone: {$validated['dial_code']} {$validated['phone_number']}\n"
+                . "Age: " . ($validated['age'] ?? 'N/A') . "\n"
+                . "Country: {$validated['country']}\n"
+                . "State: {$validated['state']}\n"
+                . "City: {$validated['city']}\n"
+                . "Course: {$courseMap[$validated['course']]}\n"
+                . "Plan: {$planMap[$validated['plan']]}\n"
+                . "Preferred Time: " . ($validated['preferred_time'] ?? 'N/A') . "\n\n"
+                . "Notes:\n" . ($validated['notes'] ?? 'N/A') . "\n",
+                function ($mail) use ($toEmail, $validated, $courseMap) {
+                    $mail->to($toEmail)
+                        ->replyTo($validated['email'], $validated['student_name'])
+                        ->subject('New Enrollment Request - ' . $courseMap[$validated['course']]);
+                }
+            );
+        } catch (\Throwable $exception) {
+            return back()
+                ->withInput()
+                ->withErrors(['mail' => 'Enrollment request could not be sent right now. Please try again in a moment.']);
+        }
+
         return redirect()
             ->route('enroll.show', $validated['course'])
             ->with('success', 'Your booking request has been submitted successfully. Our team will contact you shortly.');
@@ -311,4 +340,3 @@ class HomeController extends Controller
         return back()->with('newsletter_success', 'Subscribed successfully. We will keep you updated.');
     }
 }
-
