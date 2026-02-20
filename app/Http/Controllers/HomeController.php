@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 use Nnjeim\World\Models\Country;
-use Propaganistas\LaravelPhone\Rules\Phone;
 
 class HomeController extends Controller
 {
@@ -166,7 +165,7 @@ class HomeController extends Controller
             'parent_name' => ['nullable', 'string', 'max:120'],
             'email' => ['required', 'email', 'max:180'],
             'dial_code' => ['required', 'in:' . implode(',', $dialCodes)],
-            'phone_number' => ['required', 'max:30', (new Phone())->countryField('country')],
+            'phone_number' => ['required', 'string', 'max:30', 'regex:/^[0-9\-\s\(\)]+$/'],
             'age' => ['nullable', 'integer', 'min:4', 'max:80'],
             'country' => ['required', 'in:' . implode(',', $countryCodes)],
             'state' => ['required', 'string', 'max:120'],
@@ -175,6 +174,9 @@ class HomeController extends Controller
             'plan' => ['required', 'in:' . implode(',', array_keys($planMap))],
             'preferred_time' => ['nullable', 'string', 'max:120'],
             'notes' => ['nullable', 'string', 'max:1500'],
+        ], [
+            'phone_number.regex' => 'Please enter a valid phone number using digits only.',
+            'phone_number.required' => 'Phone number is required.',
         ]);
 
         $selectedCountry = $locationData[$validated['country']];
