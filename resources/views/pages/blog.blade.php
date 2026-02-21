@@ -40,7 +40,7 @@
 						</div>
 						<div class="news-block_one-content">
 							<ul class="news-block_one-meta">
-								<li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
+								{{-- <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li> --}}
 								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
 							</ul>
 							<h5 class="news-block_one-heading"><a href="{{ route('blogs.detail', ['slug' => $post['slug']]) }}">{{ $post['title'] }}</a></h5>

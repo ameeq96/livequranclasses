@@ -35,7 +35,7 @@
                                 By Admin
                                 <ul class="blog-detail_meta">
                                     <li><span class="icon fa-solid fa-clock fa-fw"></span>October 18, 2025</li>
-                                    <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comments</li>
+                                    {{-- <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comments</li> --}}
                                 </ul>
                             </div>
 

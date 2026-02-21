@@ -55,7 +55,7 @@
                         <input type="email" name="email" value="{{ old('email') }}" placeholder="Email Address*" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                        <input type="text" name="phone_number" value="{{ old('phone_number') }}" placeholder="WhatsApp / Phone Number*" required>
+                        <input type="tel" inputmode="tel" autocomplete="tel" name="phone_number" value="{{ old('phone_number') }}" placeholder="WhatsApp / Phone Number*" required>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 form-group">
                         <input type="text" name="age" value="{{ old('age') }}" inputmode="numeric" pattern="[0-9]*" maxlength="2" placeholder="Student Age">
@@ -320,6 +320,11 @@ document.addEventListener('DOMContentLoaded', function () {
             phoneIntlInput.setNumber(phoneInput.value.trim());
         }
 
+        phoneInput.addEventListener('input', function () {
+            this.setCustomValidity('');
+            this.value = this.value.replace(/[^\d\s\-()]/g, '');
+        });
+
         phoneInput.addEventListener('countrychange', function () {
             const selected = phoneIntlInput.getSelectedCountryData();
             if (!selected || !selected.iso2) {
@@ -384,11 +389,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (enrollForm && phoneInput && phoneIntlInput) {
-        enrollForm.addEventListener('submit', function () {
+        enrollForm.addEventListener('submit', function (event) {
             const internationalNumber = phoneIntlInput.getNumber();
-            if (internationalNumber) {
-                phoneInput.value = internationalNumber;
+            const fallbackInternationalNumber = phoneIntlInput.getNumber(intlTelInput.utils.numberFormat.E164);
+            const hasPossibleNumber = phoneIntlInput.isPossibleNumber();
+            const finalNumber = internationalNumber || fallbackInternationalNumber;
+
+            if (!finalNumber || !hasPossibleNumber) {
+                event.preventDefault();
+                phoneInput.setCustomValidity('Please enter a valid phone number for the selected country.');
+                phoneInput.reportValidity();
+                return;
             }
+
+            phoneInput.setCustomValidity('');
+            phoneInput.value = finalNumber;
         });
     }
 

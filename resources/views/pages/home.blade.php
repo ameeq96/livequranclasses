@@ -843,7 +843,7 @@
                         </div>
                         <div class="news-block_one-content">
                             <ul class="news-block_one-meta">
-                                <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
+                                {{-- <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li> --}}
                                 <li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
                             </ul>
                             <h5 class="news-block_one-heading"><a href="{{ route('blogs.detail', ['slug' => 'how-to-start-quran-lessons-online-free-and-build-consistency']) }}">How to start quran
@@ -872,7 +872,7 @@
                         </div>
                         <div class="news-block_one-content">
                             <ul class="news-block_one-meta">
-                                <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
+                                {{-- <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li> --}}
                                 <li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
                             </ul>
                             <h5 class="news-block_one-heading"><a href="{{ route('blogs.detail', ['slug' => 'choosing-the-right-tajweed-online-course-for-daily-recitation']) }}">Choosing the right
@@ -901,7 +901,7 @@
                         </div>
                         <div class="news-block_one-content">
                             <ul class="news-block_one-meta">
-                                <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li>
+                                {{-- <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li> --}}
                                 <li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
                             </ul>
                             <h5 class="news-block_one-heading"><a href="{{ route('blogs.detail', ['slug' => 'best-way-to-hifz-quran-with-focused-revision-blocks']) }}">Best way to hifz

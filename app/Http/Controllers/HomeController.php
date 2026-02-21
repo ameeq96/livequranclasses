@@ -163,7 +163,7 @@ class HomeController extends Controller
             'student_name' => ['required', 'string', 'max:120'],
             'parent_name' => ['nullable', 'string', 'max:120'],
             'email' => ['required', 'email', 'max:180'],
-            'phone_number' => ['required', 'string', 'max:30', 'regex:/^[0-9\-\s\(\)\+]+$/'],
+            'phone_number' => ['required', 'phone:country'],
             'age' => ['nullable', 'integer', 'min:4', 'max:80'],
             'country' => ['required', 'in:' . implode(',', $countryCodes)],
             'state' => ['required', 'string', 'max:120'],
@@ -173,8 +173,8 @@ class HomeController extends Controller
             'preferred_time' => ['nullable', 'string', 'max:120'],
             'notes' => ['nullable', 'string', 'max:1500'],
         ], [
-            'phone_number.regex' => 'Please enter a valid phone number using digits only.',
             'phone_number.required' => 'Phone number is required.',
+            'phone_number.phone' => 'Please enter a valid phone number for the selected country.',
         ]);
 
         $selectedCountry = $locationData[$validated['country']];
