@@ -240,6 +240,18 @@ body.translated-rtl {
   color: #fff !important;
 }
 
+.slider-one_image-layer-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-one .inner-container {
+  background-image: none !important;
+}
+
 @media (max-width: 767px) {
   .whatsapp-float {
     left: 14px;

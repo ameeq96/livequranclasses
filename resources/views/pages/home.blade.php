@@ -7,8 +7,11 @@
 
                 <!-- Slide -->
                 <div class="swiper-slide">
-                    <div class="slider-one_image-layer"
-                        style="background-image:url({{ asset('assets/images/main-slider/1.webp') }})"></div>
+                    <div class="slider-one_image-layer">
+                        <img class="slider-one_image-layer-img" src="{{ asset('assets/images/main-slider/1.webp') }}"
+                            width="1920" height="900" alt="Online Quran classes banner" fetchpriority="high"
+                            decoding="async">
+                    </div>
                     <div class="auto-container">
 
                         <!-- Content Column -->
@@ -34,8 +37,10 @@
 
                 <!-- Slide -->
                 <div class="swiper-slide">
-                    <div class="slider-one_image-layer"
-                        style="background-image:url({{ asset('assets/images/main-slider/2.webp') }})"></div>
+                    <div class="slider-one_image-layer">
+                        <img class="slider-one_image-layer-img" src="{{ asset('assets/images/main-slider/2.webp') }}"
+                            width="1920" height="900" alt="Tajweed learning banner" decoding="async">
+                    </div>
                     <div class="auto-container">
 
                         <!-- Content Column -->
@@ -61,8 +66,10 @@
 
                 <!-- Slide -->
                 <div class="swiper-slide">
-                    <div class="slider-one_image-layer"
-                        style="background-image:url({{ asset('assets/images/main-slider/3.webp') }})"></div>
+                    <div class="slider-one_image-layer">
+                        <img class="slider-one_image-layer-img" src="{{ asset('assets/images/main-slider/3.webp') }}"
+                            width="1920" height="900" alt="Hifz Quran classes banner" decoding="async">
+                    </div>
                     <div class="auto-container">
 
                         <!-- Content Column -->
@@ -99,7 +106,7 @@
     <!-- Featured One -->
     <section class="featured-one">
         <div class="auto-container">
-            <div class="inner-container" style="background-image:url({{ asset('assets/images/icons/featured.webp') }})">
+            <div class="inner-container">
                 <div class="row clearfix">
 
                     <!-- Feature Block One -->
@@ -948,5 +955,4 @@
     </section>
     <!-- End CTA One -->
 @endsection
-
 

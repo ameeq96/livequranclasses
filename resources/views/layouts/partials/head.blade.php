@@ -12,10 +12,7 @@
     $ogImage = data_get($pageSeo, 'image', data_get($seoConfig, 'default_og_image', '/assets/images/main-slider/image-1.webp'));
     $ogImageUrl = \Illuminate\Support\Str::startsWith($ogImage, ['http://', 'https://']) ? $ogImage : url($ogImage);
     $robots = data_get($seoConfig, 'indexable_robots', 'index,follow');
-    $bootstrapCss = asset('assets/css/bootstrap.css') . '?v=' . filemtime(public_path('assets/css/bootstrap.css'));
-    $styleCss = asset('assets/css/style.css') . '?v=' . filemtime(public_path('assets/css/style.css'));
-    $responsiveCss = asset('assets/css/responsive.css') . '?v=' . filemtime(public_path('assets/css/responsive.css'));
-    $fixesCss = asset('assets/css/laravel-fixes.css') . '?v=' . filemtime(public_path('assets/css/laravel-fixes.css'));
+    $bundleCss = asset('assets/css/app.bundle.css') . '?v=' . filemtime(public_path('assets/css/app.bundle.css'));
 
     if ($routeName === 'search') {
         $robots = data_get($seoConfig, 'noindex_robots', 'noindex,follow');
@@ -45,17 +42,22 @@
 <meta name="twitter:description" content="{{ $metaDescription }}">
 <meta name="twitter:image" content="{{ $ogImageUrl }}">
 
+@if ($routeName === 'home')
+<link rel="preload" as="image" href="{{ asset('assets/images/main-slider/1.webp') }}" fetchpriority="high">
+@endif
+
 <!-- Stylesheets -->
-<link href="{{ $bootstrapCss }}" rel="stylesheet">
-<link href="{{ $styleCss }}" rel="stylesheet">
-<link href="{{ $responsiveCss }}" rel="stylesheet">
-<link href="{{ $fixesCss }}" rel="stylesheet">
+<link href="{{ $bundleCss }}" rel="stylesheet">
 @stack('styles')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+</noscript>
 
 <link rel="shortcut icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
 <link rel="icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
