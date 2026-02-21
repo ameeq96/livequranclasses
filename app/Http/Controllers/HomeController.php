@@ -191,28 +191,35 @@ class HomeController extends Controller
         }
 
         $toEmail = config('site.contact_email');
+        $studentEmail = $validated['email'];
+        $countryName = $selectedCountry['name'] ?? $validated['country'];
+        $mailData = [
+            'student_name' => $validated['student_name'],
+            'parent_name' => $validated['parent_name'] ?? 'N/A',
+            'email' => $studentEmail,
+            'phone_number' => $validated['phone_number'],
+            'age' => $validated['age'] ?? 'N/A',
+            'country' => $countryName,
+            'state' => $validated['state'],
+            'city' => $validated['city'],
+            'course' => $courseMap[$validated['course']],
+            'plan' => $planMap[$validated['plan']],
+            'preferred_time' => $validated['preferred_time'] ?? 'N/A',
+            'notes' => $validated['notes'] ?? 'N/A',
+        ];
 
         try {
-            Mail::raw(
-                "New course enrollment request\n\n"
-                . "Student Name: {$validated['student_name']}\n"
-                . "Parent/Guardian: " . ($validated['parent_name'] ?? 'N/A') . "\n"
-                . "Email: {$validated['email']}\n"
-                . "Phone: {$validated['phone_number']}\n"
-                . "Age: " . ($validated['age'] ?? 'N/A') . "\n"
-                . "Country: {$validated['country']}\n"
-                . "State: {$validated['state']}\n"
-                . "City: {$validated['city']}\n"
-                . "Course: {$courseMap[$validated['course']]}\n"
-                . "Plan: {$planMap[$validated['plan']]}\n"
-                . "Preferred Time: " . ($validated['preferred_time'] ?? 'N/A') . "\n\n"
-                . "Notes:\n" . ($validated['notes'] ?? 'N/A') . "\n",
-                function ($mail) use ($toEmail, $validated, $courseMap) {
-                    $mail->to($toEmail)
-                        ->replyTo($validated['email'], $validated['student_name'])
-                        ->subject('New Enrollment Request - ' . $courseMap[$validated['course']]);
-                }
-            );
+            Mail::send('emails.enrollment-request', $mailData, function ($mail) use ($toEmail, $studentEmail, $validated, $courseMap) {
+                $mail->to($toEmail)
+                    ->replyTo($studentEmail, $validated['student_name'])
+                    ->subject('New Enrollment Request - ' . $courseMap[$validated['course']]);
+            });
+
+            Mail::send('emails.enrollment-confirmation', $mailData, function ($mail) use ($toEmail, $studentEmail, $validated, $courseMap) {
+                $mail->to($studentEmail)
+                    ->replyTo($toEmail)
+                    ->subject('Enrollment Confirmation - ' . $courseMap[$validated['course']]);
+            });
         } catch (\Throwable $exception) {
             return back()
                 ->withInput()
@@ -297,19 +304,23 @@ class HomeController extends Controller
         ]);
 
         $toEmail = config('site.contact_email');
+        $senderEmail = $validated['email'];
+        $mailData = [
+            'name' => $validated['name'],
+            'email' => $senderEmail,
+            'messageBody' => $validated['message'],
+        ];
 
         try {
-            Mail::raw(
-                "New contact enquiry\n\n"
-                . "Name: {$validated['name']}\n"
-                . "Email: {$validated['email']}\n\n"
-                . "Message:\n{$validated['message']}\n",
-                function ($mail) use ($toEmail, $validated) {
-                    $mail->to($toEmail)
-                        ->replyTo($validated['email'], $validated['name'])
-                        ->subject('Website Contact Form Enquiry');
+            Mail::send('emails.contact-enquiry', $mailData, function ($mail) use ($toEmail, $senderEmail, $validated) {
+                $mail->to($toEmail)
+                    ->replyTo($senderEmail, $validated['name'])
+                    ->subject('Website Contact Form Enquiry');
+
+                if (strcasecmp($toEmail, $senderEmail) !== 0) {
+                    $mail->cc($senderEmail);
                 }
-            );
+            });
         } catch (\Throwable $exception) {
             return back()
                 ->withInput()
