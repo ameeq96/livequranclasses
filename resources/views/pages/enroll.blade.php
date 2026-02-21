@@ -54,24 +54,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                         <input type="email" name="email" value="{{ old('email') }}" placeholder="Email Address*" required>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 form-group">
-                        <select name="dial_code" id="dial_code" required>
-                            <option value="">Code*</option>
-                            @foreach ($locationData as $countryCode => $countryItem)
-                                <option
-                                    value="{{ $countryItem['dial_code'] }}"
-                                    data-country="{{ $countryCode }}"
-                                    data-flag="{{ $countryItem['flag'] }}"
-                                    data-country-name="{{ $countryItem['name'] }}"
-                                    data-code="{{ $countryItem['dial_code'] }}"
-                                    {{ old('country') === $countryCode ? 'selected' : '' }}
-                                >
-                                    {{ $countryItem['flag'] }} {{ $countryItem['dial_code'] }} ({{ $countryItem['name'] }})
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="col-lg-3 col-md-8 col-sm-12 form-group">
+                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                         <input type="text" name="phone_number" value="{{ old('phone_number') }}" placeholder="WhatsApp / Phone Number*" required>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 form-group">
@@ -82,7 +65,7 @@
                             <option value="">Select Country*</option>
                             @foreach ($locationData as $countryCode => $countryItem)
                                 <option value="{{ $countryCode }}" {{ old('country') === $countryCode ? 'selected' : '' }}>
-                                    {{ $countryItem['flag'] }} {{ $countryItem['name'] }}
+                                    {{ $countryItem['name'] }}
                                 </option>
                             @endforeach
                         </select>
@@ -144,6 +127,7 @@
 
 @push('styles')
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
 <style>
 .enroll-page .select2-container--default .select2-selection--single {
     height: 50px;
@@ -201,18 +185,32 @@
     vertical-align: middle;
     display: inline-block;
 }
+.enroll-page .iti {
+    width: 100%;
+}
+.enroll-page .iti__selected-country {
+    padding-left: 10px;
+}
+.enroll-page .iti input[name="phone_number"] {
+    padding-left: 94px !important;
+}
 </style>
 @endpush
 
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const locationData = @json($locationData);
     const countrySelect = document.getElementById('country');
     const stateSelect = document.getElementById('state');
     const citySelect = document.getElementById('city');
-    const dialCodeSelect = document.getElementById('dial_code');
+    const phoneInput = document.querySelector('.enroll-page input[name="phone_number"]');
+    const enrollForm = document.querySelector('.enroll-page form');
+    const availableCountries = Object.keys(locationData).map((countryCode) => countryCode.toLowerCase());
+    let phoneIntlInput = null;
 
     const oldCountry = "{{ old('country') }}";
     const oldState = stateSelect.getAttribute('data-old-state') || '';
@@ -237,20 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (window.jQuery && window.jQuery(select).hasClass('select2-hidden-accessible')) {
             window.jQuery(select).trigger('change.select2');
-        }
-    };
-
-    const syncDialCode = (countryCode) => {
-        if (!countryCode || !locationData[countryCode]) {
-            return;
-        }
-        const optionByCountry = dialCodeSelect.querySelector(`option[data-country="${countryCode}"]`);
-        if (!optionByCountry) {
-            return;
-        }
-        optionByCountry.selected = true;
-        if (window.jQuery && window.jQuery(dialCodeSelect).hasClass('select2-hidden-accessible')) {
-            window.jQuery(dialCodeSelect).trigger('change.select2');
         }
     };
 
@@ -288,7 +272,9 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const handleCountryChange = (countryCode) => {
-        syncDialCode(countryCode);
+        if (phoneIntlInput && countryCode) {
+            phoneIntlInput.setCountry(countryCode.toLowerCase());
+        }
         populateStates(countryCode);
     };
 
@@ -304,25 +290,9 @@ document.addEventListener('DOMContentLoaded', function () {
         handleStateChange(this.value);
     });
 
-    dialCodeSelect.addEventListener('change', function () {
-        const selectedOption = this.options[this.selectedIndex];
-        const countryCode = selectedOption ? selectedOption.getAttribute('data-country') : '';
-        if (!countryCode || !locationData[countryCode] || countrySelect.value === countryCode) {
-            return;
-        }
-        countrySelect.value = countryCode;
-        if (window.jQuery && window.jQuery(countrySelect).hasClass('select2-hidden-accessible')) {
-            window.jQuery(countrySelect).trigger('change.select2');
-        }
-        populateStates(countryCode);
-    });
-
     if (countrySelect.value || oldCountry) {
         if (!countrySelect.value && oldCountry) {
             countrySelect.value = oldCountry;
-        }
-        if (!dialCodeSelect.value) {
-            syncDialCode(countrySelect.value);
         }
         populateStates(countrySelect.value, oldState);
     } else {
@@ -330,9 +300,49 @@ document.addEventListener('DOMContentLoaded', function () {
         setOptions(citySelect, [], 'Select City*', '');
     }
 
+    if (phoneInput && window.intlTelInput) {
+        phoneIntlInput = window.intlTelInput(phoneInput, {
+            initialCountry: 'us',
+            onlyCountries: availableCountries,
+            separateDialCode: true,
+            autoPlaceholder: 'aggressive',
+            nationalMode: false,
+            formatOnDisplay: true,
+            utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js',
+        });
+
+        const selectedCountryCode = (countrySelect.value || oldCountry || 'US').toLowerCase();
+        if (availableCountries.includes(selectedCountryCode)) {
+            phoneIntlInput.setCountry(selectedCountryCode);
+        }
+
+        if (phoneInput.value && phoneInput.value.trim().startsWith('+')) {
+            phoneIntlInput.setNumber(phoneInput.value.trim());
+        }
+
+        phoneInput.addEventListener('countrychange', function () {
+            const selected = phoneIntlInput.getSelectedCountryData();
+            if (!selected || !selected.iso2) {
+                return;
+            }
+
+            const iso2 = selected.iso2.toUpperCase();
+            if (countrySelect.value === iso2) {
+                return;
+            }
+
+            countrySelect.value = iso2;
+            handleCountryChange(iso2);
+
+            if (window.jQuery && window.jQuery(countrySelect).hasClass('select2-hidden-accessible')) {
+                window.jQuery(countrySelect).trigger('change.select2');
+            }
+        });
+    }
+
     if (window.jQuery) {
         const $ = window.jQuery;
-        $('.enroll-page select').not('#dial_code, #country').select2({
+        $('.enroll-page select').not('#country').select2({
             width: '100%',
             placeholder: 'Select option',
             minimumResultsForSearch: 0
@@ -351,21 +361,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             const code = option.id;
             const text = option.text || '';
-            return $('<span><img class="select2-flag" src="' + flagSrc(code) + '" alt="' + code + ' flag"> ' + text + '</span>');
-        };
-
-        const formatDialCode = function (option) {
-            if (!option.id) {
-                return option.text;
-            }
-            const el = option.element;
-            if (!el) {
-                return option.text;
-            }
-            const countryCode = el.getAttribute('data-country') || '';
-            const code = el.getAttribute('data-code') || option.id;
-            const countryName = el.getAttribute('data-country-name') || '';
-            return $('<span><img class="select2-flag" src="' + flagSrc(countryCode) + '" alt="' + countryCode + ' flag"> ' + code + (countryName ? ` (${countryName})` : '') + '</span>');
+            return $('<span><img class="select2-flag" src="' + flagSrc(code) + '" alt=""> ' + text + '</span>');
         };
 
         $('#country').select2({
@@ -379,21 +375,20 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        $('#dial_code').select2({
-            width: '100%',
-            placeholder: 'Code*',
-            minimumResultsForSearch: 0,
-            templateResult: formatDialCode,
-            templateSelection: formatDialCode,
-            escapeMarkup: function (markup) {
-                return markup;
-            }
-        });
         $('#country').on('change', function () {
             handleCountryChange(this.value);
         });
         $('#state').on('change', function () {
             handleStateChange(this.value);
+        });
+    }
+
+    if (enrollForm && phoneInput && phoneIntlInput) {
+        enrollForm.addEventListener('submit', function () {
+            const internationalNumber = phoneIntlInput.getNumber();
+            if (internationalNumber) {
+                phoneInput.value = internationalNumber;
+            }
         });
     }
 

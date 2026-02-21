@@ -65,7 +65,7 @@ class HomeController extends Controller
     private function locationData(): array
     {
         $countries = Country::query()
-            ->whereIn('iso2', ['US', 'CA'])
+            ->whereIn('iso2', ['US', 'CA', 'AE'])
             ->with([
                 'states' => function ($stateQuery) {
                     $stateQuery->orderBy('name')->with([
@@ -158,14 +158,12 @@ class HomeController extends Controller
         $planMap = $this->enrollPlans();
         $locationData = $this->locationData();
         $countryCodes = array_keys($locationData);
-        $dialCodes = array_values(array_unique(array_column($locationData, 'dial_code')));
 
         $validated = $request->validate([
             'student_name' => ['required', 'string', 'max:120'],
             'parent_name' => ['nullable', 'string', 'max:120'],
             'email' => ['required', 'email', 'max:180'],
-            'dial_code' => ['required', 'in:' . implode(',', $dialCodes)],
-            'phone_number' => ['required', 'string', 'max:30', 'regex:/^[0-9\-\s\(\)]+$/'],
+            'phone_number' => ['required', 'string', 'max:30', 'regex:/^[0-9\-\s\(\)\+]+$/'],
             'age' => ['nullable', 'integer', 'min:4', 'max:80'],
             'country' => ['required', 'in:' . implode(',', $countryCodes)],
             'state' => ['required', 'string', 'max:120'],
@@ -180,11 +178,6 @@ class HomeController extends Controller
         ]);
 
         $selectedCountry = $locationData[$validated['country']];
-        if (($selectedCountry['dial_code'] ?? null) !== $validated['dial_code']) {
-            return back()
-                ->withErrors(['dial_code' => 'Please select the correct dial code for the selected country.'])
-                ->withInput();
-        }
         $states = $selectedCountry['states'];
         if (! isset($states[$validated['state']])) {
             return back()
@@ -205,7 +198,7 @@ class HomeController extends Controller
                 . "Student Name: {$validated['student_name']}\n"
                 . "Parent/Guardian: " . ($validated['parent_name'] ?? 'N/A') . "\n"
                 . "Email: {$validated['email']}\n"
-                . "Phone: {$validated['dial_code']} {$validated['phone_number']}\n"
+                . "Phone: {$validated['phone_number']}\n"
                 . "Age: " . ($validated['age'] ?? 'N/A') . "\n"
                 . "Country: {$validated['country']}\n"
                 . "State: {$validated['state']}\n"
@@ -231,10 +224,21 @@ class HomeController extends Controller
             ->with('success', 'Your booking request has been submitted successfully. Our team will contact you shortly.');
     }
 
-    public function blog(): View
+    public function blog(Request $request): View
     {
+        $query = trim((string) $request->query('q', ''));
+        $posts = $this->blogPosts();
+
+        if ($query !== '') {
+            $needle = mb_strtolower($query);
+            $posts = array_values(array_filter($posts, function (array $post) use ($needle) {
+                return str_contains(mb_strtolower($post['title']), $needle);
+            }));
+        }
+
         return view('pages.blog', [
-            'blogPosts' => $this->blogPosts(),
+            'blogPosts' => $posts,
+            'query' => $query,
         ]);
     }
 

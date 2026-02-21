@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+@php
+    $shareUrl = urlencode(url()->current());
+    $shareTitle = urlencode($post['title'] ?? 'Live Quran Classes Blog');
+@endphp
 <!-- Page Title -->
 <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
     <div class="auto-container">
@@ -55,9 +59,9 @@
                             <div class="post-share-options d-flex justify-content-between align-items-center flex-wrap">
                                 <div class="tags"><span>Tags:</span><a href="#">learn quran recitation with tajweed</a> <a href="#">learn quran with tajweed</a> <a href="#">learn to read quran</a></div>
                                 <div class="social-box mt-2"><span>Share:</span>
-                                    <a href="#" class="fa-brands fa-facebook-f"></a>
-                                    <a href="#" class="fa-brands fa-twitter"></a>
-                                    <a href="#" class="fa-brands fa-instagram"></a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ $shareUrl }}" target="_blank" rel="noopener" class="fa-brands fa-facebook-f"></a>
+                                    <a href="https://twitter.com/intent/tweet?url={{ $shareUrl }}&text={{ $shareTitle }}" target="_blank" rel="noopener" class="fa-brands fa-twitter"></a>
+                                    <a href="https://wa.me/?text={{ $shareTitle }}%20{{ $shareUrl }}" target="_blank" rel="noopener" class="fa-brands fa-whatsapp"></a>
                                 </div>
                             </div>
                         </div>
@@ -74,9 +78,9 @@
                             <h4>Search</h4>
                         </div>
                         <div class="content">
-                            <form method="post" action="#">
+                            <form method="get" action="{{ route('blogs') }}">
                                 <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Search here" required>
+                                    <input type="search" name="q" value="{{ request('q') }}" placeholder="Search posts" required>
                                     <button type="submit"><span class="fa fa-search"></span></button>
                                 </div>
                             </form>
@@ -128,5 +132,4 @@
     </div>
 </div>
 @endsection
-
 
