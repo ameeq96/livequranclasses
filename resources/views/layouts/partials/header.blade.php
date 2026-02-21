@@ -37,7 +37,7 @@
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
 
                     <div class="logo-box">
-                        <div class="logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.webp') }}" alt="" title=""></a></div>
+                        <div class="logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.svg') }}" width="200" height="70" fetchpriority="high" alt="Live Quran Classes" title="Live Quran Classes"></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -101,7 +101,7 @@
         <div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.webp') }}" alt="" title=""></a></div>
+            <div class="nav-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/logo.svg') }}" width="200" height="70" alt="Live Quran Classes" title="Live Quran Classes"></a></div>
             <div class="menu-outer"></div>
         </nav>
     </div>

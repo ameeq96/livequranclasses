@@ -3,7 +3,7 @@
     $siteName = config('seo.site_name', config('app.name'));
     $siteUrl = rtrim(config('app.url', url('/')), '/');
     $orgName = config('seo.organization.name', $siteName);
-    $orgLogo = config('seo.organization.logo', '/assets/images/logo.webp');
+    $orgLogo = config('seo.organization.logo', '/assets/images/logo.svg');
     $orgLogoUrl = \Illuminate\Support\Str::startsWith($orgLogo, ['http://', 'https://']) ? $orgLogo : url($orgLogo);
     $sameAs = array_values(array_filter(config('seo.organization.same_as', [])));
     $contactPhone = preg_replace('/[^0-9+]/', '', config('site.contact_phone'));

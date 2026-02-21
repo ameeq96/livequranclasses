@@ -10,7 +10,7 @@ return [
     'noindex_robots' => 'noindex,follow',
     'organization' => [
         'name' => env('SEO_ORG_NAME', 'Live Quran Classes'),
-        'logo' => env('SEO_ORG_LOGO', '/assets/images/logo.webp'),
+        'logo' => env('SEO_ORG_LOGO', '/assets/images/logo.svg'),
         'same_as' => [
             env('SEO_SOCIAL_FACEBOOK', 'https://facebook.com/'),
             env('SEO_SOCIAL_TWITTER', 'https://twitter.com/'),
