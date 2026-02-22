@@ -51,10 +51,7 @@
 <link rel="preload" as="font" href="{{ asset('assets/fonts/flaticon_afbd3404a2e1104832d0.woff') }}" type="font/woff" crossorigin>
 
 <!-- Stylesheets -->
-<script>document.documentElement.classList.add('css-loading');</script>
-<style>html.css-loading body{opacity:0;visibility:hidden;}</style>
-<link rel="preload" href="{{ $bundleCss }}" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')">
-<noscript><link href="{{ $bundleCss }}" rel="stylesheet"></noscript>
+<link href="{{ $bundleCss }}" rel="stylesheet">
 @stack('styles')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,9 +62,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 </noscript>
-<script>
-window.setTimeout(function(){document.documentElement.classList.remove('css-loading');},3000);
-</script>
 
 <link rel="shortcut icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
 <link rel="icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">

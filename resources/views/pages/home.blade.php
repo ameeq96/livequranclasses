@@ -162,7 +162,8 @@
                         </div>
                         <div class="welcome-one_content">
                             <div class="welcome-one_content-image">
-                                <img src="{{ asset('assets/images/resource/welcome.webp') }}" alt="" />
+                                <img src="{{ asset('assets/images/resource/welcome.webp') }}" width="167" height="180"
+                                    alt="Live Quran Classes image" />
                             </div>
                             <p>Our sessions include learning arabic for quran, online quran learning with tajweed, and
                                 guided hifz quran classes with one-to-one teacher support.</p>
