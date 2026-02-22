@@ -9,8 +9,6 @@
                 <div class="swiper-slide">
                     <div class="slider-one_image-layer">
                         <img class="slider-one_image-layer-img" src="{{ asset('assets/images/main-slider/1.webp') }}"
-                            srcset="{{ asset('assets/images/main-slider/1-768.webp') }} 768w, {{ asset('assets/images/main-slider/1-1280.webp') }} 1280w, {{ asset('assets/images/main-slider/1.webp') }} 1920w"
-                            sizes="100vw"
                             width="1920" height="900" alt="Online Quran classes banner" fetchpriority="high"
                             decoding="async" loading="eager">
                     </div>
@@ -186,10 +184,7 @@
                             <img src="{{ asset('assets/images/icons/ameen-1.webp') }}" alt="" />
                         </div>
                         <div class="welcome-one_image">
-                            <img src="{{ asset('assets/images/resource/welcome-1-669.webp') }}"
-                                srcset="{{ asset('assets/images/resource/welcome-1-480.webp') }} 480w, {{ asset('assets/images/resource/welcome-1-669.webp') }} 669w, {{ asset('assets/images/resource/welcome-1.webp') }} 762w"
-                                sizes="(max-width: 767px) 90vw, (max-width: 1199px) 60vw, 669px"
-                                width="669" height="518" alt="Live Quran Classes image" />
+                            <img src="{{ asset('assets/images/resource/welcome-1.webp') }}" alt="" />
                         </div>
                         <div class="welcome-one_years d-flex align-items-center flex-wrap">
                             <span class="fa-solid fa-globe fa-fw"></span>
