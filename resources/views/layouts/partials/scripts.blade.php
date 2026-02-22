@@ -1,4 +1,4 @@
-<script src="{{ asset('assets/js/jquery.js') }}" defer></script>
+<script src="{{ asset('assets/js/jquery.js') }}"></script>
 <script src="{{ asset('assets/js/popper.min.js') }}" defer></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}" defer></script>
 <script src="{{ asset('assets/js/parallax.min.js') }}" defer></script>

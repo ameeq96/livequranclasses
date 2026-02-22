@@ -185,6 +185,13 @@
     vertical-align: middle;
     display: inline-block;
 }
+.enroll-page .select2-flag-emoji {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 1;
+    vertical-align: middle;
+}
 .enroll-page .iti {
     width: 100%;
 }
@@ -353,20 +360,14 @@ document.addEventListener('DOMContentLoaded', function () {
             minimumResultsForSearch: 0
         });
 
-        const flagSrc = (countryCode) => {
-            if (!countryCode) {
-                return '';
-            }
-            return `https://flagcdn.com/24x18/${String(countryCode).toLowerCase()}.png`;
-        };
-
         const formatCountry = function (option) {
             if (!option.id) {
                 return option.text;
             }
-            const code = option.id;
+            const code = String(option.id).toUpperCase();
             const text = option.text || '';
-            return $('<span><img class="select2-flag" src="' + flagSrc(code) + '" alt=""> ' + text + '</span>');
+            const flag = (locationData[code] && locationData[code].flag) ? locationData[code].flag : '';
+            return $('<span><span class="select2-flag-emoji">' + flag + '</span>' + text + '</span>');
         };
 
         $('#country').select2({
