@@ -10,7 +10,7 @@
                     <div class="slider-one_image-layer">
                         <img class="slider-one_image-layer-img" src="{{ asset('assets/images/main-slider/1.webp') }}"
                             width="1920" height="900" alt="Online Quran classes banner" fetchpriority="high"
-                            decoding="async">
+                            decoding="async" loading="eager">
                     </div>
                     <div class="auto-container">
 
@@ -955,4 +955,3 @@
     </section>
     <!-- End CTA One -->
 @endsection
-

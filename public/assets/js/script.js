@@ -745,7 +745,7 @@
 
 
 	//Progress Bar
-	if($('.progress-line').length){
+	if($('.progress-line').length && $.fn.appear){
 		$('.progress-line').appear(function(){
 			var el = $(this);
 			var percent = el.data('width');
@@ -754,7 +754,7 @@
 	}
 
 	//Fact Counter + Text Count
-	if($('.count-box').length){
+	if($('.count-box').length && $.fn.appear){
 		$('.count-box').appear(function(){
 	
 			var $t = $(this),
@@ -886,7 +886,7 @@
 
 
 	//Progress Bar
-	if($('.progress-line').length){
+	if($('.progress-line').length && $.fn.appear){
 		$('.progress-line').appear(function(){
 			var el = $(this);
 			var percent = el.data('width');
@@ -932,7 +932,7 @@
 
 
 	// Odometer
-	if ($(".odometer").length) {
+	if ($(".odometer").length && $.fn.appear) {
 		$('.odometer').appear();
 		$('.odometer').appear(function(){
 			var odo = $(".odometer");
@@ -983,7 +983,7 @@
 	
 	
 	// Elements Animation
-	if($('.wow').length){
+	if($('.wow').length && typeof WOW !== 'undefined'){
 		var wow = new WOW(
 		  {
 			boxClass:     'wow',      // animated element css class (default is wow)

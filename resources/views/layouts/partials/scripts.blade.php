@@ -1,11 +1,9 @@
 <script src="{{ asset('assets/js/jquery.js') }}" defer></script>
 <script src="{{ asset('assets/js/popper.min.js') }}" defer></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}" defer></script>
-<script src="{{ asset('assets/js/appear.js') }}" defer></script>
 <script src="{{ asset('assets/js/parallax.min.js') }}" defer></script>
 <script src="{{ asset('assets/js/tilt.jquery.min.js') }}" defer></script>
 <script src="{{ asset('assets/js/jquery.paroller.min.js') }}" defer></script>
-<script src="{{ asset('assets/js/wow.js') }}" defer></script>
 <script src="{{ asset('assets/js/swiper.min.js') }}" defer></script>
 <script src="{{ asset('assets/js/backtotop.js') }}" defer></script>
 <script src="{{ asset('assets/js/odometer.js') }}" defer></script>
@@ -24,7 +22,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var images = document.querySelectorAll('img');
     images.forEach(function (img, index) {
-        if (!img.hasAttribute('loading') && index > 3) {
+        if (!img.hasAttribute('loading') && index > 3 && img.getAttribute('fetchpriority') !== 'high') {
             img.setAttribute('loading', 'lazy');
             img.setAttribute('decoding', 'async');
         }
