@@ -43,7 +43,11 @@
 <meta name="twitter:image" content="{{ $ogImageUrl }}">
 
 @if ($routeName === 'home')
-<link rel="preload" as="image" href="{{ asset('assets/images/main-slider/1.webp') }}" fetchpriority="high">
+<link rel="preload" as="image"
+    href="{{ asset('assets/images/main-slider/1-1280.webp') }}"
+    imagesrcset="{{ asset('assets/images/main-slider/1-768.webp') }} 768w, {{ asset('assets/images/main-slider/1-1280.webp') }} 1280w, {{ asset('assets/images/main-slider/1.webp') }} 1920w"
+    imagesizes="100vw"
+    fetchpriority="high">
 @endif
 <link rel="preload" as="font" href="{{ asset('assets/fonts/fa-solid-900.woff2') }}" type="font/woff2" crossorigin>
 <link rel="preload" as="font" href="{{ asset('assets/fonts/fa-regular-400.woff2') }}" type="font/woff2" crossorigin>
