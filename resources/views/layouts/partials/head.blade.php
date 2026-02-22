@@ -45,13 +45,12 @@
 @if ($routeName === 'home')
 <link rel="preload" as="image" href="{{ asset('assets/images/main-slider/1.webp') }}" fetchpriority="high">
 @endif
-<link rel="preload" as="font" href="{{ asset('assets/fonts/fa-solid-900.woff2') }}" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="{{ asset('assets/fonts/fa-regular-400.woff2') }}" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="{{ asset('assets/fonts/fa-brands-400.woff2') }}" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="{{ asset('assets/fonts/flaticon_afbd3404a2e1104832d0.woff') }}" type="font/woff" crossorigin>
 
 <!-- Stylesheets -->
-<link href="{{ $bundleCss }}" rel="stylesheet">
+<script>document.documentElement.classList.add('css-pending');</script>
+<style>html.css-pending body{visibility:hidden;opacity:0;}html body{transition:opacity .15s ease;}</style>
+<link rel="preload" href="{{ $bundleCss }}" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-pending')">
+<noscript><link href="{{ $bundleCss }}" rel="stylesheet"></noscript>
 @stack('styles')
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,6 +61,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 </noscript>
+<script>
+window.setTimeout(function(){document.documentElement.classList.remove('css-pending');},1500);
+</script>
 
 <link rel="shortcut icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
 <link rel="icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
