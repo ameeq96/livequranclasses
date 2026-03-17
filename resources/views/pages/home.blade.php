@@ -961,3 +961,59 @@
     </section>
     <!-- End CTA One -->
 @endsection
+
+@section('jsonld')
+@php
+    $schemaSiteName = config('seo.organization.name', config('seo.site_name', config('app.name')));
+    $schemaSiteUrl = rtrim(config('app.url', url('/')), '/');
+    $schemaHomeDescription = data_get(config('seo.pages'), 'home.description', '');
+    $schemaLogo = config('seo.organization.logo', '/assets/images/logo.svg');
+    $schemaLogoUrl = \Illuminate\Support\Str::startsWith($schemaLogo, ['http://', 'https://']) ? $schemaLogo : url($schemaLogo);
+    $schemaPhone = preg_replace('/[^0-9+]/', '', config('site.contact_phone'));
+@endphp
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'EducationalOrganization',
+    '@id' => $schemaSiteUrl . '#organization',
+    'name' => $schemaSiteName,
+    'url' => $schemaSiteUrl,
+    'description' => $schemaHomeDescription,
+    'logo' => $schemaLogoUrl,
+    'telephone' => $schemaPhone,
+    'email' => config('site.contact_email'),
+    'areaServed' => 'Worldwide',
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'name' => 'Online Quran Classes',
+    'url' => $schemaSiteUrl,
+    'description' => $schemaHomeDescription,
+    'provider' => [
+        '@id' => $schemaSiteUrl . '#organization',
+    ],
+    'serviceType' => 'Online Quran Learning Service',
+    'areaServed' => 'Worldwide',
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => 'Home',
+            'item' => $schemaSiteUrl,
+        ],
+    ],
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endsection
