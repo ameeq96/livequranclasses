@@ -64,7 +64,11 @@
                         <select name="country" id="country" required>
                             <option value="">Select Country*</option>
                             @foreach ($locationData as $countryCode => $countryItem)
-                                <option value="{{ $countryCode }}" {{ old('country') === $countryCode ? 'selected' : '' }}>
+                                <option
+                                    value="{{ $countryCode }}"
+                                    data-country-name="{{ $countryItem['name'] }}"
+                                    {{ old('country') === $countryCode ? 'selected' : '' }}
+                                >
                                     {{ $countryItem['name'] }}
                                 </option>
                             @endforeach
@@ -149,8 +153,25 @@
 .enroll-page .select2-container {
     width: 100% !important;
 }
-.enroll-page .select2-results__option {
-    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+.select2-country-option {
+    display: inline-flex;
+    align-items: center;
+}
+.select2-flag-image {
+    width: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+    height: 14px !important;
+    min-height: 14px !important;
+    max-height: 14px !important;
+    margin-right: 8px;
+    border-radius: 2px;
+    object-fit: contain;
+    background: #fff;
+    display: inline-block !important;
+    flex: 0 0 20px;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 .enroll-page input[type="time"] {
     position: relative;
@@ -176,15 +197,6 @@
 .enroll-page input[type="time"]:focus {
     outline: none;
 }
-.enroll-page .select2-flag {
-    width: 20px;
-    height: 14px;
-    object-fit: cover;
-    margin-right: 8px;
-    border-radius: 2px;
-    vertical-align: middle;
-    display: inline-block;
-}
 .enroll-page .iti {
     width: 100%;
 }
@@ -198,9 +210,9 @@
 @endpush
 
 @push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const locationData = @json($locationData);
@@ -345,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    if (window.jQuery) {
+    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.select2) {
         const $ = window.jQuery;
         $('.enroll-page select').not('#country').select2({
             width: '100%',
@@ -353,26 +365,78 @@ document.addEventListener('DOMContentLoaded', function () {
             minimumResultsForSearch: 0
         });
 
-        const flagSrc = (countryCode) => {
-            if (!countryCode) {
-                return '';
-            }
-            return `https://flagcdn.com/24x18/${String(countryCode).toLowerCase()}.png`;
+        const flagSvgMap = {
+            US: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+                    <rect width="60" height="40" fill="#fff"/>
+                    <rect width="60" height="3.08" y="0" fill="#b22234"/>
+                    <rect width="60" height="3.08" y="6.16" fill="#b22234"/>
+                    <rect width="60" height="3.08" y="12.32" fill="#b22234"/>
+                    <rect width="60" height="3.08" y="18.48" fill="#b22234"/>
+                    <rect width="60" height="3.08" y="24.64" fill="#b22234"/>
+                    <rect width="60" height="3.08" y="30.8" fill="#b22234"/>
+                    <rect width="60" height="3.08" y="36.92" fill="#b22234"/>
+                    <rect width="26" height="21.56" fill="#3c3b6e"/>
+                    <g fill="#fff">
+                        <circle cx="4" cy="4" r="1.1"/>
+                        <circle cx="10" cy="4" r="1.1"/>
+                        <circle cx="16" cy="4" r="1.1"/>
+                        <circle cx="22" cy="4" r="1.1"/>
+                        <circle cx="7" cy="8" r="1.1"/>
+                        <circle cx="13" cy="8" r="1.1"/>
+                        <circle cx="19" cy="8" r="1.1"/>
+                        <circle cx="4" cy="12" r="1.1"/>
+                        <circle cx="10" cy="12" r="1.1"/>
+                        <circle cx="16" cy="12" r="1.1"/>
+                        <circle cx="22" cy="12" r="1.1"/>
+                        <circle cx="7" cy="16" r="1.1"/>
+                        <circle cx="13" cy="16" r="1.1"/>
+                        <circle cx="19" cy="16" r="1.1"/>
+                    </g>
+                </svg>`,
+            CA: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+                    <path fill="#d52b1e" d="M0 0h15l.62.62h28.76L45 0h15v40H45l-.62-.62H15.62L15 40H0z"/>
+                    <path fill="#fff" d="M15 0h30v40H15zm15.56 36.92-.28-7.19a.59.59 0 0 1 .68-.58l5.37 1.26-.73-2.67a.4.4 0 0 1 .12-.6l5.88-6.35-1.32-.83a.4.4 0 0 1-.21-.65l1.16-4.76-3.39.96a.4.4 0 0 1-.45-.31l-.66-2.06-2.64 3.79a.4.4 0 0 1-.69-.46l1.28-8.77-2.04 1.57a.4.4 0 0 1-.57-.16l-2.08-5.43-2.07 5.43a.4.4 0 0 1-.57.16l-2.05-1.57 1.28 8.77a.4.4 0 0 1-.69.46l-2.64-3.79-.66 2.06a.4.4 0 0 1-.45.31l-3.39-.96 1.16 4.76a.4.4 0 0 1-.21.65l-1.32.83 5.88 6.35a.4.4 0 0 1 .12.6l-.73 2.67 5.37-1.26a.59.59 0 0 1 .68.58l-.28 7.19z"/>
+                </svg>`,
+            AE: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
+                    <rect width="60" height="40" fill="#fff"/>
+                    <rect width="15" height="40" x="0" fill="#ff0000"/>
+                    <rect width="45" height="13.34" x="15" y="0" fill="#009a49"/>
+                    <rect width="45" height="13.33" x="15" y="13.34" fill="#ffffff"/>
+                    <rect width="45" height="13.33" x="15" y="26.67" fill="#000000"/>
+                </svg>`
+        };
+
+        const flagSrc = function (countryCode) {
+            const code = String(countryCode || '').toUpperCase();
+            const svg = flagSvgMap[code] || '';
+            return svg ? 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg) : '';
         };
 
         const formatCountry = function (option) {
             if (!option.id) {
                 return option.text;
             }
-            const code = option.id;
-            const text = option.text || '';
-            return $('<span><img class="select2-flag" src="' + flagSrc(code) + '" alt=""> ' + text + '</span>');
+
+            const optionElement = option.element || null;
+            const country = locationData[option.id] || {};
+            const optionDataset = optionElement && optionElement.dataset ? optionElement.dataset : {};
+            const text = optionDataset.countryName || country.name || option.text || '';
+            const $wrapper = $('<span class="select2-country-option"></span>');
+            const flag = flagSrc(option.id);
+
+            if (flag) {
+                $('<img class="select2-flag-image" alt="">').attr('src', flag).appendTo($wrapper);
+            }
+
+            $('<span class="select2-country-text"></span>').text(text).appendTo($wrapper);
+            return $wrapper;
         };
 
         $('#country').select2({
             width: '100%',
             placeholder: 'Select Country*',
             minimumResultsForSearch: 0,
+            dropdownParent: $('#country').closest('.form-group'),
             templateResult: formatCountry,
             templateSelection: formatCountry,
             escapeMarkup: function (markup) {
@@ -420,4 +484,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 @endpush
-
