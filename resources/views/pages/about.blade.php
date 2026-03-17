@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Page Title -->
-    <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
+	@php($socialLinks = array_values(array_filter(config('seo.organization.same_as', []))))
+	@php($facebookUrl = $socialLinks[0] ?? null)
+	@php($twitterUrl = $socialLinks[1] ?? null)
+	@php($instagramUrl = $socialLinks[2] ?? null)
+	<!-- Page Title -->
+	<section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
 			<h1>About</h1>
 			<ul class="bread-crumb clearfix">
@@ -234,9 +238,15 @@
 							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
 							<!-- Social Box -->
 							<div class="scholar-block_one-socials">
-								<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-								<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-								<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+								@if ($facebookUrl)
+									<a href="{{ $facebookUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+								@endif
+								@if ($instagramUrl)
+									<a href="{{ $instagramUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Instagram"><i class="fa-brands fa-instagram"></i></a>
+								@endif
+								@if ($twitterUrl)
+									<a href="{{ $twitterUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on X"><i class="fa-brands fa-twitter"></i></a>
+								@endif
 							</div>
 						</div>
 					</div>
@@ -253,9 +263,15 @@
 							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
 							<!-- Social Box -->
 							<div class="scholar-block_one-socials">
-								<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-								<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-								<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+								@if ($facebookUrl)
+									<a href="{{ $facebookUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+								@endif
+								@if ($instagramUrl)
+									<a href="{{ $instagramUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Instagram"><i class="fa-brands fa-instagram"></i></a>
+								@endif
+								@if ($twitterUrl)
+									<a href="{{ $twitterUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on X"><i class="fa-brands fa-twitter"></i></a>
+								@endif
 							</div>
 						</div>
 					</div>
@@ -272,9 +288,15 @@
 							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
 							<!-- Social Box -->
 							<div class="scholar-block_one-socials">
-								<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-								<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-								<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+								@if ($facebookUrl)
+									<a href="{{ $facebookUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+								@endif
+								@if ($instagramUrl)
+									<a href="{{ $instagramUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Instagram"><i class="fa-brands fa-instagram"></i></a>
+								@endif
+								@if ($twitterUrl)
+									<a href="{{ $twitterUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on X"><i class="fa-brands fa-twitter"></i></a>
+								@endif
 							</div>
 						</div>
 					</div>

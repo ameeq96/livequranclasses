@@ -19,10 +19,10 @@
                         <!-- Content Column -->
                         <div class="slider-one_content">
                             <div class="slider-one_content-inner">
-                                <div class="slider-one_title">Learn Quran with Confidence</div>
+                                <div class="slider-one_title">Live Quran Classes</div>
                                 <h1 class="slider-one_heading">Online Quran <br> Classes for All Ages</h1>
-                                <div class="slider-one_text">Start with quran lessons online free and continue with guided
-                                    one-to-one sessions for steady progress.</div>
+                                <div class="slider-one_text">Start with Live Quran Classes for beginners and continue with
+                                    guided one-to-one sessions for steady progress.</div>
                                 <div class="slider-one_button">
                                     <a href="{{ route('enroll.show') }}" class="theme-btn btn-style-two">
                                         <span class="btn-wrap">
@@ -159,7 +159,7 @@
                                         src="{{ asset('assets/images/icons/bismillah-2.webp') }}" alt="" /></span>
                             </div>
                             <h2 class="sec-title_heading">Welcome To Live Quran Classes</h2>
-                            <div class="sec-title_text">We help students learning the quran for beginners with clear steps,
+                            <div class="sec-title_text">At Live Quran Classes, we help students learning the quran for beginners with clear steps,
                                 so families understand how to learn quran with tajweed the right way.</div>
                         </div>
                         <div class="welcome-one_content">
@@ -965,12 +965,26 @@
 @section('jsonld')
 @php
     $schemaSiteName = config('seo.organization.name', config('seo.site_name', config('app.name')));
+    $schemaAlternateName = config('seo.site_alternate_name');
     $schemaSiteUrl = rtrim(config('app.url', url('/')), '/');
+    $schemaHomeTitle = data_get(config('seo.pages'), 'home.title', $schemaSiteName);
     $schemaHomeDescription = data_get(config('seo.pages'), 'home.description', '');
-    $schemaLogo = config('seo.organization.logo', '/assets/images/logo.svg');
+    $schemaLogo = config('seo.organization.logo', '/assets/images/site-logo-square.png');
     $schemaLogoUrl = \Illuminate\Support\Str::startsWith($schemaLogo, ['http://', 'https://']) ? $schemaLogo : url($schemaLogo);
     $schemaPhone = preg_replace('/[^0-9+]/', '', config('site.contact_phone'));
+    $schemaSameAs = array_values(array_filter(config('seo.organization.same_as', [])));
 @endphp
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'ImageObject',
+    '@id' => $schemaSiteUrl . '#logo',
+    'url' => $schemaLogoUrl,
+    'contentUrl' => $schemaLogoUrl,
+    'name' => $schemaSiteName . ' logo',
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
 
 <script type="application/ld+json">
 {!! json_encode([
@@ -980,10 +994,55 @@
     'name' => $schemaSiteName,
     'url' => $schemaSiteUrl,
     'description' => $schemaHomeDescription,
-    'logo' => $schemaLogoUrl,
+    'logo' => [
+        '@id' => $schemaSiteUrl . '#logo',
+    ],
+    'image' => [
+        '@id' => $schemaSiteUrl . '#logo',
+    ],
     'telephone' => $schemaPhone,
     'email' => config('site.contact_email'),
     'areaServed' => 'Worldwide',
+    'sameAs' => $schemaSameAs,
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'WebSite',
+    '@id' => $schemaSiteUrl . '#website',
+    'url' => $schemaSiteUrl,
+    'name' => $schemaSiteName,
+    'alternateName' => $schemaAlternateName,
+    'publisher' => [
+        '@id' => $schemaSiteUrl . '#organization',
+    ],
+    'potentialAction' => [
+        '@type' => 'SearchAction',
+        'target' => route('search') . '?q={search_term_string}',
+        'query-input' => 'required name=search_term_string',
+    ],
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'WebPage',
+    '@id' => $schemaSiteUrl . '#webpage',
+    'url' => $schemaSiteUrl,
+    'name' => $schemaHomeTitle,
+    'description' => $schemaHomeDescription,
+    'isPartOf' => [
+        '@id' => $schemaSiteUrl . '#website',
+    ],
+    'about' => [
+        '@id' => $schemaSiteUrl . '#organization',
+    ],
+    'primaryImageOfPage' => [
+        '@id' => $schemaSiteUrl . '#logo',
+    ],
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
 </script>
 

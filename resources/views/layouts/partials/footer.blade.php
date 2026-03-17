@@ -1,5 +1,10 @@
 <footer class="main-footer">
 		@php($phoneHref = preg_replace('/[^0-9+]/', '', config('site.contact_phone')))
+		@php($socialLinks = array_values(array_filter(config('seo.organization.same_as', []))))
+		@php($facebookUrl = $socialLinks[0] ?? null)
+		@php($twitterUrl = $socialLinks[1] ?? null)
+		@php($instagramUrl = $socialLinks[2] ?? null)
+		@php($youtubeUrl = $socialLinks[3] ?? null)
 		<div class="footer_bg-image" style="background-image: url({{ asset('assets/images/background/footer-bg.webp') }})"></div>
 		<div class="auto-container">
 			<div class="inner-container">
@@ -14,7 +19,7 @@
 								<!-- Footer Column -->
 								<div class="footer-column col-lg-6 col-md-6 col-sm-12">
 									<div class="footer-widget logo-widget">
-										<div class="footer-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/footer-logo.svg') }}" alt="" title=""></a></div>
+										<div class="footer-logo"><a href="{{ route('home') }}"><img src="{{ asset('assets/images/footer-logo.svg') }}" alt="Live Quran Classes" title="Live Quran Classes"></a></div>
 										<!-- Footer List -->
 										<div class="footer_list">
 											<li>{{ config('site.contact_address') }}</li>
@@ -22,10 +27,18 @@
 										</div>
 										<!-- Social Box -->
 										<div class="footer_socials">
-											<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-											<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-											<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-											<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+											@if ($facebookUrl)
+												<a href="{{ $facebookUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+											@endif
+											@if ($twitterUrl)
+												<a href="{{ $twitterUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on X"><i class="fa-brands fa-twitter"></i></a>
+											@endif
+											@if ($youtubeUrl)
+												<a href="{{ $youtubeUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on YouTube"><i class="fa-brands fa-youtube"></i></a>
+											@endif
+											@if ($instagramUrl)
+												<a href="{{ $instagramUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Instagram"><i class="fa-brands fa-instagram"></i></a>
+											@endif
 										</div>
 									</div>
 								</div>
@@ -104,7 +117,7 @@
 			<div class="footer_bottom-bg" style="background-image: url({{ asset('assets/images/background/footer-bg_2.webp') }})"></div>
 			<div class="auto-container">
 				<div class="d-flex justify-content-between align-items-center flex-wrap">
-					<div class="copyright">All rights reserved 2026 &copy; Opplexify</div>
+					<div class="copyright">All rights reserved 2026 &copy; Live Quran Classes</div>
 					<ul class="footer-nav">
 						<li><a href="#">Terms of use</a></li>
 						<li><a href="#">Privacy Policy</a></li>

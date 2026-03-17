@@ -35,12 +35,14 @@
 <meta property="og:description" content="{{ $metaDescription }}">
 <meta property="og:url" content="{{ $canonicalUrl }}">
 <meta property="og:image" content="{{ $ogImageUrl }}">
+<meta property="og:image:alt" content="{{ $siteName }}">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="{{ data_get($seoConfig, 'twitter_site', '') }}">
 <meta name="twitter:title" content="{{ $metaTitle }}">
 <meta name="twitter:description" content="{{ $metaDescription }}">
 <meta name="twitter:image" content="{{ $ogImageUrl }}">
+<meta name="twitter:image:alt" content="{{ $siteName }}">
 
 @if ($routeName === 'home')
 <link rel="preload" as="image"
@@ -63,10 +65,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 </noscript>
 
-<link rel="shortcut icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
-<link rel="icon" href="{{ asset('assets/images/favicon.webp') }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('assets/images/site-logo-square.png') }}" type="image/png">
+<link rel="icon" href="{{ asset('assets/images/site-logo-square.png') }}" type="image/png">
 <meta name="theme-color" content="#1f9a5f">
-<link rel="apple-touch-icon" href="{{ asset('assets/images/favicon.webp') }}">
+<link rel="apple-touch-icon" href="{{ asset('assets/images/site-logo-square.png') }}">
+@if ($routeName === 'home')
+<link rel="image_src" href="{{ $ogImageUrl }}">
+@endif
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,5 +79,12 @@
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vxaz4ux2zd");
+</script>
 @yield('jsonld')
 </head>

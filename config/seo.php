@@ -2,6 +2,7 @@
 
 return [
     'site_name' => env('SEO_SITE_NAME', 'Live Quran Classes'),
+    'site_alternate_name' => env('SEO_SITE_ALTERNATE_NAME', 'LiveQuranClasses'),
     'site_tagline' => env('SEO_SITE_TAGLINE', 'Online Quran Learning with Tajweed and Hifz'),
     'default_locale' => 'en_US',
     'default_og_image' => env('SEO_DEFAULT_OG_IMAGE', '/assets/images/main-slider/image-1.webp'),
@@ -10,18 +11,19 @@ return [
     'noindex_robots' => 'noindex,follow',
     'organization' => [
         'name' => env('SEO_ORG_NAME', 'Live Quran Classes'),
-        'logo' => env('SEO_ORG_LOGO', '/assets/images/logo.svg'),
+        'logo' => env('SEO_ORG_LOGO', '/assets/images/site-logo-square.png'),
         'same_as' => [
-            env('SEO_SOCIAL_FACEBOOK', 'https://facebook.com/'),
-            env('SEO_SOCIAL_TWITTER', 'https://twitter.com/'),
-            env('SEO_SOCIAL_INSTAGRAM', 'https://instagram.com/'),
-            env('SEO_SOCIAL_YOUTUBE', 'https://youtube.com/'),
+            env('SEO_SOCIAL_FACEBOOK', ''),
+            env('SEO_SOCIAL_TWITTER', ''),
+            env('SEO_SOCIAL_INSTAGRAM', ''),
+            env('SEO_SOCIAL_YOUTUBE', ''),
         ],
     ],
     'pages' => [
         'home' => [
             'title' => 'Live Quran Classes with Tajweed | Live Quran Classes',
             'description' => 'Join Live Quran Classes for online Quran learning with Tajweed, Hifz, Quran reading, and Islamic studies for kids and adults with expert teachers.',
+            'image' => env('SEO_HOME_IMAGE', '/assets/images/site-logo-square.png'),
             'type' => 'website',
         ],
         'about' => [
