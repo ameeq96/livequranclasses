@@ -2,6 +2,7 @@
 @php
     $routeName = request()->route()?->getName() ?? 'home';
     $seoConfig = config('seo');
+    $googleAnalyticsId = config('services.google_analytics.measurement_id');
     $pageSeo = data_get($seoConfig, 'pages.' . $routeName, data_get($seoConfig, 'pages.home', []));
     $siteName = data_get($seoConfig, 'site_name', config('app.name'));
     $defaultTagline = data_get($seoConfig, 'site_tagline', '');
@@ -22,6 +23,15 @@
         $robots = data_get($seoConfig, 'noindex_robots', 'noindex,follow');
     }
 @endphp
+@if ($googleAnalyticsId)
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ $googleAnalyticsId }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ $googleAnalyticsId }}');
+</script>
+@endif
 <meta charset="utf-8">
 <title>{{ $metaTitle }}</title>
 <meta name="description" content="{{ $metaDescription }}">
