@@ -965,14 +965,11 @@
 @section('jsonld')
 @php
     $schemaSiteName = config('seo.organization.name', config('seo.site_name', config('app.name')));
-    $schemaAlternateName = config('seo.site_alternate_name');
     $schemaSiteUrl = rtrim(config('app.url', url('/')), '/');
     $schemaHomeTitle = data_get(config('seo.pages'), 'home.title', $schemaSiteName);
     $schemaHomeDescription = data_get(config('seo.pages'), 'home.description', '');
     $schemaLogo = config('seo.organization.logo', '/assets/images/site-logo-square.png');
     $schemaLogoUrl = \Illuminate\Support\Str::startsWith($schemaLogo, ['http://', 'https://']) ? $schemaLogo : url($schemaLogo);
-    $schemaPhone = preg_replace('/[^0-9+]/', '', config('site.contact_phone'));
-    $schemaSameAs = array_values(array_filter(config('seo.organization.same_as', [])));
 @endphp
 
 <script type="application/ld+json">
@@ -983,46 +980,6 @@
     'url' => $schemaLogoUrl,
     'contentUrl' => $schemaLogoUrl,
     'name' => $schemaSiteName . ' logo',
-], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-</script>
-
-<script type="application/ld+json">
-{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'EducationalOrganization',
-    '@id' => $schemaSiteUrl . '#organization',
-    'name' => $schemaSiteName,
-    'url' => $schemaSiteUrl,
-    'description' => $schemaHomeDescription,
-    'logo' => [
-        '@id' => $schemaSiteUrl . '#logo',
-    ],
-    'image' => [
-        '@id' => $schemaSiteUrl . '#logo',
-    ],
-    'telephone' => $schemaPhone,
-    'email' => config('site.contact_email'),
-    'areaServed' => 'Worldwide',
-    'sameAs' => $schemaSameAs,
-], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
-</script>
-
-<script type="application/ld+json">
-{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'WebSite',
-    '@id' => $schemaSiteUrl . '#website',
-    'url' => $schemaSiteUrl,
-    'name' => $schemaSiteName,
-    'alternateName' => $schemaAlternateName,
-    'publisher' => [
-        '@id' => $schemaSiteUrl . '#organization',
-    ],
-    'potentialAction' => [
-        '@type' => 'SearchAction',
-        'target' => route('search') . '?q={search_term_string}',
-        'query-input' => 'required name=search_term_string',
-    ],
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
 </script>
 

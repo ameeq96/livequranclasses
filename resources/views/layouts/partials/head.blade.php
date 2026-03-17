@@ -3,23 +3,28 @@
     $routeName = request()->route()?->getName() ?? 'home';
     $seoConfig = config('seo');
     $googleAnalyticsId = config('services.google_analytics.measurement_id');
-    $pageSeo = data_get($seoConfig, 'pages.' . $routeName, data_get($seoConfig, 'pages.home', []));
+    $pageSeo = array_merge(
+        data_get($seoConfig, 'pages.' . $routeName, data_get($seoConfig, 'pages.home', [])),
+        $seo ?? []
+    );
     $siteName = data_get($seoConfig, 'site_name', config('app.name'));
     $defaultTagline = data_get($seoConfig, 'site_tagline', '');
     $metaTitle = trim(($pageSeo['title'] ?? $siteName) . ($defaultTagline && empty($pageSeo['title']) ? ' | ' . $defaultTagline : ''));
     $metaDescription = $pageSeo['description'] ?? $defaultTagline;
-    $canonicalUrl = url()->current();
+    $canonicalUrl = $pageSeo['canonical'] ?? url()->current();
     $ogType = $pageSeo['type'] ?? 'website';
     $ogImage = data_get($pageSeo, 'image', data_get($seoConfig, 'default_og_image', '/assets/images/main-slider/image-1.webp'));
     $ogImageUrl = \Illuminate\Support\Str::startsWith($ogImage, ['http://', 'https://']) ? $ogImage : url($ogImage);
-    $robots = data_get($seoConfig, 'indexable_robots', 'index,follow');
+    $robots = $pageSeo['robots'] ?? data_get($seoConfig, 'indexable_robots', 'index,follow');
     $bundleCss = asset('assets/css/app.bundle.css') . '?v=' . filemtime(public_path('assets/css/app.bundle.css'));
 
-    if ($routeName === 'search') {
+    if (! isset($pageSeo['robots']) && $routeName === 'search') {
         $robots = data_get($seoConfig, 'noindex_robots', 'noindex,follow');
     }
-    if (($routeName === 'enroll.show' && request()->route('course')) || $routeName === 'enroll.plan') {
+    if (! isset($pageSeo['canonical']) && (($routeName === 'enroll.show' && request()->route('course')) || $routeName === 'enroll.plan')) {
         $canonicalUrl = route('enroll.show');
+    }
+    if (! isset($pageSeo['robots']) && (($routeName === 'enroll.show' && request()->route('course')) || $routeName === 'enroll.plan')) {
         $robots = data_get($seoConfig, 'noindex_robots', 'noindex,follow');
     }
 @endphp
@@ -96,5 +101,8 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "vxaz4ux2zd");
 </script>
+@include('layouts.partials.seo-schema')
+@hasSection('jsonld')
 @yield('jsonld')
+@endif
 </head>

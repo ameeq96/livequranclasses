@@ -5,10 +5,10 @@
 <!-- Page Title -->
     <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
-			<h1>Contact</h1>
+			<h1>Contact Live Quran Classes</h1>
 			<ul class="bread-crumb clearfix">
 				<li><a href="{{ route('home') }}">Home</a></li>
-				<li>Contact</li>
+				<li>Contact Live Quran Classes</li>
 			</ul>
         </div>
     </section>

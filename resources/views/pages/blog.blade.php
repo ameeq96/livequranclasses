@@ -4,10 +4,10 @@
 <!-- Page Title -->
     <section class="page-title" style="background-image:url({{ asset('assets/images/background/page-title.webp') }})">
         <div class="auto-container">
-			<h1>Blogs</h1>
+			<h1>Live Quran Classes Blog</h1>
 			<ul class="bread-crumb clearfix">
 				<li><a href="{{ route('home') }}">Home</a></li>
-				<li>Blogs</li>
+				<li>Blog</li>
 			</ul>
         </div>
     </section>
@@ -16,16 +16,6 @@
 	<!-- Blog One -->
 	<section class="blog-one">
 		<div class="auto-container">
-            @php
-                $cardImages = [
-                    'news-1.webp',
-                    'news-2.webp',
-                    'news-3.webp',
-                    'news-8.webp',
-                    'news-9.webp',
-                    'news-10.webp',
-                ];
-            @endphp
             @if (!empty($query))
                 <div class="mb-4" style="font-weight:600;">
                     Search results for: "{{ $query }}"
@@ -36,15 +26,15 @@
 				<div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="news-block_one-inner wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1500ms">
 						<div class="news-block_one-image">
-							<a href="{{ route('blogs.detail', ['slug' => $post['slug']]) }}"><img src="{{ asset('assets/images/resource/' . ($cardImages[$index % count($cardImages)] ?? 'news-1.webp')) }}" alt="{{ $post['title'] }}" /></a>
+							<a href="{{ route('blogs.detail', ['slug' => $post['slug']]) }}"><img src="{{ asset('assets/images/resource/' . $post['image']) }}" alt="{{ $post['title'] }}" /></a>
 						</div>
 						<div class="news-block_one-content">
 							<ul class="news-block_one-meta">
 								{{-- <li><span class="icon fa-brands fa-rocketchat fa-fw"></span>03 Comment</li> --}}
-								<li><span class="icon fa-solid fa-clock fa-fw"></span>October 18 2025</li>
+								<li><span class="icon fa-solid fa-clock fa-fw"></span>{{ \Illuminate\Support\Carbon::parse($post['published_at'])->format('F d, Y') }}</li>
 							</ul>
 							<h5 class="news-block_one-heading"><a href="{{ route('blogs.detail', ['slug' => $post['slug']]) }}">{{ $post['title'] }}</a></h5>
-							<div class="news-block_one-text">Read this blog post for practical Quran learning guidance and consistent daily study tips.</div>
+							<div class="news-block_one-text">{{ $post['excerpt'] }}</div>
 							<div class="news-block_one-info d-flex justify-content-between align-items-center flex-wrap">
 								<div class="news-block_one-author">
 									<div class="news-block_one-author_image">
@@ -89,5 +79,4 @@
 	</section>
 	<!-- End CTA One -->
 @endsection
-
 
