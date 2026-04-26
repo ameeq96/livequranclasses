@@ -133,45 +133,104 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
 <style>
+.enroll-page .contact-form .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 45px;
+    font-family: inherit !important;
+    letter-spacing: 0 !important;
+    word-spacing: 0 !important;
+    white-space: nowrap;
+    text-align: left !important;
+    text-align-last: left !important;
+    background-color: var(--white-color);
+    background-image: linear-gradient(45deg, transparent 50%, #8f8f8f 50%), linear-gradient(135deg, #8f8f8f 50%, transparent 50%);
+    background-position: calc(100% - 22px) 22px, calc(100% - 17px) 22px;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+.enroll-page .contact-form .form-group select:invalid {
+    color: var(--color-fiftyfive);
+}
+.enroll-page .contact-form .form-group select option {
+    color: var(--black-color);
+    letter-spacing: 0 !important;
+    word-spacing: 0 !important;
+}
+.enroll-page .select2-container {
+    width: 100% !important;
+}
 .enroll-page .select2-container--default .select2-selection--single {
     height: 50px;
     border: 1px solid rgba(var(--black-color-rgb), 1);
     border-radius: 3px;
     background-color: var(--white-color);
 }
+.enroll-page .select2-container--default.select2-container--focus .select2-selection--single,
+.enroll-page .select2-container--default.select2-container--open .select2-selection--single {
+    border-color: var(--black-color);
+}
 .enroll-page .select2-container .select2-selection--single .select2-selection__rendered {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 8px;
+    height: 48px;
     line-height: 48px;
     padding-left: 25px;
+    padding-right: 45px;
     color: var(--black-color);
+    font-family: inherit !important;
     font-size: var(--font-14);
-    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    letter-spacing: 0 !important;
+    word-spacing: 0 !important;
+    text-align: left !important;
+    text-align-last: left !important;
+    white-space: nowrap;
+}
+.enroll-page .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: var(--color-fiftyfive);
 }
 .enroll-page .select2-container--default .select2-selection--single .select2-selection__arrow {
     height: 48px;
     right: 12px;
 }
-.enroll-page .select2-container {
-    width: 100% !important;
+.enroll-page .select2-dropdown {
+    border-color: rgba(var(--black-color-rgb), 1);
 }
-.select2-country-option {
+.enroll-page .select2-results__option,
+.enroll-page .select2-search__field {
+    font-family: inherit !important;
+    font-size: var(--font-14);
+    letter-spacing: 0 !important;
+    word-spacing: 0 !important;
+    text-align: left !important;
+    text-align-last: left !important;
+}
+.enroll-select2-row {
     display: inline-flex;
     align-items: center;
+    gap: 8px;
+    min-width: 0;
+    max-width: 100%;
 }
-.select2-flag-image {
-    width: 20px !important;
-    min-width: 20px !important;
-    max-width: 20px !important;
-    height: 14px !important;
-    min-height: 14px !important;
-    max-height: 14px !important;
-    margin-right: 8px;
-    border-radius: 2px;
-    object-fit: contain;
-    background: #fff;
-    display: inline-block !important;
-    flex: 0 0 20px;
+.enroll-select2-flag {
+    flex: 0 0 auto;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+.enroll-select2-text {
+    display: inline-block;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     vertical-align: middle;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+    letter-spacing: 0 !important;
+    word-spacing: 0 !important;
+    text-align: left !important;
+    white-space: nowrap;
 }
 .enroll-page input[type="time"] {
     position: relative;
@@ -227,18 +286,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const oldCountry = "{{ old('country') }}";
     const oldState = stateSelect.getAttribute('data-old-state') || '';
     const oldCity = citySelect.getAttribute('data-old-city') || '';
+    const normalizeSelectText = (text) => String(text || '').replace(/\s+/g, ' ').trim();
+
+    document.querySelectorAll('.enroll-page select option').forEach((option) => {
+        option.textContent = normalizeSelectText(option.textContent);
+    });
 
     const setOptions = (select, items, placeholder, selectedValue) => {
         select.innerHTML = '';
         const firstOption = document.createElement('option');
         firstOption.value = '';
-        firstOption.textContent = placeholder;
+        firstOption.textContent = normalizeSelectText(placeholder);
         select.appendChild(firstOption);
 
         items.forEach((item) => {
             const option = document.createElement('option');
             option.value = item.value;
-            option.textContent = item.label;
+            option.textContent = normalizeSelectText(item.label);
             if (selectedValue && selectedValue === item.value) {
                 option.selected = true;
             }
@@ -293,14 +357,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const handleStateChange = (stateName) => {
         populateCities(countrySelect.value, stateName);
     };
-
-    countrySelect.addEventListener('change', function () {
-        handleCountryChange(this.value);
-    });
-
-    stateSelect.addEventListener('change', function () {
-        handleStateChange(this.value);
-    });
 
     if (countrySelect.value || oldCountry) {
         if (!countrySelect.value && oldCountry) {
@@ -359,95 +415,69 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (window.jQuery && window.jQuery.fn && window.jQuery.fn.select2) {
         const $ = window.jQuery;
-        $('.enroll-page select').not('#country').select2({
-            width: '100%',
-            placeholder: 'Select option',
-            minimumResultsForSearch: 0
-        });
-
-        const flagSvgMap = {
-            US: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
-                    <rect width="60" height="40" fill="#fff"/>
-                    <rect width="60" height="3.08" y="0" fill="#b22234"/>
-                    <rect width="60" height="3.08" y="6.16" fill="#b22234"/>
-                    <rect width="60" height="3.08" y="12.32" fill="#b22234"/>
-                    <rect width="60" height="3.08" y="18.48" fill="#b22234"/>
-                    <rect width="60" height="3.08" y="24.64" fill="#b22234"/>
-                    <rect width="60" height="3.08" y="30.8" fill="#b22234"/>
-                    <rect width="60" height="3.08" y="36.92" fill="#b22234"/>
-                    <rect width="26" height="21.56" fill="#3c3b6e"/>
-                    <g fill="#fff">
-                        <circle cx="4" cy="4" r="1.1"/>
-                        <circle cx="10" cy="4" r="1.1"/>
-                        <circle cx="16" cy="4" r="1.1"/>
-                        <circle cx="22" cy="4" r="1.1"/>
-                        <circle cx="7" cy="8" r="1.1"/>
-                        <circle cx="13" cy="8" r="1.1"/>
-                        <circle cx="19" cy="8" r="1.1"/>
-                        <circle cx="4" cy="12" r="1.1"/>
-                        <circle cx="10" cy="12" r="1.1"/>
-                        <circle cx="16" cy="12" r="1.1"/>
-                        <circle cx="22" cy="12" r="1.1"/>
-                        <circle cx="7" cy="16" r="1.1"/>
-                        <circle cx="13" cy="16" r="1.1"/>
-                        <circle cx="19" cy="16" r="1.1"/>
-                    </g>
-                </svg>`,
-            CA: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
-                    <path fill="#d52b1e" d="M0 0h15l.62.62h28.76L45 0h15v40H45l-.62-.62H15.62L15 40H0z"/>
-                    <path fill="#fff" d="M15 0h30v40H15zm15.56 36.92-.28-7.19a.59.59 0 0 1 .68-.58l5.37 1.26-.73-2.67a.4.4 0 0 1 .12-.6l5.88-6.35-1.32-.83a.4.4 0 0 1-.21-.65l1.16-4.76-3.39.96a.4.4 0 0 1-.45-.31l-.66-2.06-2.64 3.79a.4.4 0 0 1-.69-.46l1.28-8.77-2.04 1.57a.4.4 0 0 1-.57-.16l-2.08-5.43-2.07 5.43a.4.4 0 0 1-.57.16l-2.05-1.57 1.28 8.77a.4.4 0 0 1-.69.46l-2.64-3.79-.66 2.06a.4.4 0 0 1-.45.31l-3.39-.96 1.16 4.76a.4.4 0 0 1-.21.65l-1.32.83 5.88 6.35a.4.4 0 0 1 .12.6l-.73 2.67 5.37-1.26a.59.59 0 0 1 .68.58l-.28 7.19z"/>
-                </svg>`,
-            AE: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40">
-                    <rect width="60" height="40" fill="#fff"/>
-                    <rect width="15" height="40" x="0" fill="#ff0000"/>
-                    <rect width="45" height="13.34" x="15" y="0" fill="#009a49"/>
-                    <rect width="45" height="13.33" x="15" y="13.34" fill="#ffffff"/>
-                    <rect width="45" height="13.33" x="15" y="26.67" fill="#000000"/>
-                </svg>`
+        const selectPlaceholders = {
+            country: 'Select Country*',
+            state: 'Select State*',
+            city: 'Select City*',
+            course: 'Select Course*',
+            plan: 'Select Plan*',
         };
+        const flagEmoji = (countryCode) => {
+            const code = String(countryCode || '').trim().toUpperCase();
 
-        const flagSrc = function (countryCode) {
-            const code = String(countryCode || '').toUpperCase();
-            const svg = flagSvgMap[code] || '';
-            return svg ? 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg) : '';
-        };
-
-        const formatCountry = function (option) {
-            if (!option.id) {
-                return option.text;
+            if (!/^[A-Z]{2}$/.test(code)) {
+                return '';
             }
 
-            const optionElement = option.element || null;
-            const country = locationData[option.id] || {};
-            const optionDataset = optionElement && optionElement.dataset ? optionElement.dataset : {};
-            const text = optionDataset.countryName || country.name || option.text || '';
-            const $wrapper = $('<span class="select2-country-option"></span>');
-            const flag = flagSrc(option.id);
+            return code.replace(/./g, (char) => String.fromCodePoint(127397 + char.charCodeAt()));
+        };
+        const renderPlainOption = function (option) {
+            const text = normalizeSelectText(option.text);
+            return $('<span class="enroll-select2-text"></span>').text(text);
+        };
+        const renderCountryOption = function (option) {
+            const text = normalizeSelectText(
+                option.element && option.element.dataset
+                    ? option.element.dataset.countryName || option.text
+                    : option.text
+            );
+            const $wrapper = $('<span class="enroll-select2-row"></span>');
+            const flag = option.id && locationData[option.id] ? locationData[option.id].flag || flagEmoji(option.id) : flagEmoji(option.id);
 
             if (flag) {
-                $('<img class="select2-flag-image" alt="">').attr('src', flag).appendTo($wrapper);
+                $('<span class="enroll-select2-flag"></span>').text(flag).appendTo($wrapper);
             }
 
-            $('<span class="select2-country-text"></span>').text(text).appendTo($wrapper);
+            $('<span class="enroll-select2-text"></span>').text(text).appendTo($wrapper);
             return $wrapper;
         };
 
-        $('#country').select2({
-            width: '100%',
-            placeholder: 'Select Country*',
-            minimumResultsForSearch: 0,
-            dropdownParent: $('#country').closest('.form-group'),
-            templateResult: formatCountry,
-            templateSelection: formatCountry,
-            escapeMarkup: function (markup) {
-                return markup;
-            }
+        $('.enroll-page select').each(function () {
+            const selectKey = this.id || this.name;
+
+            $(this).select2({
+                width: '100%',
+                placeholder: selectPlaceholders[selectKey] || 'Select option',
+                minimumResultsForSearch: 0,
+                dropdownParent: $(this).closest('.form-group'),
+                templateResult: selectKey === 'country' ? renderCountryOption : renderPlainOption,
+                templateSelection: selectKey === 'country' ? renderCountryOption : renderPlainOption
+            });
         });
 
         $('#country').on('change', function () {
             handleCountryChange(this.value);
         });
+
         $('#state').on('change', function () {
+            handleStateChange(this.value);
+        });
+    } else {
+        countrySelect.addEventListener('change', function () {
+            handleCountryChange(this.value);
+        });
+
+        stateSelect.addEventListener('change', function () {
             handleStateChange(this.value);
         });
     }

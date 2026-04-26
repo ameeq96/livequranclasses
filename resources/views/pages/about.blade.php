@@ -231,35 +231,10 @@
 				<div class="scholar-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="scholar-block_one-inner wow fadeInLeft"  data-wow-delay="0ms" data-wow-duration="1000ms">
 						<div class="scholar-block_one-image">
-							<a href="{{ route('about') }}"><img src="{{ asset('assets/images/resource/scholar-1.webp') }}" alt="" /></a>
+							<a href="{{ route('about') }}"><img src="{{ asset('assets/images/resource/hafiz-zubair-ilyas.png') }}" alt="Hafiz Zubair Ilyas" /></a>
 						</div>
 						<div class="scholar-block_one-content">
-							<h4 class="scholar-block_one-heading"><a href="{{ route('about') }}">Osama Gamal</a></h4>
-							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
-							<!-- Social Box -->
-							<div class="scholar-block_one-socials">
-								@if ($facebookUrl)
-									<a href="{{ $facebookUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-								@endif
-								@if ($instagramUrl)
-									<a href="{{ $instagramUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on Instagram"><i class="fa-brands fa-instagram"></i></a>
-								@endif
-								@if ($twitterUrl)
-									<a href="{{ $twitterUrl }}" target="_blank" rel="noopener" aria-label="Live Quran Classes on X"><i class="fa-brands fa-twitter"></i></a>
-								@endif
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Scholar Block One -->
-				<div class="scholar-block_one col-lg-4 col-md-6 col-sm-12">
-					<div class="scholar-block_one-inner wow fadeInUp"  data-wow-delay="0ms" data-wow-duration="1000ms">
-						<div class="scholar-block_one-image">
-							<a href="{{ route('about') }}"><img src="{{ asset('assets/images/resource/scholar-2.webp') }}" alt="" /></a>
-						</div>
-						<div class="scholar-block_one-content">
-							<h4 class="scholar-block_one-heading"><a href="{{ route('about') }}">Ahmed Hany</a></h4>
+							<h4 class="scholar-block_one-heading"><a href="{{ route('about') }}">Hafiz Zubair Ilyas</a></h4>
 							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
 							<!-- Social Box -->
 							<div class="scholar-block_one-socials">
@@ -281,10 +256,10 @@
 				<div class="scholar-block_one col-lg-4 col-md-6 col-sm-12">
 					<div class="scholar-block_one-inner wow fadeInRight"  data-wow-delay="0ms" data-wow-duration="1000ms">
 						<div class="scholar-block_one-image">
-							<a href="{{ route('about') }}"><img src="{{ asset('assets/images/resource/scholar-3.webp') }}" alt="" /></a>
+							<a href="{{ route('about') }}"><img src="{{ asset('assets/images/resource/hafiz-ameeq-khan-turban.png') }}" alt="Hafiz Ameeq Khan" /></a>
 						</div>
 						<div class="scholar-block_one-content">
-							<h4 class="scholar-block_one-heading"><a href="{{ route('about') }}">Yusuf Samir</a></h4>
+							<h4 class="scholar-block_one-heading"><a href="{{ route('about') }}">Hafiz Ameeq Khan</a></h4>
 							<div class="scholar-block_one-designation">Quran & Arabic Teacher</div>
 							<!-- Social Box -->
 							<div class="scholar-block_one-socials">
@@ -535,4 +510,3 @@
 	</section>
 	<!-- End CTA One -->
 @endsection
-

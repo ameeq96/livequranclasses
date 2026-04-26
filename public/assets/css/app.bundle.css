@@ -21769,6 +21769,7 @@ img.mfp-img {
 .scholar-block_one-image{
 	position: relative;
 	overflow: hidden;
+	aspect-ratio: 370 / 433;
 	border-radius: 53px;
 	background-color: var(--main-color);
 }
@@ -21776,6 +21777,9 @@ img.mfp-img {
 .scholar-block_one-image img{
 	position: relative;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
 	display: block;
 	transition:all 600ms ease;
 	-moz-transition:all 600ms ease;
@@ -32931,4 +32935,3 @@ body.translated-rtl {
     font-size: 26px;
   }
 }
-
